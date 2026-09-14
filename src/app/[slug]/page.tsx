@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { Phone, Calendar, ArrowLeft, Clock, User, Share2 } from 'lucide-react';
+import { Phone, Calendar, ArrowLeft, Home, Brain, Users, ArrowRight } from 'lucide-react';
 import {
   posts,
   pages,
@@ -17,6 +17,8 @@ import BlogCard from '@/components/BlogCard';
 import ContactSection from '@/components/ContactSection';
 import ReviewsSection from '@/components/ReviewsSection';
 import FaqAccordion from '@/components/FaqAccordion';
+import ServicesSidebar from '@/components/ServicesSidebar';
+import ServiceMethodsBanner from '@/components/ServiceMethodsBanner';
 
 interface PageProps {
   params: {
@@ -89,6 +91,24 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
+function getServiceImage(slug: string, title: string): string {
+  const s = `${slug} ${title}`.toLowerCase();
+  if (s.includes('bireysel')) return '/images/bireysel-1400x680.webp';
+  if (s.includes('cift') || s.includes('çift')) return '/images/cift-1400x680.webp';
+  if (s.includes('evlilik')) return '/images/evlilik-1400x680.webp';
+  if (s.includes('cinsel')) return '/images/cinsel-terapi-1400x680.webp';
+  if (s.includes('aile')) return '/images/aile-terapisi-1400x680.webp';
+  if (s.includes('bilissel') || s.includes('bdt')) return '/images/bilissel-1400x680.webp';
+  if (s.includes('emdr')) return '/images/emdr2-1400x680.webp';
+  if (s.includes('ergen') || s.includes('ebeveyn')) return '/images/ebeveyn-1400x680.webp';
+  if (s.includes('fobi') || s.includes('korku')) return '/images/fobi-1-1400x680.webp';
+  if (s.includes('kaygi') || s.includes('kaygı')) return '/images/kaygi-1400x680.webp';
+  if (s.includes('panik')) return '/images/panik-1400x680.webp';
+  if (s.includes('sema') || s.includes('şema')) return '/images/sema-1400x680.webp';
+  if (s.includes('stres')) return '/images/stres-yoneim-1400x680.webp';
+  return '/images/psikolog-esra-sayin-uniform.webp';
+}
+
 export default function DynamicSlugPage({ params }: PageProps) {
   const post = getPostBySlugOrPermalink(params.slug);
 
@@ -119,143 +139,95 @@ export default function DynamicSlugPage({ params }: PageProps) {
         />
 
         <article className="py-12 md:py-20 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Breadcrumb Navigation */}
-            <nav className="flex items-center gap-2 text-xs text-slate-500 mb-6 flex-wrap">
-              <Link href="/" className="hover:text-indigo-600 transition-colors">
-                Anasayfa
-              </Link>
-              <span>/</span>
-              <Link href="/blog/" className="hover:text-indigo-600 transition-colors">
-                Blog
-              </Link>
-              <span>/</span>
-              <span className="text-slate-900 font-medium truncate max-w-xs sm:max-w-sm">
-                {post.title}
-              </span>
-            </nav>
-
-            {/* Post Header */}
-            <header className="mb-8">
-              <div className="mb-3">
-                <span className="inline-block bg-[#ffedd5] text-[#c2410c] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-                  BİREYSEL PSİKOLOJİ
-                </span>
-              </div>
-
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold text-slate-900 leading-tight mb-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Breadcrumb & Title Header */}
+            <div className="text-center max-w-3xl mx-auto mb-8">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 leading-tight mb-4">
                 {post.title}
               </h1>
-
-              <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500 py-3 border-y border-slate-100">
-                <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded-full bg-slate-200 overflow-hidden relative">
-                    <Image
-                      src="/images/psikolog-esra-sayin-updated-hero.webp"
-                      alt="Esra Sayın"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <span className="font-semibold text-slate-800">
-                    Uzman Psikolog Esra Sayın
-                  </span>
-                </div>
-
-                <div className="flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-slate-400" />
-                  <time dateTime={post.date}>{formattedDate}</time>
-                </div>
-
-                <div className="flex items-center gap-1.5 ml-auto text-indigo-600">
-                  <Share2 className="w-3.5 h-3.5" />
-                  <span>Bilgilendirici Rehber</span>
-                </div>
-              </div>
-            </header>
+              <nav className="inline-flex items-center gap-2 text-xs font-semibold text-indigo-600 uppercase tracking-wider">
+                <Link href="/" className="hover:underline inline-flex items-center gap-1">
+                  <Home className="w-3.5 h-3.5" />
+                  <span>İSTANBUL PSİKOLOG</span>
+                </Link>
+                <span>&gt;</span>
+                <span className="text-slate-500">{post.title}</span>
+              </nav>
+            </div>
 
             {/* Featured Image */}
             {post.featured_image && (
-              <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden mb-10 shadow-lg bg-slate-100 border border-slate-200/60">
+              <div className="max-w-4xl mx-auto relative aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border border-slate-100 mb-12 bg-slate-100">
                 <Image
                   src={post.featured_image}
                   alt={post.title}
                   fill
                   priority
-                  sizes="(max-width: 768px) 100vw, 850px"
+                  sizes="(max-width: 1024px) 100vw, 900px"
                   className="object-cover"
                 />
               </div>
             )}
 
-            {/* Post Content */}
-            <div
-              className="prose-content max-w-none text-slate-700"
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
-
-            {/* Author Card */}
-            <div className="mt-12 p-6 sm:p-8 bg-slate-50 rounded-2xl border border-slate-200 flex flex-col sm:flex-row gap-6 items-center sm:items-start text-center sm:text-left">
-              <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0 shadow-md border-2 border-white">
-                <Image
-                  src="/images/psikolog-esra-sayin-updated-hero.webp"
-                  alt="Esra Sayın"
-                  fill
-                  className="object-cover"
+            {/* Main Content + Sidebar Layout */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+              <div className="lg:col-span-8">
+                <div
+                  className="prose-content max-w-none text-slate-700 bg-white"
+                  dangerouslySetInnerHTML={{ __html: post.content }}
                 />
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-base font-bold text-slate-900">
-                  Esra Sayın
-                </h3>
-                <p className="text-xs text-indigo-600 font-medium">
-                  Uzman Psikolog &amp; Aile Danışmanı
-                </p>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  İstanbul Beyoğlu Cihangir&apos;deki ofisinde yüz yüze ve online olarak BDT, EMDR ve Şema Terapi ekolleriyle yetişkin, çift ve ailelere psikolojik danışmanlık hizmeti sunmaktadır.
-                </p>
-                <div className="pt-1 flex items-center justify-center sm:justify-start gap-4">
+
+                {/* 2 Bottom Recommendation Cards */}
+                <div className="mt-12 pt-8 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <Link
-                    href="/istanbul-psikolog-randevu/"
-                    className="text-xs font-bold text-indigo-700 hover:underline"
+                    href="/istanbul-bireysel-terapi/"
+                    className="p-5 rounded-2xl bg-slate-50 hover:bg-indigo-50/60 border border-slate-200/80 transition-all group flex items-start gap-4"
                   >
-                    Randevu Al →
+                    <div className="w-10 h-10 rounded-xl bg-indigo-100 text-[#8088E6] flex items-center justify-center flex-shrink-0">
+                      <Brain className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                        Bireysel Danışmanlık
+                      </h4>
+                      <p className="text-xs text-slate-500 mt-1 line-clamp-2">
+                        Danışmanlık seansları ile sorunlarınızı geride bırakmanıza yardımcı olur.
+                      </p>
+                      <span className="text-xs font-bold text-indigo-600 inline-flex items-center gap-1 mt-2">
+                        <span>İncele</span>
+                        <ArrowRight className="w-3 h-3" />
+                      </span>
+                    </div>
                   </Link>
+
                   <Link
-                    href="/istanbul-psikolog-esra-sayin/"
-                    className="text-xs font-bold text-slate-600 hover:underline"
+                    href="/istanbul-aile-terapisi/"
+                    className="p-5 rounded-2xl bg-slate-50 hover:bg-indigo-50/60 border border-slate-200/80 transition-all group flex items-start gap-4"
                   >
-                    Hakkında Detaylı Bilgi →
+                    <div className="w-10 h-10 rounded-xl bg-indigo-100 text-[#8088E6] flex items-center justify-center flex-shrink-0">
+                      <Users className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                        Aile Danışmanlığı
+                      </h4>
+                      <p className="text-xs text-slate-500 mt-1 line-clamp-2">
+                        Seanslara başlayarak bu bağı güçlendirin ve sorunlarınızı çözün.
+                      </p>
+                      <span className="text-xs font-bold text-indigo-600 inline-flex items-center gap-1 mt-2">
+                        <span>İncele</span>
+                        <ArrowRight className="w-3 h-3" />
+                      </span>
+                    </div>
                   </Link>
                 </div>
               </div>
-            </div>
 
-            {/* Bottom CTA Box */}
-            <div className="mt-8 p-6 bg-gradient-to-r from-[#192a3d] to-indigo-900 rounded-2xl text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
-              <div>
-                <h3 className="text-lg font-bold">
-                  Destek Almak İçin İlk Adımı Atın
-                </h3>
-                <p className="text-xs text-slate-300 mt-1">
-                  İstanbul Cihangir ofisimizde veya online görüşmeyle randevunuzu hemen oluşturun.
-                </p>
-              </div>
-              <div className="flex items-center gap-3">
-                <a
-                  href={`tel:${SITE_INFO.phone.replace(/\s+/g, '')}`}
-                  className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-xs"
-                >
-                  <Phone className="w-3.5 h-3.5" />
-                  <span>{SITE_INFO.phone}</span>
-                </a>
-                <Link
-                  href="/istanbul-psikolog-randevu/"
-                  className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-white text-slate-900 hover:bg-slate-100 font-bold text-xs uppercase"
-                >
-                  <Calendar className="w-3.5 h-3.5" />
-                  <span>Randevu Al</span>
-                </Link>
+              {/* Sidebar */}
+              <div className="lg:col-span-4">
+                <div className="sticky top-28">
+                  <ServicesSidebar currentSlug={post.permalink} />
+                </div>
               </div>
             </div>
 
@@ -283,6 +255,9 @@ export default function DynamicSlugPage({ params }: PageProps) {
             )}
           </div>
         </article>
+
+        {/* Methods Banner at bottom */}
+        <ServiceMethodsBanner />
       </>
     );
   }
@@ -298,6 +273,7 @@ export default function DynamicSlugPage({ params }: PageProps) {
     const isContactPage = params.slug.includes('iletisim');
     const isReviewPage = params.slug.includes('tavsiye');
     const isAppointmentPage = params.slug.includes('randevu');
+    const featuredImg = getServiceImage(page.slug, page.title);
 
     return (
       <>
@@ -306,69 +282,144 @@ export default function DynamicSlugPage({ params }: PageProps) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
 
-        <div className="py-12 md:py-20 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 text-xs text-slate-500 mb-6 flex-wrap">
-              <Link href="/" className="hover:text-indigo-600 transition-colors">
-                Anasayfa
-              </Link>
-              <span>/</span>
-              <span className="text-slate-900 font-medium">{page.title}</span>
-            </nav>
-
-            {/* Page Header */}
-            <header className="mb-10 text-center max-w-3xl mx-auto">
-              <span className="text-xs font-bold tracking-widest text-indigo-600 uppercase">
-                / {SITE_INFO.name.toUpperCase()} /
-              </span>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mt-2 mb-4 leading-tight">
+        <div className="py-10 md:py-16 bg-white">
+          {/* Top Title & Breadcrumb Banner (Exact match to media_1789408370012.png) */}
+          <div className="bg-[#f8f9fc] border-b border-slate-100 py-10 sm:py-12 mb-8 sm:mb-12">
+            <div className="max-w-4xl mx-auto px-4 text-center">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-3 tracking-tight">
                 {page.title}
               </h1>
-              {page.excerpt && (
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                  {page.excerpt}
-                </p>
-              )}
-            </header>
+              <nav className="inline-flex items-center gap-2 text-xs font-semibold text-indigo-600 uppercase tracking-wider">
+                <Link href="/" className="hover:underline inline-flex items-center gap-1 text-slate-700">
+                  <Home className="w-3.5 h-3.5" />
+                  <span>İSTANBUL PSİKOLOG</span>
+                </Link>
+                <span>&gt;</span>
+                <span className="text-indigo-600">{page.title}</span>
+              </nav>
+            </div>
+          </div>
 
-            {/* If reviews page, display verified reviews component */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* If reviews page */}
             {isReviewPage && (
               <div className="mb-12">
                 <ReviewsSection />
               </div>
             )}
 
-            {/* If contact or appointment page, display contact section */}
+            {/* If contact page */}
             {isContactPage && (
               <div className="mb-12">
                 <ContactSection />
               </div>
             )}
 
-            {/* Render Main Content if available */}
-            {page.content && !isContactPage && (
-              <div className="bg-slate-50/50 rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-sm mb-12">
-                <div
-                  className="prose-content max-w-none text-slate-700"
-                  dangerouslySetInnerHTML={{ __html: page.content }}
-                />
-              </div>
-            )}
-
-            {/* If appointment page, add appointment CTA block */}
+            {/* If appointment page */}
             {isAppointmentPage && (
               <div className="mb-12">
                 <ContactSection />
               </div>
             )}
 
+            {/* Standard Service Page Layout (Exact match to media_1789408370012.png) */}
+            {!isContactPage && !isAppointmentPage && (
+              <>
+                {/* Large Featured Image */}
+                <div className="max-w-4xl mx-auto relative aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border border-slate-100 mb-12 bg-slate-100">
+                  <Image
+                    src={featuredImg}
+                    alt={page.title}
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 900px"
+                    className="object-cover"
+                  />
+                </div>
+
+                {/* 2-Column Grid: Content on Left, Services Sidebar on Right */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                  {/* Left Column: Content */}
+                  <div className="lg:col-span-8">
+                    {page.content ? (
+                      <div
+                        className="prose-content max-w-none text-slate-700 bg-white"
+                        dangerouslySetInnerHTML={{ __html: page.content }}
+                      />
+                    ) : (
+                      <div className="p-8 bg-slate-50 rounded-2xl text-slate-600">
+                        {page.excerpt || 'Bu hizmet alanı hakkında detaylı bilgi ve randevu için bize ulaşabilirsiniz.'}
+                      </div>
+                    )}
+
+                    {/* 2 Bottom Recommendation Cards (media_1789408370012.png) */}
+                    <div className="mt-12 pt-8 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <Link
+                        href="/istanbul-bireysel-terapi/"
+                        className="p-5 rounded-2xl bg-slate-50 hover:bg-indigo-50/60 border border-slate-200/80 transition-all group flex items-start gap-4"
+                      >
+                        <div className="w-10 h-10 rounded-xl bg-indigo-100 text-[#8088E6] flex items-center justify-center flex-shrink-0">
+                          <Brain className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <h4 className="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                            Bireysel Danışmanlık
+                          </h4>
+                          <p className="text-xs text-slate-500 mt-1 line-clamp-2">
+                            Danışmanlık seansları ile sorunlarınızı geride bırakmanıza yardımcı olur.
+                          </p>
+                          <span className="text-xs font-bold text-indigo-600 inline-flex items-center gap-1 mt-2">
+                            <span>İncele</span>
+                            <ArrowRight className="w-3 h-3" />
+                          </span>
+                        </div>
+                      </Link>
+
+                      <Link
+                        href="/istanbul-aile-terapisi/"
+                        className="p-5 rounded-2xl bg-slate-50 hover:bg-indigo-50/60 border border-slate-200/80 transition-all group flex items-start gap-4"
+                      >
+                        <div className="w-10 h-10 rounded-xl bg-indigo-100 text-[#8088E6] flex items-center justify-center flex-shrink-0">
+                          <Users className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <h4 className="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                            Aile Danışmanlığı
+                          </h4>
+                          <p className="text-xs text-slate-500 mt-1 line-clamp-2">
+                            Seanslara başlayarak bu bağı güçlendirin ve sorunlarınızı çözün.
+                          </p>
+                          <span className="text-xs font-bold text-indigo-600 inline-flex items-center gap-1 mt-2">
+                            <span>İncele</span>
+                            <ArrowRight className="w-3 h-3" />
+                          </span>
+                        </div>
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Right Column: Sticky Services Sidebar */}
+                  <div className="lg:col-span-4">
+                    <div className="sticky top-28">
+                      <ServicesSidebar currentSlug={page.slug} />
+                    </div>
+                  </div>
+                </div>
+              </>
+            )}
+
             {/* Default FAQ section on information pages */}
-            <div className="mt-12">
+            <div className="mt-16 pt-12 border-t border-slate-100">
               <FaqAccordion />
             </div>
           </div>
         </div>
+
+        {/* Danışmanlık Yöntemleri Banner (Yüz yüze veya Online) */}
+        <ServiceMethodsBanner />
+
+        {/* Contact Section at bottom */}
+        <ContactSection />
       </>
     );
   }
