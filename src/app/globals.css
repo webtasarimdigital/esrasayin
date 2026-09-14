@@ -84,3 +84,149 @@
   height: auto;
   margin: 1.5rem auto;
 }
+
+/* Drop-cap styled letter matching Görsel 5 */
+.prose-content .tpgb-drop-cap p:first-of-type::first-letter,
+.prose-content .tpgb-drop-framed p:first-of-type::first-letter {
+  float: left;
+  font-size: 2.4rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #6366f1;
+  border: 1.5px solid #8088e6;
+  border-radius: 10px;
+  padding: 8px 14px;
+  margin-right: 14px;
+  margin-top: 4px;
+  background-color: #f8faff;
+}
+
+/* Service Benefits Box matching Görsel 5 */
+.prose-content .tpgb-infobox {
+  background-color: #f8f9fc;
+  border: 1px solid #eef2f7;
+  border-radius: 1.25rem;
+  padding: 1.5rem 1.75rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.prose-content .splide__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.prose-content .splide__arrows {
+  display: none !important;
+}
+
+.prose-content .service-media {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.prose-content .service-icon-wrap {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.6rem;
+  background-color: #e0e7ff;
+  color: #4f46e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.prose-content .service-icon i {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.prose-content .fa-lightbulb {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234f46e5'%3E%3Cpath d='M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z'/%3E%3C/svg%3E");
+}
+
+.prose-content .fa-thumbs-up {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234f46e5'%3E%3Cpath d='M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z'/%3E%3C/svg%3E");
+}
+
+.prose-content .fa-crosshairs {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234f46e5'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z'/%3E%3C/svg%3E");
+}
+
+.prose-content .fa-code-branch {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234f46e5'%3E%3Cpath d='M19 13c-1.66 0-3 1.34-3 3 0 .52.14 1.01.37 1.43l-4.57 2.63c-.45-.63-1.18-1.06-2.02-1.06-1.66 0-3 1.34-3 3s1.34 3 3 3c.84 0 1.57-.43 2.02-1.06l4.58 2.63c-.24.42-.38.91-.38 1.43 0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3z'/%3E%3C/svg%3E");
+}
+
+.prose-content .fa-comment {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234f46e5'%3E%3Cpath d='M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E");
+}
+
+.prose-content .service-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.prose-content .service-desc {
+  font-size: 0.825rem;
+  color: #64748b;
+  margin-top: 0.2rem;
+  line-height: 1.4;
+}
+
+/* Stylist Checklist with sharp SVG checkmarks matching Görsel 5 */
+.prose-content .tpgb-icon-list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 1.25rem 0 2rem;
+}
+
+.prose-content .tpgb-icon-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.prose-content .tpgb-icon-list-icon {
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.prose-content .tpgb-icon-list-icon i {
+  display: inline-block;
+  width: 1.15rem;
+  height: 1.15rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E");
+}
+
+.prose-content .tpgb-icon-list-text p {
+  margin: 0;
+  font-size: 0.925rem;
+  line-height: 1.55;
+  color: #334155;
+}
+
+.prose-content .tpgb-icon-list-text strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* Hide unrendered trailing WordPress containers */
+.prose-content .tpgb-container-row:empty,
+.prose-content .tpgb-cont-in:empty {
+  display: none !important;
+}
+

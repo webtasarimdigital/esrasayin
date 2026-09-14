@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ChevronRight, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronRight } from 'lucide-react';
 import Logo from './Logo';
 import { SITE_INFO } from '@/lib/data';
 
@@ -13,7 +13,6 @@ interface HeaderProps {
 
 export default function Header({ onOpenAppointment }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const pathname = usePathname();
 
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,22 +33,7 @@ export default function Header({ onOpenAppointment }: HeaderProps) {
   const navLinks = [
     { name: 'Anasayfa', href: '/' },
     { name: 'Hakkında', href: '/istanbul-psikolog-esra-sayin/' },
-    {
-      name: 'Danışmanlıklar',
-      href: '/istanbul-terapiler/',
-      dropdown: [
-        { name: 'Bireysel Danışmanlık', href: '/istanbul-bireysel-terapi/' },
-        { name: 'Aile Danışmanlığı', href: '/istanbul-aile-terapisi/' },
-        { name: 'Çift Danışmanlığı', href: '/istanbul-cift-terapisi/' },
-        { name: 'Evlilik Danışmanlığı', href: '/istanbul-evlilik-terapisi/' },
-        { name: 'Cinsel Danışmanlık', href: '/istanbul-cinsel-terapi/' },
-        { name: 'EMDR Terapisi', href: '/emdr-terapisi/' },
-        { name: 'Bilişsel Davranışçı Terapi (BDT)', href: '/bilissel-davranisci-terapi/' },
-        { name: 'Şema Terapi', href: '/sema-terapi/' },
-        { name: 'Ergen Danışmanlığı', href: '/ergen-terapisi/' },
-        { name: 'Online Danışmanlık', href: '/online-psikolog/' },
-      ],
-    },
+    { name: 'Danışmanlıklar', href: '/istanbul-terapiler/' },
     { name: 'Danışan Yorumları', href: '/istanbul-psikolog-tavsiye/' },
     { name: 'İletişim', href: '/istanbul-psikolog-iletisim/' },
   ];
@@ -66,24 +50,24 @@ export default function Header({ onOpenAppointment }: HeaderProps) {
       >
         <div className="max-w-[1680px] 2xl:max-w-[1780px] mx-auto">
           <div className="bg-[#2c3e50] rounded-2xl md:rounded-[2.2rem] px-5 sm:px-8 py-3.5 sm:py-4.5 md:py-5 flex items-center justify-between shadow-xl border border-white/10">
-            {/* Mobile Hamburger toggle */}
+            {/* Mobile Hamburger toggle - Light circular button matching original media_1789416076912.png */}
             <div className="flex lg:hidden items-center">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-label="Menüyü Aç"
-                className="w-11 h-11 rounded-full bg-white/10 active:bg-white/20 flex items-center justify-center text-white transition-colors"
+                className="w-10 h-10 rounded-full bg-[#dbe2ea] active:bg-slate-300 flex items-center justify-center text-slate-800 transition-colors shadow-sm"
               >
                 {isMobileMenuOpen ? (
-                  <X className="w-6 h-6 text-white" />
+                  <X className="w-5 h-5 text-slate-800" />
                 ) : (
-                  <Menu className="w-6 h-6 text-white" />
+                  <Menu className="w-5 h-5 text-slate-800" />
                 )}
               </button>
             </div>
 
             {/* Logo on Left - Enlarged */}
             <div className="flex items-center">
-              <Logo light showText className="scale-100 sm:scale-105 md:scale-110 origin-left" />
+              <Logo light showText className="scale-95 sm:scale-105 md:scale-110 origin-left" />
             </div>
 
             {/* Desktop Navigation Links (Center) - Larger font and generous spacing */}
@@ -92,43 +76,6 @@ export default function Header({ onOpenAppointment }: HeaderProps) {
                 const isActive =
                   pathname === link.href ||
                   (link.href !== '/' && pathname.startsWith(link.href));
-
-                if (link.dropdown) {
-                  return (
-                    <div
-                      key={link.name}
-                      className="relative"
-                      onMouseEnter={() => setIsServicesOpen(true)}
-                      onMouseLeave={() => setIsServicesOpen(false)}
-                    >
-                      <Link
-                        href={link.href}
-                        className={`flex items-center gap-1.5 text-[14px] xl:text-[15px] font-semibold tracking-wide transition-colors py-1 ${
-                          isActive
-                            ? 'text-white font-bold'
-                            : 'text-gray-200 hover:text-white'
-                        }`}
-                      >
-                        <span>{link.name}</span>
-                        <ChevronDown className="w-4 h-4 text-gray-300" />
-                      </Link>
-
-                      {isServicesOpen && (
-                        <div className="absolute top-full left-1/2 -translate-x-1/2 w-68 bg-white rounded-2xl shadow-2xl border border-slate-100 py-2.5 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
-                          {link.dropdown.map((subItem) => (
-                            <Link
-                              key={subItem.href}
-                              href={subItem.href}
-                              className="block px-4 py-2 text-xs sm:text-[13px] font-medium text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
-                            >
-                              {subItem.name}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  );
-                }
 
                 return (
                   <Link
@@ -146,23 +93,25 @@ export default function Header({ onOpenAppointment }: HeaderProps) {
               })}
             </nav>
 
-            {/* Right: RANDEVU AL Pill Button - Larger & more prominent */}
+            {/* Right: RANDEVU / RANDEVU AL Pill Button */}
             <div className="flex items-center">
               {onOpenAppointment ? (
                 <button
                   onClick={onOpenAppointment}
-                  className="px-6 sm:px-7 py-2.5 sm:py-3 rounded-full border border-indigo-300/40 hover:border-white/60 bg-white/5 hover:bg-white/15 text-white text-xs sm:text-[13px] font-bold tracking-wider transition-all uppercase inline-flex items-center gap-2 shadow-sm active:scale-95"
+                  className="px-4 sm:px-7 py-2 sm:py-3 rounded-full border border-slate-400/60 lg:border-indigo-300/40 hover:border-white/60 bg-transparent lg:bg-white/5 hover:bg-white/15 text-white text-xs sm:text-[13px] font-semibold lg:font-bold tracking-wider transition-all uppercase inline-flex items-center gap-1.5 shadow-sm active:scale-95"
                 >
-                  <span>RANDEVU AL</span>
-                  <ChevronRight className="w-4 h-4 text-white" />
+                  <span className="hidden sm:inline">RANDEVU AL</span>
+                  <span className="sm:hidden">RANDEVU</span>
+                  <ChevronRight className="w-3.5 h-3.5 text-white hidden sm:inline" />
                 </button>
               ) : (
                 <Link
                   href="/istanbul-psikolog-randevu/"
-                  className="px-6 sm:px-7 py-2.5 sm:py-3 rounded-full border border-indigo-300/40 hover:border-white/60 bg-white/5 hover:bg-white/15 text-white text-xs sm:text-[13px] font-bold tracking-wider transition-all uppercase inline-flex items-center gap-2 shadow-sm active:scale-95"
+                  className="px-4 sm:px-7 py-2 sm:py-3 rounded-full border border-slate-400/60 lg:border-indigo-300/40 hover:border-white/60 bg-transparent lg:bg-white/5 hover:bg-white/15 text-white text-xs sm:text-[13px] font-semibold lg:font-bold tracking-wider transition-all uppercase inline-flex items-center gap-1.5 shadow-sm active:scale-95"
                 >
-                  <span>RANDEVU AL</span>
-                  <ChevronRight className="w-4 h-4 text-white" />
+                  <span className="hidden sm:inline">RANDEVU AL</span>
+                  <span className="sm:hidden">RANDEVU</span>
+                  <ChevronRight className="w-3.5 h-3.5 text-white hidden sm:inline" />
                 </Link>
               )}
             </div>
@@ -199,20 +148,6 @@ export default function Header({ onOpenAppointment }: HeaderProps) {
                     >
                       {link.name}
                     </Link>
-                    {link.dropdown && (
-                      <div className="pl-6 pt-1 space-y-1">
-                        {link.dropdown.slice(0, 6).map((sub) => (
-                          <Link
-                            key={sub.href}
-                            href={sub.href}
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            className="block py-1.5 text-xs text-slate-500 hover:text-indigo-600"
-                          >
-                            • {sub.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
                   </div>
                 ))}
               </div>

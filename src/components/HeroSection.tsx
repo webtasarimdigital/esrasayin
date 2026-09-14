@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Phone, ChevronRight, Brain, Users, HeartHandshake, CircleDot, ArrowRight } from 'lucide-react';
 import { SITE_INFO } from '@/lib/data';
@@ -40,20 +41,84 @@ export default function HeroSection({ onOpenAppointment }: HeroSectionProps) {
   return (
     <section className="pt-1 pb-12 sm:pb-16 px-3 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-[1600px] 2xl:max-w-[1760px] mx-auto">
-        {/* HERO BANNER - Exact match to media_1789400631323.png */}
+        {/* MOBILE HERO (< lg) - Exact match to media_1789416076912.png */}
+        <div className="block lg:hidden pt-4 pb-4">
+          {/* Subtitle */}
+          <span className="inline-block text-[11px] font-bold tracking-widest text-indigo-600 uppercase mb-2">
+            / İSTANBUL YÜZ YÜZE &amp; ONLİNE PSİKOLOG /
+          </span>
+
+          {/* Heading */}
+          <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 leading-[1.2] tracking-tight mb-2">
+            Aile ve Evlilik, Çift, İlişki Danışmanı{' '}
+            <span className="font-serif italic font-normal text-slate-900 block mt-1 text-3xl sm:text-4xl">
+              Esra Sayın
+            </span>
+          </h1>
+
+          {/* Separator Line */}
+          <div className="w-full h-[1px] bg-slate-300/80 my-4" />
+
+          {/* Subtext */}
+          <p className="text-slate-600 text-sm leading-relaxed mb-6 font-normal">
+            İstanbul Cihangir&apos;de yüz yüze, Online ile Türkiye&apos;nin ve dünyanın her yerine psikolojik danışmanlık hizmeti veriyorum.
+          </p>
+
+          {/* Buttons Row */}
+          <div className="flex items-center gap-4 mb-6">
+            {onOpenAppointment ? (
+              <button
+                onClick={onOpenAppointment}
+                className="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full border-2 border-indigo-600 text-indigo-700 bg-white hover:bg-indigo-50 font-bold text-xs uppercase tracking-wider transition-all shadow-sm active:scale-95"
+              >
+                <span>RANDEVU AL</span>
+                <ChevronRight className="w-4 h-4 text-indigo-600" />
+              </button>
+            ) : (
+              <Link
+                href="/istanbul-psikolog-randevu/"
+                className="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full border-2 border-indigo-600 text-indigo-700 bg-white hover:bg-indigo-50 font-bold text-xs uppercase tracking-wider transition-all shadow-sm active:scale-95"
+              >
+                <span>RANDEVU AL</span>
+                <ChevronRight className="w-4 h-4 text-indigo-600" />
+              </Link>
+            )}
+
+            <a
+              href={`tel:${SITE_INFO.phone.replace(/\s+/g, '')}`}
+              className="inline-flex items-center justify-center gap-2.5 text-slate-800 hover:text-indigo-600 font-bold text-xs uppercase tracking-wider transition-all"
+            >
+              <div className="w-9 h-9 rounded-full bg-[#2c3e50] flex items-center justify-center shadow-sm flex-shrink-0">
+                <Phone className="w-4 h-4 text-white fill-white" />
+              </div>
+              <span>HEMEN ARAYIN</span>
+            </a>
+          </div>
+
+          {/* Fully visible photo of Esra Sayın under text */}
+          <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-lg border border-slate-100 bg-slate-100">
+            <Image
+              src="/images/psikolog-esra-sayin-updated-hero.webp"
+              alt="Psikolog & Aile Danışmanı Esra Sayın"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-top"
+            />
+          </div>
+        </div>
+
+        {/* DESKTOP HERO BANNER (lg+) - Exact match to media_1789400631323.png */}
         <div
-          className="relative w-full rounded-2xl md:rounded-[2.5rem] overflow-hidden shadow-2xl bg-slate-900 min-h-[580px] sm:min-h-[640px] lg:min-h-[700px] flex items-center p-4 sm:p-8 lg:p-12 xl:p-14 bg-cover bg-no-repeat"
+          className="hidden lg:flex relative w-full rounded-[2.5rem] overflow-hidden shadow-2xl bg-slate-900 min-h-[640px] xl:min-h-[700px] items-center p-8 lg:p-12 xl:p-14 bg-cover bg-no-repeat"
           style={{
             backgroundImage: "url('/images/psikolog-esra-sayin-updated-hero.webp')",
             backgroundPosition: 'right 12% center',
           }}
         >
-          {/* Subtle mobile overlay to ensure readability on small screens */}
-          <div className="absolute inset-0 bg-slate-950/30 lg:hidden pointer-events-none" />
-
           {/* Floating White Card on Left with decore.webp wave background */}
           <div
-            className="relative z-10 w-full max-w-xl xl:max-w-[580px] bg-white rounded-2xl md:rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl border border-slate-100 flex flex-col justify-between bg-no-repeat"
+            className="relative z-10 w-full max-w-xl xl:max-w-[580px] bg-white rounded-3xl p-8 lg:p-10 shadow-2xl border border-slate-100 flex flex-col justify-between bg-no-repeat"
             style={{
               backgroundImage: "url('/images/decore.webp')",
               backgroundPosition: 'top 10% right -10px',
@@ -62,12 +127,12 @@ export default function HeroSection({ onOpenAppointment }: HeroSectionProps) {
           >
             {/* Top Subtitle */}
             <div>
-              <span className="inline-block text-[11px] sm:text-xs font-bold tracking-widest text-indigo-600 uppercase mb-3">
+              <span className="inline-block text-xs font-bold tracking-widest text-indigo-600 uppercase mb-3">
                 / İSTANBUL YÜZ YÜZE &amp; ONLİNE PSİKOLOG /
               </span>
 
               {/* Main Heading matching screenshot */}
-              <h1 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-slate-900 leading-[1.18] tracking-tight mb-2">
+              <h1 className="text-3xl lg:text-[40px] font-bold text-slate-900 leading-[1.18] tracking-tight mb-2">
                 Aile ve Evlilik, Çift, İlişki Danışmanı{' '}
                 <span className="font-serif italic font-normal text-slate-900 block mt-1">
                   Esra Sayın
@@ -79,12 +144,12 @@ export default function HeroSection({ onOpenAppointment }: HeroSectionProps) {
             <div className="w-full h-[1.5px] bg-slate-200/80 my-5 sm:my-6" />
 
             {/* Subtext */}
-            <p className="text-slate-600 text-xs sm:text-sm md:text-[15px] leading-relaxed mb-6 sm:mb-8 font-normal">
+            <p className="text-slate-600 text-[15px] leading-relaxed mb-8 font-normal">
               İstanbul Cihangir&apos;de yüz yüze, Online ile Türkiye&apos;nin ve dünyanın her yerine psikolojik danışmanlık hizmeti veriyorum.
             </p>
 
             {/* Buttons Row */}
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+            <div className="flex items-center gap-4">
               {onOpenAppointment ? (
                 <button
                   onClick={onOpenAppointment}
