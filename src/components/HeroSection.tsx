@@ -38,14 +38,14 @@ export default function HeroSection({ onOpenAppointment }: HeroSectionProps) {
   ];
 
   return (
-    <section className="pt-2 pb-12 sm:pb-16 px-3 sm:px-6 lg:px-8 bg-white">
-      <div className="max-w-[1440px] mx-auto">
+    <section className="pt-1 pb-12 sm:pb-16 px-3 sm:px-6 lg:px-8 bg-white">
+      <div className="max-w-[1600px] 2xl:max-w-[1760px] mx-auto">
         {/* HERO BANNER - Exact match to media_1789400631323.png */}
         <div
-          className="relative w-full rounded-2xl md:rounded-[2.5rem] overflow-hidden shadow-xl bg-slate-900 min-h-[580px] sm:min-h-[640px] lg:min-h-[680px] flex items-center p-4 sm:p-8 lg:p-12 bg-cover bg-no-repeat"
+          className="relative w-full rounded-2xl md:rounded-[2.5rem] overflow-hidden shadow-2xl bg-slate-900 min-h-[580px] sm:min-h-[640px] lg:min-h-[700px] flex items-center p-4 sm:p-8 lg:p-12 xl:p-14 bg-cover bg-no-repeat"
           style={{
             backgroundImage: "url('/images/psikolog-esra-sayin-updated-hero.webp')",
-            backgroundPosition: 'right 20% center',
+            backgroundPosition: 'right 12% center',
           }}
         >
           {/* Subtle mobile overlay to ensure readability on small screens */}
@@ -53,7 +53,7 @@ export default function HeroSection({ onOpenAppointment }: HeroSectionProps) {
 
           {/* Floating White Card on Left with decore.webp wave background */}
           <div
-            className="relative z-10 w-full max-w-xl bg-white rounded-2xl md:rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl border border-slate-100 flex flex-col justify-between bg-no-repeat"
+            className="relative z-10 w-full max-w-xl xl:max-w-[580px] bg-white rounded-2xl md:rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl border border-slate-100 flex flex-col justify-between bg-no-repeat"
             style={{
               backgroundImage: "url('/images/decore.webp')",
               backgroundPosition: 'top 10% right -10px',

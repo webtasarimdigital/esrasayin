@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Award, HeartHandshake, Shield, Sparkles, CheckCircle2 } from 'lucide-react';
+import { HeartHandshake, Shield, Sparkles, CheckCircle2 } from 'lucide-react';
 import HeroSection from '@/components/HeroSection';
 import ServicesGrid from '@/components/ServicesGrid';
 import BlogGrid from '@/components/BlogGrid';
@@ -31,15 +31,6 @@ export default function HomePage() {
                   sizes="(max-width: 768px) 100vw, 450px"
                   className="object-cover"
                 />
-              </div>
-              <div className="absolute -bottom-5 -right-5 hidden sm:flex items-center gap-3 bg-white p-4 rounded-2xl shadow-xl border border-slate-100">
-                <div className="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center">
-                  <Award className="w-6 h-6" />
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-slate-900">Uzman &amp; Akredite</p>
-                  <p className="text-[11px] text-slate-500">BDT &amp; EMDR &amp; Şema Danışmanlık</p>
-                </div>
               </div>
             </div>
 

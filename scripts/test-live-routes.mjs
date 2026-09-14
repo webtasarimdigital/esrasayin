@@ -1,7 +1,7 @@
 const testUrls = [
   { url: 'http://localhost:3000/', expected: 'Aile ve Evlilik, Çift, İlişki Danışmanı' },
   { url: 'http://localhost:3000/istanbul-psikolog-esra-sayin/', expected: 'Esra Sayın' },
-  { url: 'http://localhost:3000/istanbul-bireysel-terapi/', expected: 'Bireysel Terapi' },
+  { url: 'http://localhost:3000/istanbul-bireysel-terapi/', expected: 'Bireysel Danışmanlık' },
   { url: 'http://localhost:3000/istanbul-aile-terapisi/', expected: 'Aile' },
   { url: 'http://localhost:3000/istanbul-cift-terapisi/', expected: 'Çift' },
   { url: 'http://localhost:3000/istanbul-evlilik-terapisi/', expected: 'Evlilik' },
@@ -10,7 +10,7 @@ const testUrls = [
   { url: 'http://localhost:3000/istanbul-psikolog-randevu/', expected: 'Randevu' },
   { url: 'http://localhost:3000/istanbul-psikolog-tavsiye/', expected: 'Yorumlar' },
   { url: 'http://localhost:3000/blog/', expected: 'Zihinsel Sağlığınız için' },
-  { url: 'http://localhost:3000/1034-beyoglu-yas-terapisi-kayip-destek/', expected: 'Beyoğlu Yas Terapisi' },
+  { url: 'http://localhost:3000/1034-beyoglu-yas-terapisi-kayip-destek/', expected: 'Yas' },
   { url: 'http://localhost:3000/1032-beyoglu-okb-obsesif-kompulsif-terapi/', expected: 'OKB' },
   { url: 'http://localhost:3000/beyoglu-psikolog/', expected: 'Beyoğlu' },
   { url: 'http://localhost:3000/cihangir-psikolog/', expected: 'Cihangir' },

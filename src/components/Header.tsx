@@ -16,6 +16,16 @@ export default function Header({ onOpenAppointment }: HeaderProps) {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const pathname = usePathname();
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 15);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   // Close mobile menu on route change
   useEffect(() => {
     setIsMobileMenuOpen(false);
@@ -46,10 +56,16 @@ export default function Header({ onOpenAppointment }: HeaderProps) {
 
   return (
     <>
-      {/* Floating Dark Pill Header (Exact match to media_1789400631323.png on both desktop & mobile) */}
-      <header className="sticky top-0 z-40 pt-3 pb-2 px-3 sm:px-6 lg:px-8 bg-transparent">
-        <div className="max-w-[1440px] mx-auto">
-          <div className="bg-[#2c3e50] rounded-2xl md:rounded-[2rem] px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between shadow-lg border border-white/10 backdrop-blur-md">
+      {/* Floating Dark Pill Header - Sticks cleanly without hollow gap on scroll */}
+      <header
+        className={`sticky top-0 z-50 transition-all duration-300 px-3 sm:px-6 lg:px-8 ${
+          isScrolled
+            ? 'py-2 bg-white/95 backdrop-blur-md shadow-sm'
+            : 'pt-3 pb-2 bg-transparent'
+        }`}
+      >
+        <div className="max-w-[1600px] 2xl:max-w-[1760px] mx-auto">
+          <div className="bg-[#2c3e50] rounded-2xl md:rounded-[2rem] px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between shadow-lg border border-white/10">
             {/* Mobile Hamburger toggle */}
             <div className="flex lg:hidden items-center">
               <button
