@@ -36,76 +36,42 @@ export const SITE_INFO = {
   workingHours: 'Pazartesi - Cumartesi: 09:00 - 20:00 (Pazar: Kapalı veya Randevu ile)',
 };
 
+// 5 Core Services matching the original site's homepage
 export const SERVICES: ServiceItem[] = [
   {
-    title: 'Bireysel Terapi',
+    title: 'Bireysel Danışmanlık',
     slug: 'istanbul-bireysel-terapi',
-    description: 'Bireyin iç dünyasını keşfetmesi, duygusal blokajları çözmesi, kaygı, depresyon ve özgüven konularında güçlenmesi için kişiye özel terapi süreci.',
+    description: 'Bireyin iç dünyasını keşfetmesi, duygusal blokajları çözmesi, kaygı ve özgüven konularında güçlenmesi için kişiye özel psikolojik danışmanlık süreci.',
     image: '/images/bireysel.webp',
     category: 'Bireysel Destek'
   },
   {
-    title: 'Aile Terapisi',
+    title: 'Aile Danışmanlığı',
     slug: 'istanbul-aile-terapisi',
-    description: 'Aile bireyleri arasındaki çatışmaları çözümlemek, sağlıklı sınırlar ve yapıcı iletişim dinamikleri inşa etmek amacıyla uygulanan sistemik yaklaşım.',
+    description: 'Aile bireyleri arasındaki çatışmaları çözümlemek, sağlıklı sınırlar ve yapıcı iletişim dinamikleri inşa etmek amacıyla uygulanan sistemik aile danışmanlığı.',
     image: '/images/aile2.webp',
     category: 'Aile & Evlilik'
   },
   {
-    title: 'Çift Terapisi',
+    title: 'Çift Danışmanlığı',
     slug: 'istanbul-cift-terapisi',
     description: 'İlişkilerde güven problemleri, duygusal kopukluk ve tekrarlayan anlaşmazlıkları aşarak bağı yeniden canlandırmayı hedefleyen profesyonel seanslar.',
     image: '/images/cift.webp',
     category: 'Aile & Evlilik'
   },
   {
-    title: 'Evlilik Terapisi',
+    title: 'Evlilik Danışmanlığı',
     slug: 'istanbul-evlilik-terapisi',
     description: 'Evlilik hazırlığı veya evlilik sürecinde karşılaşılan krizleri aşma, rol çatışmalarını yönetme ve uzun soluklu bir uyum sağlama çalışması.',
     image: '/images/evlilik.webp',
     category: 'Aile & Evlilik'
   },
   {
-    title: 'Cinsel Terapi',
+    title: 'Cinsel Danışmanlık',
     slug: 'istanbul-cinsel-terapi',
-    description: 'Bireysel veya çift olarak yaşanan cinsel işlev kaygıları ve tabuları, bilimsel ve gizlilik odaklı bir çerçevede ele alan psikolojik danışmanlık.',
+    description: 'Bireysel veya çift olarak yaşanan iletişimsel tabuları ve psikolojik kaygıları, bilimsel ve gizlilik odaklı bir çerçevede ele alan danışmanlık süreci.',
     image: '/images/sex.webp',
-    category: 'Özel Alan'
-  },
-  {
-    title: 'EMDR Terapisi',
-    slug: 'emdr-terapisi',
-    description: 'Göz hareketleriyle duyarsızlaştırma ve yeniden işleme tekniğiyle geçmiş travmalar, fobiler ve kaygı bozukluklarında kanıtlanmış etkili yaklaşım.',
-    image: '/images/emdr2-1400x680.webp',
-    category: 'Terapi Ekolü'
-  },
-  {
-    title: 'Bilişsel Davranışçı Terapi (BDT)',
-    slug: 'bilissel-davranisci-terapi',
-    description: 'Düşünce, duygu ve davranış zincirini fark ederek olumsuz düşünce kalıplarını yeniden yapılandıran dünyaca kabul görmüş bilimsel terapi metodu.',
-    image: '/images/bilissel-1400x680.webp',
-    category: 'Terapi Ekolü'
-  },
-  {
-    title: 'Şema Terapi',
-    slug: 'sema-terapi',
-    description: 'Çocukluk döneminde karşılanmamış temel duygusal ihtiyaçlardan köken alan erken dönem uyumsuz şemaları ve kök inançları dönüştürme süreci.',
-    image: '/images/sema-1400x680.webp',
-    category: 'Terapi Ekolü'
-  },
-  {
-    title: 'Ergen Terapisi',
-    slug: 'ergen-terapisi',
-    description: 'Ergenlik çağındaki gençlerin kimlik arayışı, okul başarısı, akran ilişkileri ve aile içi uyum sorunlarına yönelik güvenli rehberlik alanı.',
-    image: '/images/ebeveyn-1400x680.webp',
-    category: 'Gelişim & Ergen'
-  },
-  {
-    title: 'Online Psikolog',
-    slug: 'online-psikolog',
-    description: 'Türkiye’nin ve dünyanın neresinde olursanız olun, mekan sınırlarını aşarak yüksek gizlilik ve konforla online seans deneyimi.',
-    image: '/images/psikolog-esra-sayin-uniform.webp',
-    category: 'Uzaktan Destek'
+    category: 'Özel Danışmanlık Alanı'
   }
 ];
 
@@ -115,8 +81,8 @@ export const TESTIMONIALS: Testimonial[] = [
     date: 'Şubat 2026',
     rating: 5,
     platform: 'DoktorTakvimi',
-    comment: 'Esra Hanım ile geçirdiğimiz çift terapisi süreci evliliğimiz için bir dönüm noktası oldu. Tarafsız, anlayışlı ve profesyonel yaklaşımı sayesinde birbirimizi ilk defa gerçekten dinlemeyi öğrendik.',
-    service: 'Çift Terapisi'
+    comment: 'Esra Hanım ile geçirdiğimiz çift danışmanlığı süreci evliliğimiz için bir dönüm noktası oldu. Tarafsız, anlayışlı ve profesyonel yaklaşımı sayesinde birbirimizi ilk defa gerçekten dinlemeyi öğrendik.',
+    service: 'Çift Danışmanlığı'
   },
   {
     name: 'Mert S.',
@@ -124,7 +90,7 @@ export const TESTIMONIALS: Testimonial[] = [
     rating: 5,
     platform: 'Google',
     comment: 'Cihangir ofisindeki huzurlu atmosfer ve Esra Hanım\'ın derin bilgi birikimi kendimi çok rahat hissetmemi sağladı. Yıllardır süren kaygılarımı yönetmeyi ve hafifletmeyi başardık.',
-    service: 'Bireysel Terapi'
+    service: 'Bireysel Danışmanlık'
   },
   {
     name: 'Zeynep & Emre B.',
@@ -132,30 +98,30 @@ export const TESTIMONIALS: Testimonial[] = [
     rating: 5,
     platform: 'DoktorSitesi',
     comment: 'İlişkimizin en zor günlerinde bize bir yol haritası çizdi. Kendisine ve güler yüzlü ilgisine sonsuz teşekkürler. İstanbul’da gönül rahatlığıyla tavsiye edebileceğim tek uzman.',
-    service: 'Evlilik Terapisi'
+    service: 'Evlilik Danışmanlığı'
   },
   {
     name: 'Burak D.',
     date: 'Kasım 2025',
     rating: 5,
     platform: 'DoktorTakvimi',
-    comment: 'EMDR seansları sayesinde çocukluğumdan beri taşıdığım travmatik yüklerden arındım. Seansların her dakikası çok kıymetliydi.',
-    service: 'EMDR Terapisi'
+    comment: 'Görüşmeler sayesinde çocukluğumdan beri taşıdığım duygusal yükleri anlamlandırdım. Seansların her dakikası çok kıymetliydi.',
+    service: 'Bireysel Danışmanlık'
   },
   {
     name: 'Selin Y.',
     date: 'Ekim 2025',
     rating: 5,
     platform: 'Google',
-    comment: 'Yurt dışından online olarak terapi aldım. Saat farkına rağmen çok uyumlu bir planlama yaptık ve mesafelerin terapiye hiçbir engel olmadığını gördüm.',
-    service: 'Online Terapi'
+    comment: 'Yurt dışından online olarak danışmanlık aldım. Saat farkına rağmen çok uyumlu bir planlama yaptık ve mesafelerin görüşmelere engel olmadığını gördüm.',
+    service: 'Online Danışmanlık'
   }
 ];
 
 export const FAQS = [
   {
     question: 'Psikolojik danışmanlık seansı ne kadar sürer ve sıklığı nedir?',
-    answer: 'Bireysel terapi seansları standart olarak 50 dakika, çift ve aile terapisi seansları ise 60-75 dakika sürmektedir. Görüşmeler danışanın ihtiyacına göre genellikle haftada bir düzenlenir; süreç ilerledikçe seans aralıkları 15 günde bir veya ayda bir olarak kademelendirilebilir.'
+    answer: 'Bireysel danışmanlık seansları standart olarak 50 dakika, çift ve aile danışmanlığı seansları ise 60 dakika sürmektedir. Görüşmeler danışanın ihtiyacına göre genellikle haftada bir düzenlenir; süreç ilerledikçe seans aralıkları 15 günde bir olarak planlanabilir.'
   },
   {
     question: 'Cihangir ofisinde yüz yüze mi yoksa online mı görüşme yapılıyor?',
@@ -166,8 +132,8 @@ export const FAQS = [
     answer: 'Evet. Psikolojik danışmanlık sürecinin en temel kuralı gizlilik ve danışan mahremiyetidir. Görüşme odasında paylaşılan hiçbir bilgi üçüncü şahıslarla, kurumlarla veya aile bireyleriyle kesinlikle paylaşılmaz.'
   },
   {
-    question: 'Hangi terapi ekolleri ve yöntemleri uygulanıyor?',
-    answer: 'Seanslarımızda danışanın getirdiği konunun özelliğine göre Bilişsel Davranışçı Terapi (BDT), Şema Terapi, EMDR (Göz Hareketleriyle Duyarsızlaştırma ve Yeniden İşleme) ve Sistemik Çift & Aile Terapisi ekolleri bütüncül bir yaklaşımla harmanlanarak uygulanmaktadır.'
+    question: 'Hangi ekoller ve yöntemler ile çalışıyorsunuz?',
+    answer: 'Seanslarımızda danışanın getirdiği konunun özelliğine göre Bilişsel Davranışçı Terapi (BDT) ilkeleri, Şema Terapi teknikleri, EMDR yaklaşımları ve Sistemik Çift & Aile Danışmanlığı modellerinden yararlanılarak kişiye özel bir danışmanlık haritası çıkarılmaktadır.'
   },
   {
     question: 'Randevu nasıl alabilirim?',

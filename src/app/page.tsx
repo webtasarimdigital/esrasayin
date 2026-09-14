@@ -38,7 +38,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-slate-900">Uzman &amp; Akredite</p>
-                  <p className="text-[11px] text-slate-500">BDT &amp; EMDR &amp; Şema Terapist</p>
+                  <p className="text-[11px] text-slate-500">BDT &amp; EMDR &amp; Şema Danışmanlık</p>
                 </div>
               </div>
             </div>
@@ -59,7 +59,7 @@ export default function HomePage() {
               </p>
 
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                Bireysel terapi, çift terapisi, evlilik danışmanlığı ve cinsel terapi alanlarında uluslararası akreditasyona sahip <strong>Bilişsel Davranışçı Terapi (BDT)</strong>, <strong>EMDR Terapisi</strong> ve <strong>Şema Terapi</strong> ekollerinden yararlanıyorum. Amacım, danışanlarımın zorlayıcı yaşam döngülerini anlamlandırmalarına, duygusal dayanıklılık kazanmalarına ve sağlıklı ilişkiler kurmalarına destek olmaktır.
+                Bireysel danışmanlık, çift danışmanlığı, evlilik danışmanlığı ve cinsel danışmanlık alanlarında BDT, EMDR ve Şema odaklı yaklaşımlardan yararlanıyorum. Amacım, danışanlarımın zorlayıcı yaşam döngülerini anlamlandırmalarına, duygusal dayanıklılık kazanmalarına ve sağlıklı ilişkiler kurmalarına rehberlik etmektir.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">

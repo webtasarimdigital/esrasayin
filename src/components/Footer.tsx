@@ -70,13 +70,13 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2: Services / Therapies */}
+          {/* Col 2: Services / Counseling */}
           <div className="lg:col-span-3">
             <h3 className="text-white text-sm font-bold uppercase tracking-wider mb-4 border-b border-slate-700/60 pb-2">
-              Terapi Alanları
+              Danışmanlık Alanları
             </h3>
             <ul className="space-y-2 text-xs">
-              {SERVICES.slice(0, 8).map((s) => (
+              {SERVICES.map((s) => (
                 <li key={s.slug}>
                   <Link
                     href={`/${s.slug}/`}
@@ -87,14 +87,6 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  href="/istanbul-terapiler/"
-                  className="text-indigo-400 font-bold hover:underline"
-                >
-                  Tüm Terapileri Görüntüle →
-                </Link>
-              </li>
             </ul>
           </div>
 
