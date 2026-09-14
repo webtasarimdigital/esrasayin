@@ -77,46 +77,79 @@ export const SERVICES: ServiceItem[] = [
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    name: 'Aylin K.',
-    date: 'Şubat 2026',
+    name: 'T... Ü...',
+    date: '2025',
     rating: 5,
-    platform: 'DoktorTakvimi',
-    comment: 'Esra Hanım ile geçirdiğimiz çift danışmanlığı süreci evliliğimiz için bir dönüm noktası oldu. Tarafsız, anlayışlı ve profesyonel yaklaşımı sayesinde birbirimizi ilk defa gerçekten dinlemeyi öğrendik.',
+    platform: 'DoktorSitesi',
+    title: 'Başarılı sonuç aldık',
+    comment: 'Esra hoca birçok alanda çok başarılı bir uzman ama ayrılık aşamasında olan çiftler için kurtarıcı gibi. Yorumlarda az övülmüş. O kadar net ifade edebilirim aldığı başarılı sonuçları. Bizim çok toksik bir birlikteliğimiz vardı açıkçası kendimizin bile kurtulacağına inancımız yoktu ilişkimizin. Çevremizde artık mutsuz ediyorsunuz birbirinizi ayrılın demeye getiriyorlardı birbirimizden yakındığımızda. Kısacası hem kendimizi hem etrafımızı bezdirmiştik. Buradan dönüp nasıl böyle bir çift olduk biz hayret ediyoruz. Etrafımız ise hala şaşkın. Esra hocaya tüm emeği için şükranlarımızı sunuyoruz.',
     service: 'Çift Danışmanlığı'
   },
   {
-    name: 'Mert S.',
-    date: 'Ocak 2026',
+    name: 'T... P...',
+    date: '2025',
     rating: 5,
-    platform: 'Google',
-    comment: 'Cihangir ofisindeki huzurlu atmosfer ve Esra Hanım\'ın derin bilgi birikimi kendimi çok rahat hissetmemi sağladı. Yıllardır süren kaygılarımı yönetmeyi ve hafifletmeyi başardık.',
+    platform: 'DoktorTakvimi',
+    title: 'Dünya standartlarında bir psikolog',
+    comment: 'Kaygı bozukluğu ile korona başından beri mücadele ediyordum. Herkes hayatına döndü ben hep kötü bir şey olacakmış hissi ile başa çıkmaya çalışıyordum. Bu durumun beni tükettiğini hem ben hem de ailem görebiliyorduk. Esra hanım ve ekibi program çıkarmada tam bir usta. Cadde de oturduğum için burada randevu oluşturdum. Hoca üç şubesinde yüz yüze seans veriyormuş. Tüm olumlu geri bildirimleri çokça hak ediyor. Çözüme ulaşmamız hızlı ve kalıcı oldu.',
     service: 'Bireysel Danışmanlık'
   },
   {
-    name: 'Zeynep & Emre B.',
-    date: 'Aralık 2025',
+    name: 'M... O...',
+    date: '2025',
     rating: 5,
-    platform: 'DoktorSitesi',
-    comment: 'İlişkimizin en zor günlerinde bize bir yol haritası çizdi. Kendisine ve güler yüzlü ilgisine sonsuz teşekkürler. İstanbul’da gönül rahatlığıyla tavsiye edebileceğim tek uzman.',
+    platform: 'BulutKlinik',
+    title: 'Online danışmanlığa başladım',
+    comment: 'Biz Hollanda’da yaşadığımız için online seans talep ettik. Eşim de ben de ayrı ayrı destek alıyorduk ama evdeki tartışmalara engel olmuyordu bu durum. Baktık yalnızca ilaç kullanımı ile bir şeyler çözülmeyecek araştırıp Çift danışmanlığına başladık. Esra hoca verdiği programı bizzat takip eden biri. Bu danışanda değer verildiği hissiyatını pekiştiriyor. Seanslarda da hep notlar alır, nokta atışı sorular sorar. Sizlere de gönül rahatlığıyla tavsiye ederiz.',
+    service: 'Online Çift Danışmanlığı'
+  },
+  {
+    name: 'F... Ö...',
+    date: '2025',
+    rating: 5,
+    platform: 'Psikolog Pro',
+    title: 'Evliliğimizde huzuru yakaladık',
+    comment: 'Daha önce tam üç danışmana gittik. Artık demiştik ki galiba biz gelişim gösteremiyoruz çünkü sonuç alamıyoruz. Ta ki tavsiye üzerine Esra hanımın seanslarına katılana kadar. Biz Antalya’da yaşadığımız için online seanslara katıldık ama diğer yüz yüze seanslardan onlarca kat daha verimli olduğunu ikimiz de gördük. Şimdi ilk defa evliliğimizde huzuru yakaladık. Tüm yaşayanlara kesinlikle Esra hocayı tavsiye ediyoruz.',
     service: 'Evlilik Danışmanlığı'
   },
   {
-    name: 'Burak D.',
-    date: 'Kasım 2025',
+    name: 'E... E...',
+    date: '2025',
     rating: 5,
-    platform: 'DoktorTakvimi',
-    comment: 'Görüşmeler sayesinde çocukluğumdan beri taşıdığım duygusal yükleri anlamlandırdım. Seansların her dakikası çok kıymetliydi.',
-    service: 'Bireysel Danışmanlık'
+    platform: 'Türk Hekimleri',
+    title: 'Kesinlikle tavsiye ederim',
+    comment: 'Esra hoca birçok alanda çok başarılı bir uzman ama ayrılık aşamasında olan çiftler için kurtarıcı gibi. Yorumlarda az övülmüş. O kadar net ifade edebilirim aldığı başarılı sonuçları. Esra hocaya tüm emeği için şükranlarımızı sunuyoruz. Hep teşekkürle anıyoruz kendisini ve tavsiye ediyoruz ihtiyacı olduğunu bildiğimiz çiftlere.',
+    service: 'Çift & Aile Danışmanlığı'
   },
   {
-    name: 'Selin Y.',
-    date: 'Ekim 2025',
+    name: 'V... L...',
+    date: '2025',
     rating: 5,
-    platform: 'Google',
-    comment: 'Yurt dışından online olarak danışmanlık aldım. Saat farkına rağmen çok uyumlu bir planlama yaptık ve mesafelerin görüşmelere engel olmadığını gördüm.',
-    service: 'Online Danışmanlık'
+    platform: 'Psikolist',
+    title: 'Çift Danışmanlığı',
+    comment: 'Esra hoca ile ayrılık için gün sayarken tanıştık. Cihangir bize çok yakın olduğu için oraya gittik, tüm seansları orada aldık. Esra hoca etik yaklaşıma önem veren bir uzman. Seansları sorunu hızlı çözüp bitiriyor, çok başarılı bir çalışma sistemine sahip. Çok uzun aylar devam ettirmiyor. Öyle ılımlı bir ortam oluştu ki evimizde ilk defa gelecek planları yapmaya başladık birlikte.',
+    service: 'Çift Danışmanlığı'
+  },
+  {
+    name: 'H...',
+    date: '2025',
+    rating: 5,
+    platform: 'Doktor Uzman',
+    title: 'Çift Danışmanlığı',
+    comment: 'Çift danışmanlığına karşı önyargılarım vardı, ama eşim ısrar etti. İlk seans sonrası iyi ki gelmişiz dedim! Her görüşmede daha bilinçli, daha anlayışlı bireyler olduk. Ailemizi tekrar kurduk desem abartmış olmam.',
+    service: 'Çift Danışmanlığı'
+  },
+  {
+    name: 'A... K...',
+    date: '2025',
+    rating: 5,
+    platform: 'PsikolojiPark',
+    title: 'Ergen Danışmanlığı',
+    comment: 'Oğlumuz lisede okuyor. Bu sene bize karşı çok isyankardı ve ders notları da çok düşmüştü. Tavsiye üzerine Esra hanıma başvurduk ve çok güzel sonuçlar aldık. Hem dersleri çok düzeldi hem de bize karşı eskisi gibi sevgi saygıyı eksik etmiyor. Tüm ailelere kesinlikle öneriyoruz.',
+    service: 'Ergen Danışmanlığı'
   }
 ];
+
 
 export const FAQS = [
   {

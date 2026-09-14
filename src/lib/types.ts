@@ -49,7 +49,9 @@ export interface Testimonial {
   name: string;
   date: string;
   rating: number;
-  platform: 'DoktorTakvimi' | 'Google' | 'DoktorSitesi';
+  platform: string;
   comment: string;
   service?: string;
+  title?: string;
 }
+

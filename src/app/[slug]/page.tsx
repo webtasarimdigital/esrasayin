@@ -337,7 +337,7 @@ export default function DynamicSlugPage({ params }: PageProps) {
             )}
 
             {/* Standard Service Page Layout (Exact match to media_1789415391296.png - Görsel 5) */}
-            {!isContactPage && !isAppointmentPage && (
+            {!isContactPage && !isAppointmentPage && !isReviewPage && (
               <>
                 {/* Large Featured Image */}
                 <div className="max-w-4xl mx-auto relative aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-slate-100 mb-12 bg-slate-100">
