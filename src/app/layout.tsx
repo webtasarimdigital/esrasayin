@@ -69,6 +69,15 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: [
+      { url: '/images/fav-icon-esra-sayin.png', type: 'image/png' },
+      { url: '/favicon.ico' },
+    ],
+    apple: [
+      { url: '/images/fav-icon-esra-sayin.png', type: 'image/png' },
+    ],
+  },
 };
 
 export default function RootLayout({
