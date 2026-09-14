@@ -38,60 +38,6 @@ export default function ServicesIndexView() {
       image: '/images/sex.webp',
       badge: 'İstanbul / Online',
     },
-    {
-      title: 'EMDR Danışmanlığı',
-      href: '/emdr-terapisi/',
-      image: '/images/emdr2-1400x680.webp',
-      badge: 'Bilimsel Ekol',
-    },
-    {
-      title: 'BDT (Bilişsel Davranışçı)',
-      href: '/bilissel-davranisci-terapi/',
-      image: '/images/bilissel-1400x680.webp',
-      badge: 'Bilimsel Ekol',
-    },
-    {
-      title: 'Şema Danışmanlık',
-      href: '/sema-terapi/',
-      image: '/images/sema-1400x680.webp',
-      badge: 'Bilimsel Ekol',
-    },
-    {
-      title: 'Ergen Danışmanlığı',
-      href: '/ergen-terapisi/',
-      image: '/images/ebeveyn-1400x680.webp',
-      badge: '12+ Yaş',
-    },
-    {
-      title: 'Fobi & Korku Danışmanlığı',
-      href: '/fobi-korku-terapisi/',
-      image: '/images/fobi-1-1400x680.webp',
-      badge: 'Uzmanlık',
-    },
-    {
-      title: 'Kaygı Bozuklukları',
-      href: '/kaygi-bozukluklari/',
-      image: '/images/kaygi-1400x680.webp',
-      badge: 'Uzmanlık',
-    },
-    {
-      title: 'Panik Atak',
-      href: '/panik-atak/',
-      image: '/images/panik-1400x680.webp',
-      badge: 'Uzmanlık',
-    },
-    {
-      title: 'Stres Yönetimi',
-      href: '/stres-yonetimi/',
-      image: '/images/stres-yoneim-1400x680.webp',
-      badge: 'Danışmanlık',
-    },
-    {
-      title: 'Sistematik Aile Danışmanlığı',
-      href: '/573-sistematik-aile-terapisi-nedir-nasil-uygulanir/',
-      image: '/images/aile-terapisi-1400x680.webp',
-      badge: 'Sistemik Yaklaşım',
-    },
   ];
 
   return (
@@ -112,8 +58,8 @@ export default function ServicesIndexView() {
           </nav>
         </div>
 
-        {/* Services Grid - Exact match to media_1789415309116.png (Görsel 3) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+        {/* Services Grid - 1 Promo Card + 5 Service Cards = Exactly 6 cards (2x3 Grid) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {/* Left Intro Card with Button */}
           <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between">
             <div>
