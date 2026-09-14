@@ -56,38 +56,38 @@ export default function Header({ onOpenAppointment }: HeaderProps) {
 
   return (
     <>
-      {/* Floating Dark Pill Header - Sticks cleanly without hollow gap on scroll */}
+      {/* Floating Dark Pill Header - Enlarged & prominent */}
       <header
         className={`sticky top-0 z-50 transition-all duration-300 px-3 sm:px-6 lg:px-8 ${
           isScrolled
-            ? 'py-2 bg-white/95 backdrop-blur-md shadow-sm'
-            : 'pt-3 pb-2 bg-transparent'
+            ? 'py-2.5 sm:py-3 bg-white/95 backdrop-blur-md shadow-md'
+            : 'pt-3 sm:pt-4 pb-2 sm:pb-3 bg-transparent'
         }`}
       >
-        <div className="max-w-[1600px] 2xl:max-w-[1760px] mx-auto">
-          <div className="bg-[#2c3e50] rounded-2xl md:rounded-[2rem] px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between shadow-lg border border-white/10">
+        <div className="max-w-[1680px] 2xl:max-w-[1780px] mx-auto">
+          <div className="bg-[#2c3e50] rounded-2xl md:rounded-[2.2rem] px-5 sm:px-8 py-3.5 sm:py-4.5 md:py-5 flex items-center justify-between shadow-xl border border-white/10">
             {/* Mobile Hamburger toggle */}
             <div className="flex lg:hidden items-center">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-label="Menüyü Aç"
-                className="w-10 h-10 rounded-full bg-white/10 active:bg-white/20 flex items-center justify-center text-white transition-colors"
+                className="w-11 h-11 rounded-full bg-white/10 active:bg-white/20 flex items-center justify-center text-white transition-colors"
               >
                 {isMobileMenuOpen ? (
-                  <X className="w-5 h-5 text-white" />
+                  <X className="w-6 h-6 text-white" />
                 ) : (
-                  <Menu className="w-5 h-5 text-white" />
+                  <Menu className="w-6 h-6 text-white" />
                 )}
               </button>
             </div>
 
-            {/* Logo on Left */}
+            {/* Logo on Left - Enlarged */}
             <div className="flex items-center">
-              <Logo light showText className="scale-95 sm:scale-100" />
+              <Logo light showText className="scale-100 sm:scale-105 md:scale-110 origin-left" />
             </div>
 
-            {/* Desktop Navigation Links (Center) */}
-            <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+            {/* Desktop Navigation Links (Center) - Larger font and generous spacing */}
+            <nav className="hidden lg:flex items-center gap-7 xl:gap-9">
               {navLinks.map((link) => {
                 const isActive =
                   pathname === link.href ||
@@ -103,23 +103,23 @@ export default function Header({ onOpenAppointment }: HeaderProps) {
                     >
                       <Link
                         href={link.href}
-                        className={`flex items-center gap-1 text-[13px] font-semibold tracking-wide transition-colors py-1 ${
+                        className={`flex items-center gap-1.5 text-[14px] xl:text-[15px] font-semibold tracking-wide transition-colors py-1 ${
                           isActive
                             ? 'text-white font-bold'
                             : 'text-gray-200 hover:text-white'
                         }`}
                       >
                         <span>{link.name}</span>
-                        <ChevronDown className="w-3.5 h-3.5 text-gray-300" />
+                        <ChevronDown className="w-4 h-4 text-gray-300" />
                       </Link>
 
                       {isServicesOpen && (
-                        <div className="absolute top-full left-1/2 -translate-x-1/2 w-64 bg-white rounded-2xl shadow-2xl border border-slate-100 py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 w-68 bg-white rounded-2xl shadow-2xl border border-slate-100 py-2.5 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
                           {link.dropdown.map((subItem) => (
                             <Link
                               key={subItem.href}
                               href={subItem.href}
-                              className="block px-4 py-2 text-xs font-medium text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                              className="block px-4 py-2 text-xs sm:text-[13px] font-medium text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
                             >
                               {subItem.name}
                             </Link>
@@ -134,7 +134,7 @@ export default function Header({ onOpenAppointment }: HeaderProps) {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`text-[13px] font-semibold tracking-wide transition-colors ${
+                    className={`text-[14px] xl:text-[15px] font-semibold tracking-wide transition-colors ${
                       isActive
                         ? 'text-white font-bold underline decoration-indigo-400 decoration-2 underline-offset-8'
                         : 'text-gray-200 hover:text-white'
@@ -146,23 +146,23 @@ export default function Header({ onOpenAppointment }: HeaderProps) {
               })}
             </nav>
 
-            {/* Right: RANDEVU AL Pill Button */}
+            {/* Right: RANDEVU AL Pill Button - Larger & more prominent */}
             <div className="flex items-center">
               {onOpenAppointment ? (
                 <button
                   onClick={onOpenAppointment}
-                  className="px-5 sm:px-6 py-2 rounded-full border border-indigo-300/40 hover:border-white/60 bg-white/5 hover:bg-white/15 text-white text-xs font-bold tracking-wider transition-all uppercase inline-flex items-center gap-1.5 shadow-sm active:scale-95"
+                  className="px-6 sm:px-7 py-2.5 sm:py-3 rounded-full border border-indigo-300/40 hover:border-white/60 bg-white/5 hover:bg-white/15 text-white text-xs sm:text-[13px] font-bold tracking-wider transition-all uppercase inline-flex items-center gap-2 shadow-sm active:scale-95"
                 >
                   <span>RANDEVU AL</span>
-                  <ChevronRight className="w-3.5 h-3.5 text-white" />
+                  <ChevronRight className="w-4 h-4 text-white" />
                 </button>
               ) : (
                 <Link
                   href="/istanbul-psikolog-randevu/"
-                  className="px-5 sm:px-6 py-2 rounded-full border border-indigo-300/40 hover:border-white/60 bg-white/5 hover:bg-white/15 text-white text-xs font-bold tracking-wider transition-all uppercase inline-flex items-center gap-1.5 shadow-sm active:scale-95"
+                  className="px-6 sm:px-7 py-2.5 sm:py-3 rounded-full border border-indigo-300/40 hover:border-white/60 bg-white/5 hover:bg-white/15 text-white text-xs sm:text-[13px] font-bold tracking-wider transition-all uppercase inline-flex items-center gap-2 shadow-sm active:scale-95"
                 >
                   <span>RANDEVU AL</span>
-                  <ChevronRight className="w-3.5 h-3.5 text-white" />
+                  <ChevronRight className="w-4 h-4 text-white" />
                 </Link>
               )}
             </div>
