@@ -1,0 +1,227 @@
+[
+  {
+    "id": 6,
+    "count": 1,
+    "description": "",
+    "link": "https://esrasayin.com.tr/category/aile-psikolojisi/",
+    "name": "Aile Psikolojisi",
+    "slug": "aile-psikolojisi",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://esrasayin.com.tr/wp-json/wp/v2/categories/6",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://esrasayin.com.tr/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://esrasayin.com.tr/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://esrasayin.com.tr/wp-json/wp/v2/posts?categories=6"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "count": 25,
+    "description": "",
+    "link": "https://esrasayin.com.tr/category/bireysel-psikoloji/",
+    "name": "Bireysel Psikoloji",
+    "slug": "bireysel-psikoloji",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://esrasayin.com.tr/wp-json/wp/v2/categories/5",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://esrasayin.com.tr/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://esrasayin.com.tr/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://esrasayin.com.tr/wp-json/wp/v2/posts?categories=5"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "count": 2,
+    "description": "",
+    "link": "https://esrasayin.com.tr/category/cift-psikolojisi/",
+    "name": "Çift Psikolojisi",
+    "slug": "cift-psikolojisi",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://esrasayin.com.tr/wp-json/wp/v2/categories/4",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://esrasayin.com.tr/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://esrasayin.com.tr/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://esrasayin.com.tr/wp-json/wp/v2/posts?categories=4"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "count": 2,
+    "description": "",
+    "link": "https://esrasayin.com.tr/category/cocuk-psikolojisi/",
+    "name": "Çocuk Psikolojisi",
+    "slug": "cocuk-psikolojisi",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://esrasayin.com.tr/wp-json/wp/v2/categories/2",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://esrasayin.com.tr/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://esrasayin.com.tr/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://esrasayin.com.tr/wp-json/wp/v2/posts?categories=2"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1,
+    "count": 7,
+    "description": "",
+    "link": "https://esrasayin.com.tr/category/genel/",
+    "name": "Genel",
+    "slug": "genel",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://esrasayin.com.tr/wp-json/wp/v2/categories/1",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://esrasayin.com.tr/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://esrasayin.com.tr/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://esrasayin.com.tr/wp-json/wp/v2/posts?categories=1"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]
