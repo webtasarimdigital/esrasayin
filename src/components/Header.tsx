@@ -119,56 +119,44 @@ export default function Header({ onOpenAppointment }: HeaderProps) {
         </div>
       </header>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Drawer Menu - Exact match to media_1789438440278.png */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-sm animate-in fade-in">
-          <div className="fixed inset-y-0 left-0 w-[82%] max-w-sm bg-white shadow-2xl flex flex-col justify-between p-6 overflow-y-auto animate-in slide-in-from-left duration-200">
-            <div>
-              <div className="flex items-center justify-between pb-5 border-b border-slate-100">
-                <Logo showText />
-                <button
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="p-2 rounded-full hover:bg-slate-100 text-slate-600"
-                >
-                  <X className="w-6 h-6" />
-                </button>
-              </div>
-
-              <div className="mt-6 flex flex-col space-y-1">
-                {navLinks.map((link) => (
-                  <div key={link.name} className="py-1">
-                    <Link
-                      href={link.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className={`block px-3 py-2.5 rounded-lg text-sm font-semibold ${
-                        pathname === link.href
-                          ? 'bg-indigo-50 text-indigo-700'
-                          : 'text-slate-800 hover:bg-slate-50'
-                      }`}
-                    >
-                      {link.name}
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-8 pt-6 border-t border-slate-100 space-y-3">
-              <a
-                href={`tel:${SITE_INFO.phone.replace(/\s+/g, '')}`}
-                className="w-full flex items-center justify-center gap-2 bg-[#2c3e50] text-white py-3 rounded-xl font-bold text-sm"
-              >
-                <span>Hemen Ara: {SITE_INFO.phone}</span>
-              </a>
-
-              <Link
-                href="/istanbul-psikolog-randevu/"
+        <div
+          className="lg:hidden fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-sm transition-opacity"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          <div
+            className="fixed inset-y-0 left-0 w-[75%] max-w-xs bg-[#2c3e50] shadow-2xl p-6 sm:p-7 flex flex-col justify-start overflow-y-auto animate-in slide-in-from-left duration-200"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Top: Logo & Circular White Close Button */}
+            <div className="flex items-center justify-between pb-6 pt-1">
+              <Logo light showText className="scale-95 origin-left" />
+              <button
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center gap-2 border-2 border-[#2c3e50] text-[#2c3e50] py-2.5 rounded-xl font-bold text-sm hover:bg-slate-50"
+                aria-label="Kapat"
+                className="w-9 h-9 rounded-full bg-white flex items-center justify-center text-slate-800 shadow-md hover:bg-slate-100 transition-colors flex-shrink-0 ml-2"
               >
-                <span>Randevu Oluştur</span>
-              </Link>
+                <X className="w-5 h-5 text-slate-800 stroke-[2.5]" />
+              </button>
             </div>
+
+            {/* Menu Links - Pure clean white text list matching media_1789438440278.png */}
+            <nav className="mt-4 flex flex-col space-y-6">
+              {[
+                ...navLinks,
+                { name: 'Randevu Al', href: '/istanbul-psikolog-randevu/' },
+              ].map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block text-[20px] sm:text-[22px] text-white font-normal hover:text-indigo-200 transition-colors tracking-wide"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </nav>
           </div>
         </div>
       )}
