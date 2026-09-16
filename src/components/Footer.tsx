@@ -26,7 +26,7 @@ export default function Footer() {
           <div className="lg:col-span-4 space-y-4">
             <Logo light showText />
             <p className="text-slate-300 text-sm sm:text-[15px] leading-relaxed mt-4">
-              Uzman Psikolog &amp; Aile Danışmanı Esra Sayın, İstanbul Cihangir’deki ofisinde yüz yüze ve online platformlarda bilimsel ekollerle bireysel, çift ve aile danışmanlığı hizmeti sunmaktadır.
+              Psikolog &amp; Aile Danışmanı Esra Sayın, İstanbul Cihangir’deki ofisinde yüz yüze ve online platformlarda bilimsel ekollerle bireysel, çift ve aile danışmanlığı hizmeti sunmaktadır.
             </p>
 
             <div className="flex items-center gap-3 pt-2">

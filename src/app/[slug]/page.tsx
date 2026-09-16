@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const canonical = `${SITE_INFO.url}/${post.permalink}/`;
     return {
       title: post.title,
-      description: post.excerpt || `${post.title} hakkında Uzman Psikolog Esra Sayın bilgilendirme rehberi.`,
+      description: post.excerpt || `${post.title} hakkında Psikolog Esra Sayın bilgilendirme rehberi.`,
       alternates: {
         canonical,
       },
@@ -74,7 +74,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const canonical = `${SITE_INFO.url}/${page.permalink}/`;
     return {
       title: page.title,
-      description: page.excerpt || `${page.title} - Uzman Psikolog & Aile Danışmanı Esra Sayın.`,
+      description: page.excerpt || `${page.title} - Psikolog & Aile Danışmanı Esra Sayın.`,
       alternates: {
         canonical,
       },
@@ -192,7 +192,7 @@ export default function DynamicSlugPage({ params }: PageProps) {
                         Bireysel Danışmanlık
                       </h4>
                       <p className="text-xs text-slate-500 mt-1 line-clamp-2">
-                        Danışmanlık seansları ile sorunlarınızı geride bırakmanıza yardımcı olur.
+                        Danışmanlık süreci ile sorunlarınızı geride bırakmanıza yardımcı olur.
                       </p>
                       <span className="text-xs font-bold text-indigo-600 inline-flex items-center gap-1 mt-2">
                         <span>İncele</span>
@@ -213,7 +213,7 @@ export default function DynamicSlugPage({ params }: PageProps) {
                         Aile Danışmanlığı
                       </h4>
                       <p className="text-xs text-slate-500 mt-1 line-clamp-2">
-                        Seanslara başlayarak bu bağı güçlendirin ve sorunlarınızı çözün.
+                        Danışmanlığa başlayarak bu bağı güçlendirin ve sorunlarınızı çözün.
                       </p>
                       <span className="text-xs font-bold text-indigo-600 inline-flex items-center gap-1 mt-2">
                         <span>İncele</span>
@@ -381,7 +381,7 @@ export default function DynamicSlugPage({ params }: PageProps) {
                               Bireysel Danışmanlık
                             </h4>
                             <p className="text-xs text-slate-500 mt-1 leading-relaxed">
-                              Aile ve Evlilik, Çift, İlişki Danışmanı Esra SAYIN, danışmanlık seansları ile sorunlarınızı geride bırakmanıza yardımcı olur.
+                              Aile ve Evlilik, Çift, İlişki Danışmanı Esra SAYIN, danışmanlık süreci ile sorunlarınızı geride bırakmanıza yardımcı olur.
                             </p>
                           </div>
                         </div>
@@ -403,7 +403,7 @@ export default function DynamicSlugPage({ params }: PageProps) {
                               Aile Danışmanlığı
                             </h4>
                             <p className="text-xs text-slate-500 mt-1 leading-relaxed">
-                              Aile karmaşık ancak bağları güçlü bir yapıdır. Seanslara başlayarak bu bağı güçlendirin ve sorunlarınızı çözün.
+                              Aile karmaşık ancak bağları güçlü bir yapıdır. Danışmanlığa başlayarak bu bağı güçlendirin ve sorunlarınızı çözün.
                             </p>
                           </div>
                         </div>

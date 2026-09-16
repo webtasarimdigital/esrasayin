@@ -6,7 +6,7 @@ import { getBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Psikoloji & Mental Sağlık Blogu',
-  description: 'Uzman Psikolog Esra Sayın tarafından kaleme alınan kaygı, ilişki sorunları, EMDR, aile iletişimi ve ruh sağlığı üzerine rehber niteliğinde blog yazıları.',
+  description: 'Psikolog Esra Sayın tarafından kaleme alınan kaygı, ilişki sorunları, EMDR, aile iletişimi ve ruh sağlığı üzerine rehber niteliğinde blog yazıları.',
   alternates: {
     canonical: `${SITE_INFO.url}/blog/`,
   },
@@ -40,7 +40,7 @@ export default function BlogIndexPage() {
               blog yazıları
             </h1>
             <p className="text-slate-600 text-sm sm:text-base mt-4 max-w-2xl mx-auto leading-relaxed">
-              Kaygı bozuklukları, çift ilişkileri, travma, yas süreci ve psikoterapi ekolleri üzerine güncel, bilimsel ve rehber niteliğinde makaleler.
+              Kaygı bozuklukları, çift ilişkileri, travma, yas süreci ve danışmanlık ekolleri üzerine güncel, bilimsel ve rehber niteliğinde makaleler.
             </p>
           </div>
 

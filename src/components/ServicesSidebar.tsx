@@ -75,7 +75,7 @@ export default function ServicesSidebar({ currentSlug = '', onOpenAppointment }:
         </p>
 
         <h4 className="text-2xl font-bold font-serif italic text-slate-900 mt-1 mb-5">
-          Seanslara Başlayın
+          Görüşmelere Başlayın
         </h4>
 
         {onOpenAppointment ? (

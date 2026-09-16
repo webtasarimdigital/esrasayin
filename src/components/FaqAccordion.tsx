@@ -34,7 +34,7 @@ export default function FaqAccordion({
             {subtitle}
           </span>
           <h2 className="text-3xl sm:text-4xl font-medium tracking-tight text-slate-900 mt-2">
-            Terapi ve Randevu Süreci Hakkında{' '}
+            Danışmanlık ve Randevu Süreci Hakkında{' '}
             <span className="font-serif italic font-normal text-slate-800">
               {title}
             </span>

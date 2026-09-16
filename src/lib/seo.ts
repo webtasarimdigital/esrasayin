@@ -58,7 +58,7 @@ export function getPersonSchema() {
     '@type': 'Person',
     '@id': `${SITE_INFO.url}/#person`,
     name: 'Esra Sayın',
-    jobTitle: 'Uzman Psikolog & Aile Danışmanı',
+    jobTitle: 'Psikolog & Aile Danışmanı',
     url: SITE_INFO.url,
     image: `${SITE_INFO.url}/images/psikolog-esra-sayin-updated-hero.webp`,
     worksFor: {

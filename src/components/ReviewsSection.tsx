@@ -17,7 +17,7 @@ export default function ReviewsSection() {
       url: SITE_INFO.socials.doktorSitesi,
     },
     {
-      name: 'BulutKlinik',
+      name: 'BulutPlatform',
       image: '/images/bulutklinik-randevu.webp',
       url: 'https://bulutklinik.com/dr-esra-sayin',
     },
@@ -37,7 +37,7 @@ export default function ReviewsSection() {
       url: 'https://psikolist.com/uzmanlar/detay/esra-sayin/R0XvNyL',
     },
     {
-      name: 'Doktor Uzman',
+      name: 'Doktor Portalı',
       image: '/images/doktoruzman.webp',
       url: 'https://www.doktoruzman.com/uzman/esra-sayin/psikoloji/istanbul',
     },

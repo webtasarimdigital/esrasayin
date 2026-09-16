@@ -224,7 +224,7 @@ export default function ContactSection() {
                       required
                       value={formState.message}
                       onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                      placeholder="Danışmanlıklar, seanslar veya randevu hakkında merak ettiklerinizi paylaşabilirsiniz..."
+                      placeholder="Danışmanlıklar veya randevu hakkında merak ettiklerinizi paylaşabilirsiniz..."
                       className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm text-slate-800"
                     />
                   </div>

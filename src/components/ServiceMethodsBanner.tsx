@@ -62,8 +62,8 @@ export default function ServiceMethodsBanner({ onOpenAppointment }: ServiceMetho
               </h3>
               <p className="text-slate-300 text-sm sm:text-[15px] leading-relaxed mb-8">
                 {activeTab === 'online'
-                  ? "Online danışmanlık seanslarına katılarak Türkiye'nin ve dünyanın herhangi bir yerinden seanslara katılabilirsiniz. Yüz yüze danışmanlık ve online danışmanlık arasında hiçbir fark yoktur. Danışmanlık süreci, online seanslarda da yüz yüze seanslarda olduğu gibi gerçekleşmektedir."
-                  : "İstanbul Beyoğlu Cihangir'deki Sıraselviler Caddesi üzerinde yer alan ofisimizde, sakin ve güvenli bir ortamda yüz yüze seanslar gerçekleştirilmektedir. Tüm görüşmeler koşulsuz gizlilik ve profesyonel etik kuralları çerçevesinde yürütülür."}
+                  ? "Online danışmanlık sürecine katılarak Türkiye'nin ve dünyanın herhangi bir yerinden görüşmelere katılabilirsiniz. Yüz yüze danışmanlık ve online danışmanlık arasında hiçbir fark yoktur. Danışmanlık süreci, online görüşmelerde de yüz yüze görüşmelerde olduğu gibi güvenle gerçekleşmektedir."
+                  : "İstanbul Beyoğlu Cihangir'deki Sıraselviler Caddesi üzerinde yer alan ofisimizde, sakin ve güvenli bir ortamda yüz yüze görüşmeler gerçekleştirilmektedir. Tüm görüşmeler koşulsuz gizlilik ve profesyonel etik kuralları çerçevesinde yürütülür."}
               </p>
             </div>
 

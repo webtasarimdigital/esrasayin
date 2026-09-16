@@ -11,7 +11,7 @@ export const SITE_INFO = {
   name: 'Psikolog & Aile Danışmanı Esra SAYIN',
   shortName: 'Esra Sayın',
   title: 'İstanbul Psikolog Esra Sayın - Şişli, Cihangir, Beyoğlu, Nişantaşı - Online',
-  description: "İstanbul'da Şişli, Cihangir, Beyoğlu, Nişantaşı konumlarında yüz yüze Uzman Psikolog & Aile Danışmanı Esra Sayın'dan randevu alın.",
+  description: "İstanbul'da Şişli, Cihangir, Beyoğlu, Nişantaşı konumlarında yüz yüze Psikolog & Aile Danışmanı Esra Sayın'dan randevu alın.",
   url: 'https://esrasayin.com.tr',
   phone: '0538 650 32 17',
   phoneFormatted: '+90 538 650 32 17',
@@ -55,7 +55,7 @@ export const SERVICES: ServiceItem[] = [
   {
     title: 'Çift Danışmanlığı',
     slug: 'istanbul-cift-terapisi',
-    description: 'İlişkilerde güven problemleri, duygusal kopukluk ve tekrarlayan anlaşmazlıkları aşarak bağı yeniden canlandırmayı hedefleyen profesyonel seanslar.',
+    description: 'İlişkilerde güven problemleri, duygusal kopukluk ve tekrarlayan anlaşmazlıkları aşarak bağı yeniden canlandırmayı hedefleyen profesyonel görüşmeler.',
     image: '/images/cift.webp',
     category: 'Aile & Evlilik'
   },
@@ -82,7 +82,7 @@ export const TESTIMONIALS: Testimonial[] = [
     rating: 5,
     platform: 'DoktorSitesi',
     title: 'Başarılı sonuç aldık',
-    comment: 'Esra hoca birçok alanda çok başarılı bir uzman ama ayrılık aşamasında olan çiftler için kurtarıcı gibi. Yorumlarda az övülmüş. O kadar net ifade edebilirim aldığı başarılı sonuçları. Bizim çok toksik bir birlikteliğimiz vardı açıkçası kendimizin bile kurtulacağına inancımız yoktu ilişkimizin. Çevremizde artık mutsuz ediyorsunuz birbirinizi ayrılın demeye getiriyorlardı birbirimizden yakındığımızda. Kısacası hem kendimizi hem etrafımızı bezdirmiştik. Buradan dönüp nasıl böyle bir çift olduk biz hayret ediyoruz. Etrafımız ise hala şaşkın. Esra hocaya tüm emeği için şükranlarımızı sunuyoruz.',
+    comment: 'Esra hoca birçok alanda çok başarılı bir danışman ama ayrılık aşamasında olan çiftler için kurtarıcı gibi. Yorumlarda az övülmüş. O kadar net ifade edebilirim aldığı başarılı sonuçları. Bizim çok toksik bir birlikteliğimiz vardı açıkçası kendimizin bile kurtulacağına inancımız yoktu ilişkimizin. Çevremizde artık mutsuz ediyorsunuz birbirinizi ayrılın demeye getiriyorlardı birbirimizden yakındığımızda. Kısacası hem kendimizi hem etrafımızı bezdirmiştik. Buradan dönüp nasıl böyle bir çift olduk biz hayret ediyoruz. Etrafımız ise hala şaşkın. Esra hocaya tüm emeği için şükranlarımızı sunuyoruz.',
     service: 'Çift Danışmanlığı'
   },
   {
@@ -91,16 +91,16 @@ export const TESTIMONIALS: Testimonial[] = [
     rating: 5,
     platform: 'DoktorTakvimi',
     title: 'Dünya standartlarında bir psikolog',
-    comment: 'Kaygı bozukluğu ile korona başından beri mücadele ediyordum. Herkes hayatına döndü ben hep kötü bir şey olacakmış hissi ile başa çıkmaya çalışıyordum. Bu durumun beni tükettiğini hem ben hem de ailem görebiliyorduk. Esra hanım ve ekibi program çıkarmada tam bir usta. Cadde de oturduğum için burada randevu oluşturdum. Hoca üç şubesinde yüz yüze seans veriyormuş. Tüm olumlu geri bildirimleri çokça hak ediyor. Çözüme ulaşmamız hızlı ve kalıcı oldu.',
+    comment: 'Kaygı bozukluğu ile korona başından beri mücadele ediyordum. Herkes hayatına döndü ben hep kötü bir şey olacakmış hissi ile başa çıkmaya çalışıyordum. Bu durumun beni tükettiğini hem ben hem de ailem görebiliyorduk. Esra hanım ve ekibi program çıkarmada tam bir usta. Cadde de oturduğum için burada randevu oluşturdum. Hoca üç şubesinde yüz yüze danışmanlık veriyormuş. Tüm olumlu geri bildirimleri çokça hak ediyor. Çözüme ulaşmamız hızlı ve kalıcı oldu.',
     service: 'Bireysel Danışmanlık'
   },
   {
     name: 'M... O...',
     date: '2025',
     rating: 5,
-    platform: 'BulutKlinik',
+    platform: 'BulutPlatform',
     title: 'Online danışmanlığa başladım',
-    comment: 'Biz Hollanda’da yaşadığımız için online seans talep ettik. Eşim de ben de ayrı ayrı destek alıyorduk ama evdeki tartışmalara engel olmuyordu bu durum. Baktık yalnızca ilaç kullanımı ile bir şeyler çözülmeyecek araştırıp Çift danışmanlığına başladık. Esra hoca verdiği programı bizzat takip eden biri. Bu danışanda değer verildiği hissiyatını pekiştiriyor. Seanslarda da hep notlar alır, nokta atışı sorular sorar. Sizlere de gönül rahatlığıyla tavsiye ederiz.',
+    comment: 'Biz Hollanda’da yaşadığımız için online görüşme talep ettik. Eşim de ben de ayrı ayrı destek alıyorduk ama evdeki tartışmalara engel olmuyordu bu durum. Baktık yalnızca ilaç kullanımı ile bir şeyler çözülmeyecek araştırıp Çift danışmanlığına başladık. Esra hoca verdiği programı bizzat takip eden biri. Bu danışanda değer verildiği hissiyatını pekiştiriyor. Görüşmelerde de hep notlar alır, nokta atışı sorular sorar. Sizlere de gönül rahatlığıyla tavsiye ederiz.',
     service: 'Online Çift Danışmanlığı'
   },
   {
@@ -109,7 +109,7 @@ export const TESTIMONIALS: Testimonial[] = [
     rating: 5,
     platform: 'Psikolog Pro',
     title: 'Evliliğimizde huzuru yakaladık',
-    comment: 'Daha önce tam üç danışmana gittik. Artık demiştik ki galiba biz gelişim gösteremiyoruz çünkü sonuç alamıyoruz. Ta ki tavsiye üzerine Esra hanımın seanslarına katılana kadar. Biz Antalya’da yaşadığımız için online seanslara katıldık ama diğer yüz yüze seanslardan onlarca kat daha verimli olduğunu ikimiz de gördük. Şimdi ilk defa evliliğimizde huzuru yakaladık. Tüm yaşayanlara kesinlikle Esra hocayı tavsiye ediyoruz.',
+    comment: 'Daha önce tam üç danışmana gittik. Artık demiştik ki galiba biz gelişim gösteremiyoruz çünkü sonuç alamıyoruz. Ta ki tavsiye üzerine Esra hanımın danışmanlığına katılana kadar. Biz Antalya’da yaşadığımız için online görüşmelere katıldık ama diğer yüz yüze görüşmelerden onlarca kat daha verimli olduğunu ikimiz de gördük. Şimdi ilk defa evliliğimizde huzuru yakaladık. Tüm yaşayanlara kesinlikle Esra hocayı tavsiye ediyoruz.',
     service: 'Evlilik Danışmanlığı'
   },
   {
@@ -118,7 +118,7 @@ export const TESTIMONIALS: Testimonial[] = [
     rating: 5,
     platform: 'Türk Hekimleri',
     title: 'Kesinlikle tavsiye ederim',
-    comment: 'Esra hoca birçok alanda çok başarılı bir uzman ama ayrılık aşamasında olan çiftler için kurtarıcı gibi. Yorumlarda az övülmüş. O kadar net ifade edebilirim aldığı başarılı sonuçları. Esra hocaya tüm emeği için şükranlarımızı sunuyoruz. Hep teşekkürle anıyoruz kendisini ve tavsiye ediyoruz ihtiyacı olduğunu bildiğimiz çiftlere.',
+    comment: 'Esra hoca birçok alanda çok başarılı bir danışman ama ayrılık aşamasında olan çiftler için kurtarıcı gibi. Yorumlarda az övülmüş. O kadar net ifade edebilirim aldığı başarılı sonuçları. Esra hocaya tüm emeği için şükranlarımızı sunuyoruz. Hep teşekkürle anıyoruz kendisini ve tavsiye ediyoruz ihtiyacı olduğunu bildiğimiz çiftlere.',
     service: 'Çift & Aile Danışmanlığı'
   },
   {
@@ -127,16 +127,16 @@ export const TESTIMONIALS: Testimonial[] = [
     rating: 5,
     platform: 'Psikolist',
     title: 'Çift Danışmanlığı',
-    comment: 'Esra hoca ile ayrılık için gün sayarken tanıştık. Cihangir bize çok yakın olduğu için oraya gittik, tüm seansları orada aldık. Esra hoca etik yaklaşıma önem veren bir uzman. Seansları sorunu hızlı çözüp bitiriyor, çok başarılı bir çalışma sistemine sahip. Çok uzun aylar devam ettirmiyor. Öyle ılımlı bir ortam oluştu ki evimizde ilk defa gelecek planları yapmaya başladık birlikte.',
+    comment: 'Esra hoca ile ayrılık için gün sayarken tanıştık. Cihangir bize çok yakın olduğu için oraya gittik, tüm görüşmeleri orada gerçekleştirdik. Esra hoca etik yaklaşıma önem veren bir danışman. Görüşmeleri sorunu hızlı çözüp bitiriyor, çok başarılı bir çalışma sistemine sahip. Çok uzun aylar devam ettirmiyor. Öyle ılımlı bir ortam oluştu ki evimizde ilk defa gelecek planları yapmaya başladık birlikte.',
     service: 'Çift Danışmanlığı'
   },
   {
     name: 'H...',
     date: '2025',
     rating: 5,
-    platform: 'Doktor Uzman',
+    platform: 'Doktor Portalı',
     title: 'Çift Danışmanlığı',
-    comment: 'Çift danışmanlığına karşı önyargılarım vardı, ama eşim ısrar etti. İlk seans sonrası iyi ki gelmişiz dedim! Her görüşmede daha bilinçli, daha anlayışlı bireyler olduk. Ailemizi tekrar kurduk desem abartmış olmam.',
+    comment: 'Çift danışmanlığına karşı önyargılarım vardı, ama eşim ısrar etti. İlk görüşme sonrası iyi ki gelmişiz dedim! Her görüşmede daha bilinçli, daha anlayışlı bireyler olduk. Ailemizi tekrar kurduk desem abartmış olmam.',
     service: 'Çift Danışmanlığı'
   },
   {
@@ -153,20 +153,20 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const FAQS = [
   {
-    question: 'Psikolojik danışmanlık seansı ne kadar sürer ve sıklığı nedir?',
-    answer: 'Bireysel danışmanlık seansları standart olarak 50 dakika, çift ve aile danışmanlığı seansları ise 60 dakika sürmektedir. Görüşmeler danışanın ihtiyacına göre genellikle haftada bir düzenlenir; süreç ilerledikçe seans aralıkları 15 günde bir olarak planlanabilir.'
+    question: 'Psikolojik danışmanlık görüşmesi ne kadar sürer ve sıklığı nedir?',
+    answer: 'Bireysel danışmanlık görüşmeleri standart olarak 50 dakika, çift ve aile danışmanlığı görüşmeleri ise 60 dakika sürmektedir. Görüşmeler danışanın ihtiyacına göre genellikle haftada bir düzenlenir; süreç ilerledikçe görüşme aralıkları 15 günde bir olarak planlanabilir.'
   },
   {
     question: 'Cihangir ofisinde yüz yüze mi yoksa online mı görüşme yapılıyor?',
-    answer: 'İstanbul Beyoğlu Cihangir\'deki Sıraselviler Caddesi üzerindeki ofisimizde yüz yüze danışmanlık verilmektedir. İstanbul dışındaki veya yurt dışındaki danışanlarımız için ise aynı etik ve gizlilik ilkeleriyle online seanslar yürütülmektedir.'
+    answer: 'İstanbul Beyoğlu Cihangir\'deki Sıraselviler Caddesi üzerindeki ofisimizde yüz yüze danışmanlık verilmektedir. İstanbul dışındaki veya yurt dışındaki danışanlarımız için ise aynı etik ve gizlilik ilkeleriyle online görüşmeler yürütülmektedir.'
   },
   {
-    question: 'Seanslarda paylaşılan bilgiler gizli tutulur mu?',
+    question: 'Görüşmelerde paylaşılan bilgiler gizli tutulur mu?',
     answer: 'Evet. Psikolojik danışmanlık sürecinin en temel kuralı gizlilik ve danışan mahremiyetidir. Görüşme odasında paylaşılan hiçbir bilgi üçüncü şahıslarla, kurumlarla veya aile bireyleriyle kesinlikle paylaşılmaz.'
   },
   {
     question: 'Hangi ekoller ve yöntemler ile çalışıyorsunuz?',
-    answer: 'Seanslarımızda danışanın getirdiği konunun özelliğine göre Bilişsel Davranışçı Terapi (BDT) ilkeleri, Şema Terapi teknikleri, EMDR yaklaşımları ve Sistemik Çift & Aile Danışmanlığı modellerinden yararlanılarak kişiye özel bir danışmanlık haritası çıkarılmaktadır.'
+    answer: 'Görüşmelerimizde danışanın getirdiği konunun özelliğine göre Bilişsel Davranışçı Danışmanlık (BDT) ilkeleri, Şema Danışmanlığı teknikleri, EMDR yaklaşımları ve Sistemik Çift & Aile Danışmanlığı modellerinden yararlanılarak kişiye özel bir danışmanlık haritası çıkarılmaktadır.'
   },
   {
     question: 'Randevu nasıl alabilirim?',

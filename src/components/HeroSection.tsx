@@ -14,13 +14,13 @@ export default function HeroSection({ onOpenAppointment }: HeroSectionProps) {
   const quickServices = [
     {
       title: 'Bireysel Danışmanlık',
-      description: 'Uzman Klinik Psikolog, Aile ve Çift Danışmanı Esra SAYIN, Danışmanlık seansları ile sorunlarınızı geride bırakmanıza yardımcı olur.',
+      description: 'Psikolog, Aile ve Çift Danışmanı Esra SAYIN, danışmanlık süreci ile sorunlarınızı geride bırakmanıza yardımcı olur.',
       href: '/istanbul-bireysel-terapi/',
       icon: Brain,
     },
     {
       title: 'Aile Danışmanlığı',
-      description: 'Aile karmaşık ancak bağları güçlü bir yapıdır. Seanslara başlayarak bu bağı güçlendirin ve sorunlarınızı çözün.',
+      description: 'Aile karmaşık ancak bağları güçlü bir yapıdır. Görüşmelere başlayarak bu bağı güçlendirin ve sorunlarınızı çözün.',
       href: '/istanbul-aile-terapisi/',
       icon: Users,
     },
@@ -32,7 +32,7 @@ export default function HeroSection({ onOpenAppointment }: HeroSectionProps) {
     },
     {
       title: 'Evlilik Danışmanlığı',
-      description: 'Evliliğinizde aşamadığınız sorunları danışmanlık seansları ile geride bırakabilirsiniz. Danışmanlık almaya bugün başlayın.',
+      description: 'Evliliğinizde aşamadığınız sorunları danışmanlık süreci ile geride bırakabilirsiniz. Danışmanlık almaya bugün başlayın.',
       href: '/istanbul-evlilik-terapisi/',
       icon: CircleDot,
     },

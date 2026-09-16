@@ -14,7 +14,7 @@ export default function AppointmentModal({ isOpen, onClose }: AppointmentModalPr
     name: '',
     phone: '',
     type: 'Yüz Yüze (Cihangir / Beyoğlu)',
-    service: 'Bireysel Terapi',
+    service: 'Bireysel Danışmanlık',
     preferredDate: '',
     notes: '',
   });
@@ -25,7 +25,7 @@ export default function AppointmentModal({ isOpen, onClose }: AppointmentModalPr
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const text = encodeURIComponent(
-      `Merhaba Esra Hanım, Randevu Talebi:\nAd Soyad: ${formData.name}\nTelefon: ${formData.phone}\nGörüşme Türü: ${formData.type}\nSeçilen Terapi: ${formData.service}\nTercih Edilen Tarih/Saat: ${formData.preferredDate || 'Belirtilmedi'}\nNot: ${formData.notes || 'Yok'}`
+      `Merhaba Esra Hanım, Randevu Talebi:\nAd Soyad: ${formData.name}\nTelefon: ${formData.phone}\nGörüşme Türü: ${formData.type}\nSeçilen Danışmanlık: ${formData.service}\nTercih Edilen Tarih/Saat: ${formData.preferredDate || 'Belirtilmedi'}\nNot: ${formData.notes || 'Yok'}`
     );
     window.open(`https://wa.me/905386503217?text=${text}`, '_blank');
     setIsSuccess(true);
@@ -51,7 +51,7 @@ export default function AppointmentModal({ isOpen, onClose }: AppointmentModalPr
               Randevu Talebiniz Alındı!
             </h3>
             <p className="text-sm text-slate-600 max-w-sm mx-auto">
-              Talebiniz bize ulaştı. Müsait seans saatleri ve detaylar için en kısa sürede sizinle iletişime geçeceğiz.
+              Talebiniz bize ulaştı. Müsait randevu saatleri ve detaylar için en kısa sürede sizinle iletişime geçeceğiz.
             </p>
             <button
               onClick={() => {
@@ -75,7 +75,7 @@ export default function AppointmentModal({ isOpen, onClose }: AppointmentModalPr
               Psikolojik Danışmanlık Randevusu
             </h3>
             <p className="text-xs text-slate-500 mb-6">
-              İstanbul Cihangir ofisimizde yüz yüze veya dilediğiniz yerden online olarak seansınızı planlayın.
+              İstanbul Cihangir ofisimizde yüz yüze veya dilediğiniz yerden online olarak randevunuzu planlayın.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -118,13 +118,13 @@ export default function AppointmentModal({ isOpen, onClose }: AppointmentModalPr
                     className="w-full px-3 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-xs text-slate-700"
                   >
                     <option value="Yüz Yüze (Cihangir / Beyoğlu)">Yüz Yüze (Cihangir)</option>
-                    <option value="Online Terapi (Görüntülü)">Online Terapi</option>
+                    <option value="Online Danışmanlık (Görüntülü)">Online Danışmanlık</option>
                   </select>
                 </div>
 
                 <div>
                   <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-                    Terapi Alanı
+                    Danışmanlık Alanı
                   </label>
                   <select
                     value={formData.service}

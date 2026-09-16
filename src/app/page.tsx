@@ -26,7 +26,7 @@ export default function HomePage() {
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-200">
                 <Image
                   src="/images/psikolog-esra-sayin-uniform.webp"
-                  alt="Uzman Psikolog Esra Sayın Danışmanlık"
+                  alt="Psikolog Esra Sayın Danışmanlık"
                   fill
                   sizes="(max-width: 768px) 100vw, 450px"
                   className="object-cover"
@@ -35,22 +35,16 @@ export default function HomePage() {
             </div>
 
             <div className="lg:col-span-7">
-              <span className="text-xs font-bold tracking-widest text-indigo-600 uppercase">
-                / HAKKIMDA &amp; YAKLAŞIMIM /
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-medium tracking-tight text-slate-900 mt-2 mb-6">
-                İçsel Yolculuğunuzda Güvenilir Bir Rehber:{' '}
-                <span className="font-serif italic font-normal text-slate-800">
-                  Esra Sayın
-                </span>
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 mb-6">
+                Hakkımda
               </h2>
 
               <p className="text-slate-700 text-sm sm:text-base leading-relaxed mb-4">
-                Merhaba, ben <strong>Uzman Psikolog ve Aile Danışmanı Esra Sayın</strong>. Lisans eğitimimi üç yılda Onur derecesiyle tamamladıktan sonra İstanbul Üniversitesi&apos;nde Aile Danışmanlığı uzmanlığımı ve Klinik Psikoloji alanında tezli yüksek lisansımı tamamladım.
+                Merhaba, ben <strong>Psikolog ve Aile Danışmanı Esra Sayın</strong>. Lisans eğitimimi üç yılda Onur derecesiyle tamamladıktan sonra İstanbul Üniversitesi&apos;nde Aile Danışmanlığı eğitimimi ve Psikoloji alanında yüksek lisansımı tamamladım.
               </p>
 
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                2022 yılında kurucusu olduğum <strong>ESRA SAYIN PSİKOAKADEMİ</strong> bünyesinde, İstanbul Beyoğlu Cihangir&apos;deki ofisimde yüz yüze ve online platformlarda 12 yaş üstü danışan kabul etmekteyim. BDT, EMDR ve Şema Terapi gibi uluslararası akredite bilimsel ekollerle bireysel, çift ve aile danışmanlığı yürütmekteyim.
+                2022 yılında kurucusu olduğum <strong>ESRA SAYIN PSİKOAKADEMİ</strong> bünyesinde, İstanbul Beyoğlu Cihangir&apos;deki ofisimde yüz yüze ve online platformlarda 12 yaş üstü danışan kabul etmekteyim. BDT, EMDR ve Şema Danışmanlığı gibi bilimsel ekollerle bireysel, çift ve aile danışmanlığı yürütmekteyim.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -80,7 +74,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <h4 className="text-xs font-bold text-slate-900">Kanıta Dayalı Ekoller</h4>
-                    <p className="text-xs text-slate-500">EMDR, BDT ve Şema Terapi entegrasyonu</p>
+                    <p className="text-xs text-slate-500">EMDR, BDT ve Şema Danışmanlığı entegrasyonu</p>
                   </div>
                 </div>
 
