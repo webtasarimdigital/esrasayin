@@ -39,12 +39,8 @@ export default function HomePage() {
                 Hakkımda
               </h2>
 
-              <p className="text-slate-700 text-sm sm:text-base leading-relaxed mb-4">
-                Psikolog, Aile Danışmanı ve Çift Danışmanı olan <strong>Esra Sayın</strong> 1987 yılında İstanbul&apos;da doğmuştur. Lisans eğitimini üç yılda tamamlayarak Onur derecesiyle mezun olmuştur.
-              </p>
-
-              <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                Özellikle Aile Danışmanlığı, Çift Danışmanlığı ve Bireysel Danışmanlık alanında çok sayıda danışan görmüştür. Uzun yıllar Türk Hava Yolları Anonim Şirketi&apos;nde çalıştıktan sonra 2022 yılında <strong>ESRA SAYIN PSİKOAKADEMİ</strong>&apos;yi kurmuştur. 2022 yılından beri kurucusu olduğu bu kurumda Cihangir&apos;de aktif olarak 12 yaş üstü danışan görmektedir.
+              <p className="text-slate-700 text-sm sm:text-base leading-relaxed mb-6">
+                Psikolog, Aile Danışmanı ve Çift Danışmanı olan <strong>Esra Sayın</strong> 1987 yılında İstanbul&apos;da doğmuştur. Lisans eğitimini üç yılda tamamlayarak Onur derecesiyle mezun olmuştur. Uzun yıllar Türk Hava Yolları Anonim Şirketi&apos;nde çalıştıktan sonra 2022 yılında <strong>ESRA SAYIN PSİKOAKADEMİ</strong>&apos;yi kurmuştur. Cihangir&apos;deki merkezinde aktif olarak 12 yaş üstü danışan kabul etmektedir.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -92,7 +88,7 @@ export default function HomePage() {
               <div className="flex items-center gap-4">
                 <Link
                   href="/istanbul-psikolog-esra-sayin/"
-                  className="inline-flex items-center gap-2 bg-[#192a3d] text-white px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-slate-800 transition-all shadow-sm"
+                  className="inline-flex items-center gap-2 bg-[#192a3d] text-white px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-slate-800 transition-all shadow-sm"
                 >
                   <span>Özgeçmiş &amp; Detaylar</span>
                   <span>→</span>
