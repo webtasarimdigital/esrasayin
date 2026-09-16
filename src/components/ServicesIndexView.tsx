@@ -33,9 +33,9 @@ export default function ServicesIndexView() {
       badge: 'İstanbul / Online',
     },
     {
-      title: 'Cinsel Danışmanlık',
-      href: '/istanbul-cinsel-terapi/',
-      image: '/images/sex.webp',
+      title: 'Ergen Danışmanlığı',
+      href: '/ergen-terapisi/',
+      image: '/images/ebeveyn.webp',
       badge: 'İstanbul / Online',
     },
   ];

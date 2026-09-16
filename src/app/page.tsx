@@ -40,11 +40,11 @@ export default function HomePage() {
               </h2>
 
               <p className="text-slate-700 text-sm sm:text-base leading-relaxed mb-4">
-                Merhaba, ben <strong>Psikolog ve Aile Danışmanı Esra Sayın</strong>. Lisans eğitimimi üç yılda Onur derecesiyle tamamladıktan sonra İstanbul Üniversitesi&apos;nde Aile Danışmanlığı eğitimimi ve Psikoloji alanında yüksek lisansımı tamamladım.
+                Psikolog, Aile Danışmanı ve Çift Danışmanı olan <strong>Esra Sayın</strong> 1987 yılında İstanbul&apos;da doğmuştur. Lisans eğitimini üç yılda tamamlayarak Onur derecesiyle mezun olmuştur.
               </p>
 
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                2022 yılında kurucusu olduğum <strong>ESRA SAYIN PSİKOAKADEMİ</strong> bünyesinde, İstanbul Beyoğlu Cihangir&apos;deki ofisimde yüz yüze ve online platformlarda 12 yaş üstü danışan kabul etmekteyim. BDT, EMDR ve Şema Danışmanlığı gibi bilimsel ekollerle bireysel, çift ve aile danışmanlığı yürütmekteyim.
+                Özellikle Aile Danışmanlığı, Çift Danışmanlığı ve Bireysel Danışmanlık alanında çok sayıda danışan görmüştür. Uzun yıllar Türk Hava Yolları Anonim Şirketi&apos;nde çalıştıktan sonra 2022 yılında <strong>ESRA SAYIN PSİKOAKADEMİ</strong>&apos;yi kurmuştur. 2022 yılından beri kurucusu olduğu bu kurumda Cihangir&apos;de aktif olarak 12 yaş üstü danışan görmektedir.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
