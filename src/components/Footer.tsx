@@ -137,15 +137,6 @@ export default function Footer() {
               <Clock className="w-5 h-5 text-indigo-400 flex-shrink-0 mt-0.5" />
               <span>{SITE_INFO.workingHours}</span>
             </div>
-
-            <div className="pt-2">
-              <Link
-                href="/onam-formu/"
-                className="inline-block text-xs sm:text-sm text-slate-300 hover:text-indigo-300 underline font-medium"
-              >
-                Aydınlatılmış Onam Formu &amp; KVKK Metni
-              </Link>
-            </div>
           </div>
         </div>
 
@@ -168,9 +159,6 @@ export default function Footer() {
             </Link>
             <Link href="/istanbul-psikolog-tavsiye/" className="hover:text-white transition-colors">
               Yorumlar
-            </Link>
-            <Link href="/onam-formu/" className="hover:text-white transition-colors">
-              Onam Formu
             </Link>
             <Link href="/istanbul-psikolog-iletisim/" className="hover:text-white transition-colors">
               İletişim
