@@ -8,6 +8,20 @@ interface BlogCardProps {
   badge?: string;
 }
 
+function cleanText(text?: string) {
+  if (!text) return '';
+  return text
+    .replace(/&#8217;/g, "'")
+    .replace(/&#8216;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&#8220;/g, '"')
+    .replace(/&#8221;/g, '"')
+    .replace(/&#8230;/g, '...')
+    .replace(/&hellip;/g, '...')
+    .replace(/&#038;/g, '&')
+    .replace(/&amp;/g, '&');
+}
+
 export default function BlogCard({ post, badge = 'BİREYSEL PSİKOLOJİ' }: BlogCardProps) {
   // Format date to Turkish uppercase like "HAZİRAN 30, 2026"
   const formattedDate = new Date(post.date).toLocaleDateString('tr-TR', {
@@ -29,7 +43,7 @@ export default function BlogCard({ post, badge = 'BİREYSEL PSİKOLOJİ' }: Blog
       >
         <Image
           src={imageSrc}
-          alt={post.title}
+          alt={cleanText(post.title)}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -47,14 +61,14 @@ export default function BlogCard({ post, badge = 'BİREYSEL PSİKOLOJİ' }: Blog
         {/* Title matching screenshot 3 */}
         <h3 className="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors mt-2.5 mb-2 leading-snug line-clamp-2">
           <Link href={`/${post.permalink}/`}>
-            {post.title}
+            {cleanText(post.title)}
           </Link>
         </h3>
 
         {/* Excerpt */}
         {post.excerpt && (
           <p className="text-xs sm:text-sm text-slate-600 line-clamp-2 mb-3">
-            {post.excerpt}
+            {cleanText(post.excerpt)}
           </p>
         )}
 
