@@ -39,8 +39,12 @@ export default function HomePage() {
                 Hakkında
               </h2>
 
-              <p className="text-slate-700 text-sm sm:text-base leading-relaxed mb-6">
+              <p className="text-slate-700 text-sm sm:text-base leading-relaxed mb-4">
                 Psikolog, Aile Danışmanı ve Çift Danışmanı olan <strong>Esra Sayın</strong>, 1987 yılında İstanbul&apos;da doğmuştur. Lisans eğitimini üç yılda tamamlayarak Onur derecesiyle mezun olmuştur. Uzun yıllar Türk Hava Yolları Anonim Şirketi&apos;nde çalıştıktan sonra profesyonel çalışmalarını çift ve aile danışmanlığı alanında sürdürmeye başlamıştır. Cihangir&apos;deki ofisinde 18 yaş üstü yetişkinlere yönelik danışmanlık yürütmektedir. Özellikle çift danışmanlığı, evlilik dinamikleri ve ilişkiler üzerinde yoğunlaşmıştır.
+              </p>
+
+              <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+                Çalıştay konuları arasında Bireysel Danışmanlık, Aile Danışmanlığı, Çift Danışmanlığı, Stres Yönetimi, İletişim ve Çatışma Çözümü, Evlilik ve Boşanma, Sağlıklı İlişkiler, Zaman Yönetimi yer almaktadır. Türk Psikologlar Derneği Etik Yönetmeliği ilkeleriyle çalışmaktadır. Alınan tüm belgeler e-Devlet onaylıdır.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
