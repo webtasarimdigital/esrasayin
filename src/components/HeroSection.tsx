@@ -13,28 +13,28 @@ interface HeroSectionProps {
 export default function HeroSection({ onOpenAppointment }: HeroSectionProps) {
   const quickServices = [
     {
-      title: 'Bireysel Danışmanlık',
-      description: 'Psikolog, Aile ve Çift Danışmanı Esra SAYIN, danışmanlık süreci ile sorunlarınızı geride bırakmanıza yardımcı olur.',
-      href: '/istanbul-bireysel-terapi/',
-      icon: Brain,
-    },
-    {
-      title: 'Aile Danışmanlığı',
-      description: 'Aile karmaşık ancak bağları güçlü bir yapıdır. Görüşmelere başlayarak bu bağı güçlendirin ve sorunlarınızı çözün.',
-      href: '/istanbul-aile-terapisi/',
-      icon: Users,
-    },
-    {
       title: 'Çift Danışmanlığı',
-      description: 'Online çift danışmanlığı ve İstanbul çift danışmanlığı hizmetlerimizle partnerinizle aranızdaki sorunları çözün.',
+      description: 'İlişkilerde iletişim sorunları, güven ve duygusal bağları güçlendirmeye yönelik danışmanlık süreci.',
       href: '/istanbul-cift-terapisi/',
       icon: HeartHandshake,
     },
     {
       title: 'Evlilik Danışmanlığı',
-      description: 'Evliliğinizde aşamadığınız sorunları danışmanlık süreci ile geride bırakabilirsiniz. Danışmanlık almaya bugün başlayın.',
+      description: 'Evlilik dinamiklerinde karşılaşılan krizleri aşma ve sağlıklı uyum geliştirme desteği.',
       href: '/istanbul-evlilik-terapisi/',
       icon: CircleDot,
+    },
+    {
+      title: 'Aile Danışmanlığı',
+      description: 'Aile içi sağlıklı sınırlar ve yapıcı iletişim dinamikleri inşa etmeyi amaçlayan danışmanlık süreci.',
+      href: '/istanbul-aile-terapisi/',
+      icon: Users,
+    },
+    {
+      title: 'Bireysel Danışmanlık',
+      description: 'Bireysel farkındalığı artırma ve duygusal tıkanıklıkları aşmaya yönelik kişiye özel süreç.',
+      href: '/istanbul-bireysel-terapi/',
+      icon: Brain,
     },
   ];
 
@@ -45,7 +45,7 @@ export default function HeroSection({ onOpenAppointment }: HeroSectionProps) {
         <div className="block lg:hidden pt-4 pb-4">
           {/* Subtitle */}
           <span className="inline-block text-[11px] font-bold tracking-widest text-indigo-600 uppercase mb-2">
-            / İSTANBUL YÜZ YÜZE &amp; ONLİNE PSİKOLOG /
+            / ÇİFT VE AİLE DANIŞMANLIĞI /
           </span>
 
           {/* Heading */}
@@ -61,7 +61,7 @@ export default function HeroSection({ onOpenAppointment }: HeroSectionProps) {
 
           {/* Subtext */}
           <p className="text-slate-600 text-sm leading-relaxed mb-6 font-normal">
-            İstanbul Cihangir&apos;de yüz yüze, Online ile Türkiye&apos;nin ve dünyanın her yerine psikolojik danışmanlık hizmeti veriyorum.
+            İstanbul Cihangir ofisinde yüz yüze ve online platformlarda bireysel, çift ve aile danışmanlığı desteği sunulmaktadır.
           </p>
 
           {/* Buttons Row */}
@@ -128,7 +128,7 @@ export default function HeroSection({ onOpenAppointment }: HeroSectionProps) {
             {/* Top Subtitle */}
             <div>
               <span className="inline-block text-xs font-bold tracking-widest text-indigo-600 uppercase mb-3">
-                / İSTANBUL YÜZ YÜZE &amp; ONLİNE PSİKOLOG /
+                / ÇİFT VE AİLE DANIŞMANLIĞI /
               </span>
 
               {/* Main Heading matching screenshot */}
@@ -145,7 +145,7 @@ export default function HeroSection({ onOpenAppointment }: HeroSectionProps) {
 
             {/* Subtext */}
             <p className="text-slate-600 text-[15px] leading-relaxed mb-8 font-normal">
-              İstanbul Cihangir&apos;de yüz yüze, Online ile Türkiye&apos;nin ve dünyanın her yerine psikolojik danışmanlık hizmeti veriyorum.
+              İstanbul Cihangir ofisinde yüz yüze ve online platformlarda bireysel, çift ve aile danışmanlığı desteği sunulmaktadır.
             </p>
 
             {/* Buttons Row */}

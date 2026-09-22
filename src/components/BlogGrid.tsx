@@ -13,9 +13,9 @@ interface BlogGridProps {
 
 export default function BlogGrid({
   posts,
-  title = 'Zihinsel Sağlığınız için',
-  italicText = 'özel olarak yazılmış',
-  subtitle = '/ PSİKOLOJİ & MENTAL SAĞLIK BLOGU /',
+  title = 'Psikoloji ve İlişki Dinamikleri İçin',
+  italicText = 'bilgilendirici',
+  subtitle = '/ PSİKOLOJİ BLOGU /',
   showViewAll = true,
 }: BlogGridProps) {
   return (

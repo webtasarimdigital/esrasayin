@@ -11,21 +11,16 @@ interface ServicesSidebarProps {
 }
 
 export const ALL_SERVICES = [
-  { name: 'Bireysel Danışmanlık', href: '/istanbul-bireysel-terapi/' },
-  { name: 'Aile Danışmanlığı', href: '/istanbul-aile-terapisi/' },
   { name: 'Çift Danışmanlığı', href: '/istanbul-cift-terapisi/' },
   { name: 'Evlilik Danışmanlığı', href: '/istanbul-evlilik-terapisi/' },
-  { name: 'Cinsel Danışmanlık', href: '/istanbul-cinsel-terapi/' },
+  { name: 'Aile Danışmanlığı', href: '/istanbul-aile-terapisi/' },
+  { name: 'Bireysel Danışmanlık', href: '/istanbul-bireysel-terapi/' },
   { name: 'Aile İçi İletişim Sorunları', href: '/aile-ici-iletisim-sorunlari/' },
-  { name: 'BDT', href: '/bilissel-davranisci-terapi/' },
-  { name: 'EMDR Danışmanlığı', href: '/emdr-terapisi/' },
-  { name: 'Ergen Danışmanlığı', href: '/ergen-terapisi/' },
-  { name: 'Fobi & Korku Danışmanlığı', href: '/fobi-korku-terapisi/' },
-  { name: 'Kaygı Bozuklukları', href: '/kaygi-bozukluklari/' },
-  { name: 'Panik Atak', href: '/panik-atak/' },
-  { name: 'Şema Eğilimli Danışmanlık', href: '/sema-terapi/' },
   { name: 'Sistematik Aile Danışmanlığı', href: '/573-sistematik-aile-terapisi-nedir-nasil-uygulanir/' },
+  { name: 'BDT (Bilişsel Davranışçı)', href: '/bilissel-davranisci-terapi/' },
+  { name: 'Şema Danışmanlığı', href: '/sema-terapi/' },
   { name: 'Stres Yönetimi', href: '/stres-yonetimi/' },
+  { name: 'Korku ve Fobi Danışmanlığı', href: '/fobi-korku-terapisi/' },
 ];
 
 export default function ServicesSidebar({ currentSlug = '', onOpenAppointment }: ServicesSidebarProps) {

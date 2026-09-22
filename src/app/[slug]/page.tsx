@@ -149,7 +149,7 @@ export default function DynamicSlugPage({ params }: PageProps) {
               <nav className="inline-flex items-center gap-2 text-xs font-semibold text-indigo-600 uppercase tracking-wider">
                 <Link href="/" className="hover:underline inline-flex items-center gap-1">
                   <Home className="w-3.5 h-3.5" />
-                  <span>İSTANBUL PSİKOLOG</span>
+                  <span>ANASAYFA</span>
                 </Link>
                 <span>&gt;</span>
                 <span className="text-slate-500">{post.title}</span>
@@ -306,7 +306,7 @@ export default function DynamicSlugPage({ params }: PageProps) {
               <nav className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-600">
                 <Link href="/" className="hover:underline inline-flex items-center gap-1.5 text-slate-800">
                   <Home className="w-3.5 h-3.5" />
-                  <span>İSTANBUL PSİKOLOG</span>
+                  <span>ANASAYFA</span>
                 </Link>
                 <span className="text-slate-400">&gt;</span>
                 <span className="text-indigo-600 font-bold">{page.title}</span>

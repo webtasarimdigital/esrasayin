@@ -5,8 +5,8 @@ import { posts, SITE_INFO } from '@/lib/data';
 import { getBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Psikoloji & Mental Sağlık Blogu',
-  description: 'Psikolog Esra Sayın tarafından kaleme alınan kaygı, ilişki sorunları, EMDR, aile iletişimi ve ruh sağlığı üzerine rehber niteliğinde blog yazıları.',
+  title: 'Psikoloji Blogu | Esra Sayın',
+  description: 'Çift ilişkileri, evlilik dinamikleri, aile iletişimi ve bireysel farkındalık üzerine temel bilgilendirici yazılar.',
   alternates: {
     canonical: `${SITE_INFO.url}/blog/`,
   },
@@ -30,17 +30,17 @@ export default function BlogIndexPage() {
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="text-xs font-bold tracking-widest text-indigo-500 uppercase">
-              / PSİKOLOJİ &amp; MENTAL SAĞLIK BLOGU /
+              / PSİKOLOJİ BLOGU /
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-slate-900 mt-3 leading-tight">
-              Zihinsel Sağlığınız için{' '}
+              Psikoloji ve İlişki Dinamikleri İçin{' '}
               <span className="font-serif italic font-normal text-slate-800">
-                özel olarak yazılmış
+                bilgilendirici
               </span>{' '}
               blog yazıları
             </h1>
             <p className="text-slate-600 text-sm sm:text-base mt-4 max-w-2xl mx-auto leading-relaxed">
-              Kaygı bozuklukları, çift ilişkileri, travma, yas süreci ve danışmanlık ekolleri üzerine güncel, bilimsel ve rehber niteliğinde makaleler.
+              Çift ilişkileri, evlilikte uyum, aile içi yapıcı iletişim ve kişisel farkındalık üzerine temel bilgiler içeren rehber makaleler.
             </p>
           </div>
 

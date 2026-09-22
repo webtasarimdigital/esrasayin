@@ -38,7 +38,7 @@ export default function ContactSection() {
             </span>
           </h2>
           <p className="text-slate-600 text-sm md:text-base mt-4">
-            İstanbul Cihangir ofisimizde yüz yüze veya dilediğiniz yerden online olarak görüşmelerimize başlayabilirsiniz.
+            İstanbul Cihangir ofisinde yüz yüze veya online platformlarda danışmanlık süreci hakkında bilgi alabilir, randevu oluşturabilirsiniz.
           </p>
         </div>
 

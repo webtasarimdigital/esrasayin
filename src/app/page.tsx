@@ -36,11 +36,11 @@ export default function HomePage() {
 
             <div className="lg:col-span-7">
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 mb-6">
-                Hakkımda
+                Hakkında
               </h2>
 
               <p className="text-slate-700 text-sm sm:text-base leading-relaxed mb-6">
-                Psikolog, Aile Danışmanı ve Çift Danışmanı olan <strong>Esra Sayın</strong> 1987 yılında İstanbul&apos;da doğmuştur. Lisans eğitimini üç yılda tamamlayarak Onur derecesiyle mezun olmuştur. Uzun yıllar Türk Hava Yolları Anonim Şirketi&apos;nde çalıştıktan sonra 2022 yılında <strong>ESRA SAYIN PSİKOAKADEMİ</strong>&apos;yi kurmuştur. Cihangir&apos;deki merkezinde aktif olarak 12 yaş üstü danışan kabul etmektedir.
+                Psikolog, Aile Danışmanı ve Çift Danışmanı olan <strong>Esra Sayın</strong>, 1987 yılında İstanbul&apos;da doğmuştur. Lisans eğitimini üç yılda tamamlayarak Onur derecesiyle mezun olmuştur. Uzun yıllar Türk Hava Yolları Anonim Şirketi&apos;nde çalıştıktan sonra profesyonel çalışmalarını çift ve aile danışmanlığı alanında sürdürmeye başlamıştır. Cihangir&apos;deki ofisinde 18 yaş üstü yetişkinlere yönelik danışmanlık yürütmektedir. Özellikle çift danışmanlığı, evlilik dinamikleri ve ilişkiler üzerinde yoğunlaşmıştır.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -69,8 +69,8 @@ export default function HomePage() {
                     <Sparkles className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="text-xs font-bold text-slate-900">Kanıta Dayalı Ekoller</h4>
-                    <p className="text-xs text-slate-500">EMDR, BDT ve Şema Danışmanlığı entegrasyonu</p>
+                    <h4 className="text-xs font-bold text-slate-900">Bilimsel Ekoller</h4>
+                    <p className="text-xs text-slate-500">Sistemik Çift, BDT ve Şema Danışmanlığı yaklaşımları</p>
                   </div>
                 </div>
 

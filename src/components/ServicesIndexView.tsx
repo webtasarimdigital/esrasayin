@@ -9,34 +9,34 @@ import ContactSection from './ContactSection';
 export default function ServicesIndexView() {
   const servicesList = [
     {
-      title: 'Bireysel Danışmanlık',
-      href: '/istanbul-bireysel-terapi/',
-      image: '/images/bireysel.webp',
-      badge: 'İstanbul / Online',
-    },
-    {
-      title: 'Aile Danışmanlığı',
-      href: '/istanbul-aile-terapisi/',
-      image: '/images/aile2.webp',
-      badge: 'İstanbul / Online',
-    },
-    {
       title: 'Çift Danışmanlığı',
       href: '/istanbul-cift-terapisi/',
       image: '/images/cift.webp',
-      badge: 'İstanbul / Online',
+      badge: 'Yüz Yüze / Online',
     },
     {
       title: 'Evlilik Danışmanlığı',
       href: '/istanbul-evlilik-terapisi/',
       image: '/images/evlilik.webp',
-      badge: 'İstanbul / Online',
+      badge: 'Yüz Yüze / Online',
     },
     {
-      title: 'Ergen Danışmanlığı',
-      href: '/ergen-terapisi/',
-      image: '/images/ebeveyn.webp',
-      badge: 'İstanbul / Online',
+      title: 'Aile Danışmanlığı',
+      href: '/istanbul-aile-terapisi/',
+      image: '/images/aile2.webp',
+      badge: 'Yüz Yüze / Online',
+    },
+    {
+      title: 'Bireysel Danışmanlık',
+      href: '/istanbul-bireysel-terapi/',
+      image: '/images/bireysel.webp',
+      badge: 'Yüz Yüze / Online',
+    },
+    {
+      title: 'Aile İçi İletişim',
+      href: '/aile-ici-iletisim-sorunlari/',
+      image: '/images/aile-terapisi.webp',
+      badge: 'Yüz Yüze / Online',
     },
   ];
 
@@ -51,7 +51,7 @@ export default function ServicesIndexView() {
           <nav className="inline-flex items-center gap-2 text-xs font-semibold text-indigo-600 uppercase tracking-wider">
             <Link href="/" className="hover:underline inline-flex items-center gap-1 text-slate-700">
               <Home className="w-3.5 h-3.5" />
-              <span>İSTANBUL PSİKOLOG</span>
+              <span>ANASAYFA</span>
             </Link>
             <span>&gt;</span>
             <span className="text-indigo-600 font-bold">DANIŞMANLIKLAR</span>
@@ -64,12 +64,12 @@ export default function ServicesIndexView() {
           <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between">
             <div>
               <span className="text-xs font-bold tracking-widest text-indigo-600 uppercase mb-3 block">
-                / CİHANGİR PSİKOLOG /
+                / ÇİFT VE AİLE DANIŞMANLIĞI /
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 leading-tight mb-4">
-                Zihinsel Sağlığınız için{' '}
+                Duygusal Denge ve Sağlıklı İlişkiler İçin{' '}
                 <span className="font-serif italic font-normal text-slate-800 block mt-1">
-                  İstanbul Psikolog&apos;dan randevu alın
+                  Danışmanlık Randevusu Alın
                 </span>
               </h2>
             </div>

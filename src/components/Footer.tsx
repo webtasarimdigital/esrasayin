@@ -7,25 +7,14 @@ import { SITE_INFO, SERVICES } from '@/lib/data';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const localSeoLinks = [
-    { name: 'Beyoğlu Psikolog', href: '/beyoglu-psikolog/' },
-    { name: 'Cihangir Psikolog', href: '/cihangir-psikolog/' },
-    { name: 'Taksim Psikolog', href: '/taksim-psikolog/' },
-    { name: 'Şişli Psikolog', href: '/sisli-psikolog/' },
-    { name: 'Nişantaşı Psikolog', href: '/nisantasi-psikolog/' },
-    { name: 'Şişli Aile Danışmanlığı', href: '/sisli-aile-danismanligi/' },
-    { name: 'Şişli Çift Danışmanlığı', href: '/sisli-cift-terapisi/' },
-    { name: 'Online Psikolog', href: '/online-psikolog/' },
-  ];
-
   return (
     <footer className="bg-[#192a3d] text-slate-200 pt-16 pb-24 lg:pb-12 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-12">
           {/* Col 1: Bio & Brand */}
-          <div className="lg:col-span-4 space-y-4">
+          <div className="lg:col-span-5 space-y-4">
             <Logo light showText />
-            <p className="text-slate-300 text-sm sm:text-[15px] leading-relaxed mt-4">
+            <p className="text-slate-300 text-sm sm:text-[15px] leading-relaxed mt-4 max-w-md">
               Psikolog &amp; Aile Danışmanı Esra Sayın, İstanbul Cihangir’deki ofisinde yüz yüze ve online platformlarda bilimsel ekollerle bireysel, çift ve aile danışmanlığı hizmeti sunmaktadır.
             </p>
 
@@ -90,28 +79,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3: Local Locations */}
-          <div className="lg:col-span-2">
-            <h3 className="text-white text-base font-bold uppercase tracking-wider mb-4 border-b border-slate-700/80 pb-2">
-              Hizmet Bölgeleri
-            </h3>
-            <ul className="space-y-2.5 text-sm sm:text-[15px]">
-              {localSeoLinks.map((loc) => (
-                <li key={loc.href}>
-                  <Link
-                    href={loc.href}
-                    className="text-slate-300 hover:text-white transition-colors flex items-center gap-2"
-                  >
-                    <span className="text-indigo-400 font-bold">•</span>
-                    <span>{loc.name}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Col 4: Contact & Hours */}
-          <div className="lg:col-span-3 space-y-3.5">
+          {/* Col 3: Contact & Hours */}
+          <div className="lg:col-span-4 space-y-3.5">
             <h3 className="text-white text-base font-bold uppercase tracking-wider mb-4 border-b border-slate-700/80 pb-2">
               İletişim &amp; Adres
             </h3>

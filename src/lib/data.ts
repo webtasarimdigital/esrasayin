@@ -10,8 +10,8 @@ export const categories: Category[] = categoriesData as Category[];
 export const SITE_INFO = {
   name: 'Psikolog & Aile Danışmanı Esra SAYIN',
   shortName: 'Esra Sayın',
-  title: 'İstanbul Psikolog Esra Sayın - Şişli, Cihangir, Beyoğlu, Nişantaşı - Online',
-  description: "İstanbul'da Şişli, Cihangir, Beyoğlu, Nişantaşı konumlarında yüz yüze Psikolog & Aile Danışmanı Esra Sayın'dan randevu alın.",
+  title: 'Psikolog & Aile Danışmanı Esra Sayın | Çift ve Aile Danışmanlığı',
+  description: 'Psikolog & Aile Danışmanı Esra Sayın. Çift danışmanlığı, evlilik danışmanlığı, aile ve bireysel danışmanlık süreçleri hakkında bilgilendirme ve randevu.',
   url: 'https://esrasayin.com.tr',
   phone: '0538 650 32 17',
   phoneFormatted: '+90 538 650 32 17',
@@ -24,7 +24,7 @@ export const SITE_INFO = {
     postalCode: '34433',
   },
   socials: {
-    instagram: 'https://www.instagram.com/esrasayinakademi/',
+    instagram: 'https://www.instagram.com/uzm.kl.psk.esrasayin/',
     instagramPersonal: 'https://www.instagram.com/uzm.kl.psk.esrasayin/',
     facebook: 'https://www.facebook.com/profile.php?id=61573524325398',
     linkedin: 'https://www.linkedin.com/in/esra-s-1302b4209/',
@@ -36,28 +36,14 @@ export const SITE_INFO = {
   workingHours: 'Pazartesi - Pazar: 10:00 - 23:30 (Haftanın 7 Günü Açık)',
 };
 
-// 5 Core Services matching the original site's homepage
+// 5 Core Services focusing on Couples & Family Counseling
 export const SERVICES: ServiceItem[] = [
-  {
-    title: 'Bireysel Danışmanlık',
-    slug: 'istanbul-bireysel-terapi',
-    description: 'Bireyin iç dünyasını keşfetmesi, duygusal blokajları çözmesi, kaygı ve özgüven konularında güçlenmesi için kişiye özel psikolojik danışmanlık süreci.',
-    image: '/images/bireysel.webp',
-    category: 'Bireysel Destek'
-  },
-  {
-    title: 'Aile Danışmanlığı',
-    slug: 'istanbul-aile-terapisi',
-    description: 'Aile bireyleri arasındaki çatışmaları çözümlemek, sağlıklı sınırlar ve yapıcı iletişim dinamikleri inşa etmek amacıyla uygulanan sistemik aile danışmanlığı.',
-    image: '/images/aile2.webp',
-    category: 'Aile & Evlilik'
-  },
   {
     title: 'Çift Danışmanlığı',
     slug: 'istanbul-cift-terapisi',
     description: 'İlişkilerde güven problemleri, duygusal kopukluk ve tekrarlayan anlaşmazlıkları aşarak bağı yeniden canlandırmayı hedefleyen profesyonel görüşmeler.',
     image: '/images/cift.webp',
-    category: 'Aile & Evlilik'
+    category: 'Çift & İlişki'
   },
   {
     title: 'Evlilik Danışmanlığı',
@@ -67,11 +53,25 @@ export const SERVICES: ServiceItem[] = [
     category: 'Aile & Evlilik'
   },
   {
-    title: 'Ergen Danışmanlığı',
-    slug: 'ergen-terapisi',
-    description: 'Ergenlik döneminde karşılaşılan duygusal dalgalanmalar, sınav kaygısı, kimlik arayışı ve aile içi iletişim süreçlerine yönelik profesyonel danışmanlık hizmeti.',
-    image: '/images/ebeveyn.webp',
-    category: 'Ergen & Aile'
+    title: 'Aile Danışmanlığı',
+    slug: 'istanbul-aile-terapisi',
+    description: 'Aile bireyleri arasındaki çatışmaları çözümlemek, sağlıklı sınırlar ve yapıcı iletişim dinamikleri inşa etmek amacıyla uygulanan sistemik aile danışmanlığı.',
+    image: '/images/aile2.webp',
+    category: 'Aile & Evlilik'
+  },
+  {
+    title: 'Bireysel Danışmanlık',
+    slug: 'istanbul-bireysel-terapi',
+    description: 'Bireyin iç dünyasını keşfetmesi, duygusal tıkanıklıkları çözmesi ve kişisel farkındalığını güçlendirmesi için yapılandırılmış danışmanlık süreci.',
+    image: '/images/bireysel.webp',
+    category: 'Bireysel Destek'
+  },
+  {
+    title: 'Aile İçi İletişim',
+    slug: 'aile-ici-iletisim-sorunlari',
+    description: 'Aile üyeleri arasında yapıcı diyalog zeminini güçlendirme ve çatışma çözme becerilerini geliştirme danışmanlığı.',
+    image: '/images/aile-terapisi.webp',
+    category: 'İletişim & İlişki'
   }
 ];
 
