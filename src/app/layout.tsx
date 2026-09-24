@@ -69,6 +69,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  verification: {
+    google: 'egXPzCMrAlxYA2SCdaoynX7nWPfNiJBjYG6d8h-vw88',
+  },
   icons: {
     icon: [
       { url: '/images/fav-icon-esra-sayin.png', type: 'image/png' },
