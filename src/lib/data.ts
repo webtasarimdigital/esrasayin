@@ -86,15 +86,6 @@ export const TESTIMONIALS: Testimonial[] = [
     service: 'Çift Danışmanlığı'
   },
   {
-    name: 'T... P...',
-    date: '2025',
-    rating: 5,
-    platform: 'DoktorTakvimi',
-    title: 'Dünya standartlarında bir psikolog',
-    comment: 'Kaygı bozukluğu ile korona başından beri mücadele ediyordum. Herkes hayatına döndü ben hep kötü bir şey olacakmış hissi ile başa çıkmaya çalışıyordum. Bu durumun beni tükettiğini hem ben hem de ailem görebiliyorduk. Esra hanım ve ekibi program çıkarmada tam bir usta. Cadde de oturduğum için burada randevu oluşturdum. Hoca üç şubesinde yüz yüze danışmanlık veriyormuş. Tüm olumlu geri bildirimleri çokça hak ediyor. Çözüme ulaşmamız hızlı ve kalıcı oldu.',
-    service: 'Bireysel Danışmanlık'
-  },
-  {
     name: 'M... O...',
     date: '2025',
     rating: 5,
@@ -138,15 +129,6 @@ export const TESTIMONIALS: Testimonial[] = [
     title: 'Çift Danışmanlığı',
     comment: 'Çift danışmanlığına karşı önyargılarım vardı, ama eşim ısrar etti. İlk görüşme sonrası iyi ki gelmişiz dedim! Her görüşmede daha bilinçli, daha anlayışlı bireyler olduk. Ailemizi tekrar kurduk desem abartmış olmam.',
     service: 'Çift Danışmanlığı'
-  },
-  {
-    name: 'A... K...',
-    date: '2025',
-    rating: 5,
-    platform: 'PsikolojiPark',
-    title: 'Ergen Danışmanlığı',
-    comment: 'Oğlumuz lisede okuyor. Bu sene bize karşı çok isyankardı ve ders notları da çok düşmüştü. Tavsiye üzerine Esra hanıma başvurduk ve çok güzel sonuçlar aldık. Hem dersleri çok düzeldi hem de bize karşı eskisi gibi sevgi saygıyı eksik etmiyor. Tüm ailelere kesinlikle öneriyoruz.',
-    service: 'Ergen Danışmanlığı'
   }
 ];
 
