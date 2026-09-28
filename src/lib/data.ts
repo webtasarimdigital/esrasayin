@@ -135,10 +135,6 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const FAQS = [
   {
-    question: 'Psikolojik danışmanlık görüşmesi ne kadar sürer ve sıklığı nedir?',
-    answer: 'Bireysel danışmanlık görüşmeleri standart olarak 50 dakika, çift ve aile danışmanlığı görüşmeleri ise 60 dakika sürmektedir. Görüşmeler danışanın ihtiyacına göre genellikle haftada bir düzenlenir; süreç ilerledikçe görüşme aralıkları 15 günde bir olarak planlanabilir.'
-  },
-  {
     question: 'Cihangir ofisinde yüz yüze mi yoksa online mı görüşme yapılıyor?',
     answer: 'İstanbul Beyoğlu Cihangir\'deki Sıraselviler Caddesi üzerindeki ofisimizde yüz yüze danışmanlık verilmektedir. İstanbul dışındaki veya yurt dışındaki danışanlarımız için ise aynı etik ve gizlilik ilkeleriyle online görüşmeler yürütülmektedir.'
   },
