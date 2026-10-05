@@ -287,6 +287,7 @@ export default function DynamicSlugPage({ params }: PageProps) {
     const isContactPage = params.slug.includes('iletisim');
     const isReviewPage = params.slug.includes('tavsiye');
     const isAppointmentPage = params.slug.includes('randevu');
+    const isAboutPage = params.slug === 'istanbul-psikolog-esra-sayin';
     const featuredImg = getServiceImage(page.slug, page.title);
 
     return (
@@ -367,51 +368,53 @@ export default function DynamicSlugPage({ params }: PageProps) {
                     )}
 
                     {/* 2 Bottom Recommendation Cards (Exact match to media_1789415391296.png - Görsel 5) */}
-                    <div className="mt-12 bg-[#f8f9fc] rounded-2xl p-6 sm:p-8 border border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <Link
-                        href="/istanbul-bireysel-terapi/"
-                        className="group flex flex-col justify-between"
-                      >
-                        <div className="flex items-start gap-4">
-                          <div className="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0">
-                            <Brain className="w-6 h-6" />
+                    {!isAboutPage && (
+                      <div className="mt-12 bg-[#f8f9fc] rounded-2xl p-6 sm:p-8 border border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <Link
+                          href="/istanbul-bireysel-terapi/"
+                          className="group flex flex-col justify-between"
+                        >
+                          <div className="flex items-start gap-4">
+                            <div className="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0">
+                              <Brain className="w-6 h-6" />
+                            </div>
+                            <div>
+                              <h4 className="text-base font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                Bireysel Danışmanlık
+                              </h4>
+                              <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                                Aile ve Evlilik, Çift, İlişki Danışmanı Esra SAYIN, danışmanlık süreci ile sorunlarınızı geride bırakmanıza yardımcı olur.
+                              </p>
+                            </div>
                           </div>
-                          <div>
-                            <h4 className="text-base font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
-                              Bireysel Danışmanlık
-                            </h4>
-                            <p className="text-xs text-slate-500 mt-1 leading-relaxed">
-                              Aile ve Evlilik, Çift, İlişki Danışmanı Esra SAYIN, danışmanlık süreci ile sorunlarınızı geride bırakmanıza yardımcı olur.
-                            </p>
+                          <div className="mt-4 pl-16">
+                            <ArrowRight className="w-4 h-4 text-slate-800 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all" />
                           </div>
-                        </div>
-                        <div className="mt-4 pl-16">
-                          <ArrowRight className="w-4 h-4 text-slate-800 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all" />
-                        </div>
-                      </Link>
+                        </Link>
 
-                      <Link
-                        href="/istanbul-aile-terapisi/"
-                        className="group flex flex-col justify-between"
-                      >
-                        <div className="flex items-start gap-4">
-                          <div className="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0">
-                            <Users className="w-6 h-6" />
+                        <Link
+                          href="/istanbul-aile-terapisi/"
+                          className="group flex flex-col justify-between"
+                        >
+                          <div className="flex items-start gap-4">
+                            <div className="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0">
+                              <Users className="w-6 h-6" />
+                            </div>
+                            <div>
+                              <h4 className="text-base font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                Aile Danışmanlığı
+                              </h4>
+                              <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                                Aile karmaşık ancak bağları güçlü bir yapıdır. Danışmanlığa başlayarak bu bağı güçlendirin ve sorunlarınızı çözün.
+                              </p>
+                            </div>
                           </div>
-                          <div>
-                            <h4 className="text-base font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
-                              Aile Danışmanlığı
-                            </h4>
-                            <p className="text-xs text-slate-500 mt-1 leading-relaxed">
-                              Aile karmaşık ancak bağları güçlü bir yapıdır. Danışmanlığa başlayarak bu bağı güçlendirin ve sorunlarınızı çözün.
-                            </p>
+                          <div className="mt-4 pl-16">
+                            <ArrowRight className="w-4 h-4 text-slate-800 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all" />
                           </div>
-                        </div>
-                        <div className="mt-4 pl-16">
-                          <ArrowRight className="w-4 h-4 text-slate-800 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all" />
-                        </div>
-                      </Link>
-                    </div>
+                        </Link>
+                      </div>
+                    )}
                   </div>
 
                   {/* Right Column: Sticky Services Sidebar */}
@@ -425,9 +428,11 @@ export default function DynamicSlugPage({ params }: PageProps) {
             )}
 
             {/* Default FAQ section on information pages */}
-            <div className="mt-16 pt-12 border-t border-slate-100">
-              <FaqAccordion />
-            </div>
+            {!isAboutPage && (
+              <div className="mt-16 pt-12 border-t border-slate-100">
+                <FaqAccordion />
+              </div>
+            )}
           </div>
         </div>
 

@@ -54,6 +54,8 @@ const nextConfig = {
       { source: '/stres-ve-kaygi-bozuklugu-ile-nasil-basa-cikarim', destination: '/', permanent: true },
       { source: '/akran-zorbaligi-nedir', destination: '/', permanent: true },
       { source: '/cift-terapisinde-emdr-yonteminin-faydalari', destination: '/istanbul-cift-terapisi/', permanent: true },
+      { source: '/1006-online-yuz-yuze-terapi-beyoglu-psikolog', destination: '/', permanent: true },
+      { source: '/online-yuz-yuze-terapi-beyoglu-psikolog', destination: '/', permanent: true },
     ];
   },
 };
