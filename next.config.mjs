@@ -56,6 +56,8 @@ const nextConfig = {
       { source: '/cift-terapisinde-emdr-yonteminin-faydalari', destination: '/istanbul-cift-terapisi/', permanent: true },
       { source: '/1006-online-yuz-yuze-terapi-beyoglu-psikolog', destination: '/', permanent: true },
       { source: '/online-yuz-yuze-terapi-beyoglu-psikolog', destination: '/', permanent: true },
+      { source: '/968-beyoglu-psikolog-tavsiye', destination: '/', permanent: true },
+      { source: '/beyoglu-psikolog-tavsiye', destination: '/', permanent: true },
     ];
   },
 };
