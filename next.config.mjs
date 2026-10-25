@@ -20,6 +20,7 @@ const nextConfig = {
       { source: '/wp-json/:path*', destination: '/', permanent: true },
       { source: '/wp-admin/:path*', destination: '/', permanent: true },
       // Removed Pages
+      { source: '/anasayfa', destination: '/', permanent: true },
       { source: '/panik-atak', destination: '/', permanent: true },
       { source: '/ergen-terapisi', destination: '/', permanent: true },
       { source: '/cinsel-terapi', destination: '/istanbul-cift-terapisi/', permanent: true },
