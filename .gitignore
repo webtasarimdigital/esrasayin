@@ -28,3 +28,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# backups and system files
+desktop.ini
+*.tar
+*.tar.*
+*.sql
+*.zst

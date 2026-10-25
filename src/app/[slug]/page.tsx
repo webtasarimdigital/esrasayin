@@ -12,11 +12,10 @@ import {
   getRelatedPosts,
   SITE_INFO,
 } from '@/lib/data';
-import { getArticleSchema, getBreadcrumbSchema, getFaqSchema } from '@/lib/seo';
+import { getArticleSchema, getBreadcrumbSchema } from '@/lib/seo';
 import BlogCard from '@/components/BlogCard';
 import ContactSection from '@/components/ContactSection';
 import ReviewsSection from '@/components/ReviewsSection';
-import FaqAccordion from '@/components/FaqAccordion';
 import ServicesSidebar from '@/components/ServicesSidebar';
 import ServiceMethodsBanner from '@/components/ServiceMethodsBanner';
 import ServicesIndexView from '@/components/ServicesIndexView';
@@ -304,13 +303,9 @@ export default function DynamicSlugPage({ params }: PageProps) {
       'sisli-psikolog',
       'kurtulus-psikolog',
     ].includes(params.slug);
-    const pageFaqs = (page as any).faqs;
-    const faqSchema = pageFaqs && pageFaqs.length > 0 ? getFaqSchema(pageFaqs) : null;
-    const featuredImg = (page as any).featured_image || getServiceImage(page.slug, page.title);
-    const isSplit = isRegionalPage && !!page.content && page.content.includes('<!-- FULL_WIDTH_SPLIT -->');
-    const [topHtml, bottomHtml] = isSplit
-      ? page.content.split('<!-- FULL_WIDTH_SPLIT -->')
-      : [page.content, null];
+    const featuredImg = isRegionalPage
+      ? '/images/psikolog-esra-sayin-updated-hero.webp'
+      : (page as any).featured_image || getServiceImage(page.slug, page.title);
 
     return (
       <>
@@ -318,12 +313,6 @@ export default function DynamicSlugPage({ params }: PageProps) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
-        {faqSchema && (
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-          />
-        )}
 
         <div className="py-6 sm:py-10 bg-white">
           {/* Top Title & Breadcrumb Banner (Exact match to media_1789415391296.png - Görsel 5) */}
@@ -384,10 +373,10 @@ export default function DynamicSlugPage({ params }: PageProps) {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
                   {/* Left Column: Content */}
                   <div className="lg:col-span-8">
-                    {topHtml ? (
+                    {page.content ? (
                       <div
                         className="prose-content max-w-none text-slate-700 bg-white"
-                        dangerouslySetInnerHTML={{ __html: topHtml }}
+                        dangerouslySetInnerHTML={{ __html: page.content }}
                       />
                     ) : (
                       <div className="p-8 bg-slate-50 rounded-2xl text-slate-600">
@@ -395,8 +384,8 @@ export default function DynamicSlugPage({ params }: PageProps) {
                       </div>
                     )}
 
-                    {/* 2 Bottom Recommendation Cards (Only on non-split standard pages) */}
-                    {!isSplit && !isAboutPage && (
+                    {/* 2 Bottom Recommendation Cards */}
+                    {!isAboutPage && (
                       <div className="mt-12 bg-[#f8f9fc] rounded-2xl p-6 sm:p-8 border border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <Link
                           href="/istanbul-bireysel-terapi/"
@@ -452,71 +441,7 @@ export default function DynamicSlugPage({ params }: PageProps) {
                     </div>
                   </div>
                 </div>
-
-                {/* Full Width Grid for Regional Pages once sidebar finishes */}
-                {isSplit && bottomHtml && (
-                  <div className="mt-10 sm:mt-12 space-y-10 sm:space-y-12">
-                    <div
-                      className="prose-content max-w-none text-slate-700"
-                      dangerouslySetInnerHTML={{ __html: bottomHtml }}
-                    />
-
-                    {/* 2 Bottom Recommendation Cards across full width */}
-                    <div className="bg-[#f8f9fc] rounded-3xl p-6 sm:p-8 border border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <Link
-                        href="/istanbul-bireysel-terapi/"
-                        className="group flex flex-col justify-between p-5 rounded-2xl bg-white border border-slate-100 hover:border-indigo-200 transition-all shadow-sm hover:shadow-md"
-                      >
-                        <div className="flex items-start gap-4">
-                          <div className="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0">
-                            <Brain className="w-6 h-6" />
-                          </div>
-                          <div>
-                            <h4 className="text-base font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
-                              Bireysel Danışmanlık
-                            </h4>
-                            <p className="text-xs text-slate-500 mt-1 leading-relaxed">
-                              Aile ve Evlilik, Çift, İlişki Danışmanı Esra SAYIN, danışmanlık süreci ile sorunlarınızı geride bırakmanıza yardımcı olur.
-                            </p>
-                          </div>
-                        </div>
-                        <div className="mt-4 pl-16">
-                          <ArrowRight className="w-4 h-4 text-slate-800 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all" />
-                        </div>
-                      </Link>
-
-                      <Link
-                        href="/istanbul-aile-terapisi/"
-                        className="group flex flex-col justify-between p-5 rounded-2xl bg-white border border-slate-100 hover:border-indigo-200 transition-all shadow-sm hover:shadow-md"
-                      >
-                        <div className="flex items-start gap-4">
-                          <div className="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0">
-                            <Users className="w-6 h-6" />
-                          </div>
-                          <div>
-                            <h4 className="text-base font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
-                              Aile Danışmanlığı
-                            </h4>
-                            <p className="text-xs text-slate-500 mt-1 leading-relaxed">
-                              Aile karmaşık ancak bağları güçlü bir yapıdır. Danışmanlığa başlayarak bu bağı güçlendirin ve sorunlarınızı çözün.
-                            </p>
-                          </div>
-                        </div>
-                        <div className="mt-4 pl-16">
-                          <ArrowRight className="w-4 h-4 text-slate-800 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all" />
-                        </div>
-                      </Link>
-                    </div>
-                  </div>
-                )}
               </>
-            )}
-
-            {/* Default FAQ section on information pages */}
-            {!isAboutPage && !isRegionalPage && (
-              <div className="mt-16 pt-12 border-t border-slate-100">
-                <FaqAccordion items={pageFaqs && pageFaqs.length > 0 ? pageFaqs : undefined} />
-              </div>
             )}
           </div>
         </div>
