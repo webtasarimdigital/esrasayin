@@ -295,6 +295,15 @@ export default function DynamicSlugPage({ params }: PageProps) {
     const isReviewPage = params.slug.includes('tavsiye');
     const isAppointmentPage = params.slug.includes('randevu');
     const isAboutPage = params.slug === 'istanbul-psikolog-esra-sayin';
+    const isRegionalPage = [
+      'cihangir-psikolog',
+      'beyoglu-psikolog',
+      'taksim-psikolog',
+      'gumussuyu-psikolog',
+      'nisantasi-psikolog',
+      'sisli-psikolog',
+      'kurtulus-psikolog',
+    ].includes(params.slug);
     const pageFaqs = (page as any).faqs;
     const faqSchema = pageFaqs && pageFaqs.length > 0 ? getFaqSchema(pageFaqs) : null;
     const featuredImg = (page as any).featured_image || getServiceImage(page.slug, page.title);
@@ -443,7 +452,7 @@ export default function DynamicSlugPage({ params }: PageProps) {
             )}
 
             {/* Default FAQ section on information pages */}
-            {!isAboutPage && (
+            {!isAboutPage && !isRegionalPage && (
               <div className="mt-16 pt-12 border-t border-slate-100">
                 <FaqAccordion items={pageFaqs && pageFaqs.length > 0 ? pageFaqs : undefined} />
               </div>
