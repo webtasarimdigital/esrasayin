@@ -18,7 +18,6 @@ import ContactSection from '@/components/ContactSection';
 import ReviewsSection from '@/components/ReviewsSection';
 import ServicesSidebar from '@/components/ServicesSidebar';
 import ServiceMethodsBanner from '@/components/ServiceMethodsBanner';
-import ServicesIndexView from '@/components/ServicesIndexView';
 
 interface PageProps {
   params: {
@@ -277,18 +276,7 @@ export default function DynamicSlugPage({ params }: PageProps) {
       { name: page.title, url: `/${page.permalink}/` },
     ]);
 
-    // If this is the Danışmanlıklar index page (/istanbul-terapiler/), render ServicesIndexView (Görsel 3)
-    if (params.slug === 'istanbul-terapiler') {
-      return (
-        <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-          />
-          <ServicesIndexView />
-        </>
-      );
-    }
+
 
     const isContactPage = params.slug.includes('iletisim');
     const isReviewPage = params.slug.includes('tavsiye');

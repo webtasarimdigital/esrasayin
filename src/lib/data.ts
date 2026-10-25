@@ -144,7 +144,7 @@ export const FAQS = [
   },
   {
     question: 'Hangi ekoller ve yöntemler ile çalışıyorsunuz?',
-    answer: 'Görüşmelerimizde danışanın getirdiği konunun özelliğine göre Bilişsel Davranışçı Danışmanlık (BDT) ilkeleri, Şema Danışmanlığı teknikleri, EMDR yaklaşımları ve Sistemik Çift & Aile Danışmanlığı modellerinden yararlanılarak kişiye özel bir danışmanlık haritası çıkarılmaktadır.'
+    answer: 'Görüşmelerimizde danışanın getirdiği konunun özelliğine göre Bilişsel Davranışçı Danışmanlık (BDT) ilkeleri, Şema Danışmanlığı teknikleri, çözüm odaklı psikolojik yaklaşımlar ve Sistemik Çift & Aile Danışmanlığı modellerinden yararlanılarak kişiye özel bir danışmanlık haritası çıkarılmaktadır.'
   },
   {
     question: 'Randevu nasıl alabilirim?',

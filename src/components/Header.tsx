@@ -33,7 +33,7 @@ export default function Header({ onOpenAppointment }: HeaderProps) {
   const navLinks = [
     { name: 'Anasayfa', href: '/' },
     { name: 'Hakkında', href: '/istanbul-psikolog-esra-sayin/' },
-    { name: 'Danışmanlıklar', href: '/istanbul-terapiler/' },
+    { name: 'Blog', href: '/blog/' },
     { name: 'Danışan Yorumları', href: '/istanbul-psikolog-tavsiye/' },
     { name: 'İletişim', href: '/istanbul-psikolog-iletisim/' },
   ];
