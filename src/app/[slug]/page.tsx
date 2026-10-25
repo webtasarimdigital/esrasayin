@@ -307,6 +307,10 @@ export default function DynamicSlugPage({ params }: PageProps) {
     const pageFaqs = (page as any).faqs;
     const faqSchema = pageFaqs && pageFaqs.length > 0 ? getFaqSchema(pageFaqs) : null;
     const featuredImg = (page as any).featured_image || getServiceImage(page.slug, page.title);
+    const isSplit = isRegionalPage && !!page.content && page.content.includes('<!-- FULL_WIDTH_SPLIT -->');
+    const [topHtml, bottomHtml] = isSplit
+      ? page.content.split('<!-- FULL_WIDTH_SPLIT -->')
+      : [page.content, null];
 
     return (
       <>
@@ -380,10 +384,10 @@ export default function DynamicSlugPage({ params }: PageProps) {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
                   {/* Left Column: Content */}
                   <div className="lg:col-span-8">
-                    {page.content ? (
+                    {topHtml ? (
                       <div
                         className="prose-content max-w-none text-slate-700 bg-white"
-                        dangerouslySetInnerHTML={{ __html: page.content }}
+                        dangerouslySetInnerHTML={{ __html: topHtml }}
                       />
                     ) : (
                       <div className="p-8 bg-slate-50 rounded-2xl text-slate-600">
@@ -391,8 +395,8 @@ export default function DynamicSlugPage({ params }: PageProps) {
                       </div>
                     )}
 
-                    {/* 2 Bottom Recommendation Cards (Exact match to media_1789415391296.png - Görsel 5) */}
-                    {!isAboutPage && (
+                    {/* 2 Bottom Recommendation Cards (Only on non-split standard pages) */}
+                    {!isSplit && !isAboutPage && (
                       <div className="mt-12 bg-[#f8f9fc] rounded-2xl p-6 sm:p-8 border border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <Link
                           href="/istanbul-bireysel-terapi/"
@@ -448,6 +452,63 @@ export default function DynamicSlugPage({ params }: PageProps) {
                     </div>
                   </div>
                 </div>
+
+                {/* Full Width Grid for Regional Pages once sidebar finishes */}
+                {isSplit && bottomHtml && (
+                  <div className="mt-10 sm:mt-12 space-y-10 sm:space-y-12">
+                    <div
+                      className="prose-content max-w-none text-slate-700"
+                      dangerouslySetInnerHTML={{ __html: bottomHtml }}
+                    />
+
+                    {/* 2 Bottom Recommendation Cards across full width */}
+                    <div className="bg-[#f8f9fc] rounded-3xl p-6 sm:p-8 border border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                      <Link
+                        href="/istanbul-bireysel-terapi/"
+                        className="group flex flex-col justify-between p-5 rounded-2xl bg-white border border-slate-100 hover:border-indigo-200 transition-all shadow-sm hover:shadow-md"
+                      >
+                        <div className="flex items-start gap-4">
+                          <div className="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0">
+                            <Brain className="w-6 h-6" />
+                          </div>
+                          <div>
+                            <h4 className="text-base font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                              Bireysel Danışmanlık
+                            </h4>
+                            <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                              Aile ve Evlilik, Çift, İlişki Danışmanı Esra SAYIN, danışmanlık süreci ile sorunlarınızı geride bırakmanıza yardımcı olur.
+                            </p>
+                          </div>
+                        </div>
+                        <div className="mt-4 pl-16">
+                          <ArrowRight className="w-4 h-4 text-slate-800 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all" />
+                        </div>
+                      </Link>
+
+                      <Link
+                        href="/istanbul-aile-terapisi/"
+                        className="group flex flex-col justify-between p-5 rounded-2xl bg-white border border-slate-100 hover:border-indigo-200 transition-all shadow-sm hover:shadow-md"
+                      >
+                        <div className="flex items-start gap-4">
+                          <div className="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0">
+                            <Users className="w-6 h-6" />
+                          </div>
+                          <div>
+                            <h4 className="text-base font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                              Aile Danışmanlığı
+                            </h4>
+                            <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                              Aile karmaşık ancak bağları güçlü bir yapıdır. Danışmanlığa başlayarak bu bağı güçlendirin ve sorunlarınızı çözün.
+                            </p>
+                          </div>
+                        </div>
+                        <div className="mt-4 pl-16">
+                          <ArrowRight className="w-4 h-4 text-slate-800 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all" />
+                        </div>
+                      </Link>
+                    </div>
+                  </div>
+                )}
               </>
             )}
 
