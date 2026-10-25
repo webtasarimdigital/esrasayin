@@ -41,11 +41,14 @@ const nextConfig = {
       { source: '/579-emdr-nedir-hangi-durumlarda-ve-nasil-uygulanir', destination: '/', permanent: true },
       { source: '/emdr-nedir-hangi-durumlarda-ve-nasil-uygulanir', destination: '/', permanent: true },
       { source: '/425-cift-terapisinde-emdr-yonteminin-faydalari', destination: '/istanbul-cift-terapisi/', permanent: true },
-      { source: '/cift-terapisinde-emdr-yonteminin-faydalari', destination: '/istanbul-cift-terapisi/', permanent: true },
       { source: '/459-insanlar-neden-kendine-zarar-verir', destination: '/', permanent: true },
       { source: '/insanlar-neden-kendine-zarar-verir', destination: '/', permanent: true },
       { source: '/547-ergen-terapisi-nedir-neden-ve-nasil-uygulanir', destination: '/', permanent: true },
       { source: '/ergen-terapisi-nedir-neden-ve-nasil-uygulanir', destination: '/', permanent: true },
+      { source: '/553-bdt-nedir-hangi-durumlarda-ve-nasil-uygulanir', destination: '/', permanent: true },
+      { source: '/bdt-nedir-hangi-durumlarda-ve-nasil-uygulanir', destination: '/', permanent: true },
+      { source: '/550-panik-atak-nedir', destination: '/', permanent: true },
+      { source: '/panik-atak-nedir', destination: '/', permanent: true },
     ];
   },
 };
