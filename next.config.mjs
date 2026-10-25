@@ -35,6 +35,10 @@ const nextConfig = {
       { source: '/sisli-evlilik-terapisi', destination: '/istanbul-evlilik-terapisi/', permanent: true },
       { source: '/online-psikolog', destination: '/', permanent: true },
       // Removed Blog Posts
+      { source: '/1006-online-yuz-yuze-terapi-beyoglu-psikolog', destination: '/', permanent: true },
+      { source: '/online-yuz-yuze-terapi-beyoglu-psikolog', destination: '/', permanent: true },
+      { source: '/1002-terapiye-ne-zaman-baslanmali', destination: '/', permanent: true },
+      { source: '/terapiye-ne-zaman-baslanmali', destination: '/', permanent: true },
       { source: '/440-akran-zorbaligi-nedir', destination: '/', permanent: true },
       { source: '/akran-zorbaligi-nedir', destination: '/', permanent: true },
       { source: '/1034-beyoglu-yas-terapisi-kayip-destek', destination: '/', permanent: true },
