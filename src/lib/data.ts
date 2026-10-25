@@ -33,7 +33,7 @@ export const SITE_INFO = {
     googleMap: 'https://share.google/niicNRLot1aky40vr',
     googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.6854808981248!2d28.983053499999997!3d41.0321365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab7aad30c9351%3A0xf57e5e5fb04894eb!2sPsikolog%20Esra%20Say%C4%B1n%20Beyo%C4%9Flu!5e0!3m2!1str!2str!4v1762242545849!5m2!1str!2str',
   },
-  workingHours: 'Pazartesi - Pazar: 10:00 - 23:30 (Haftanın 7 Günü Açık)',
+  workingHours: 'Pazartesi - Pazar: 10:00 - 23:30',
 };
 
 // 5 Core Services focusing on Couples & Family Counseling
