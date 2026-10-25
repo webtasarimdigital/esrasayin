@@ -26,7 +26,6 @@ const nextConfig = {
       { source: '/istanbul-cinsel-terapi', destination: '/istanbul-cift-terapisi/', permanent: true },
       { source: '/sisli-cinsel-terapi', destination: '/istanbul-cift-terapisi/', permanent: true },
       { source: '/istanbul-terapiler', destination: '/', permanent: true },
-      { source: '/onam-formu', destination: '/', permanent: true },
       { source: '/emdr-terapisi', destination: '/', permanent: true },
       { source: '/istanbul-cift-terapisinde-emdr-yontemi', destination: '/istanbul-cift-terapisi/', permanent: true },
       { source: '/sisli-aile-danismanligi', destination: '/istanbul-aile-terapisi/', permanent: true },
