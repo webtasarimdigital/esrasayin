@@ -144,20 +144,20 @@ export default function DynamicSlugPage({ params }: PageProps) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
 
-        <article className="py-12 md:py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <article className="py-8 sm:py-12 md:py-20 bg-white max-w-full overflow-hidden">
+          <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
             {/* Breadcrumb & Title Header */}
-            <div className="text-center max-w-3xl mx-auto mb-8">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 leading-tight mb-4">
+            <div className="text-center max-w-3xl mx-auto mb-8 px-1 sm:px-0">
+              <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-slate-900 leading-tight mb-4 break-words">
                 {post.title}
               </h1>
-              <nav className="inline-flex items-center gap-2 text-xs font-semibold text-indigo-600 uppercase tracking-wider">
-                <Link href="/" className="hover:underline inline-flex items-center gap-1">
+              <nav className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-semibold text-indigo-600 uppercase tracking-wider">
+                <Link href="/" className="hover:underline inline-flex items-center gap-1 flex-shrink-0">
                   <Home className="w-3.5 h-3.5" />
                   <span>ANASAYFA</span>
                 </Link>
-                <span>&gt;</span>
-                <span className="text-slate-500">{post.title}</span>
+                <span className="text-slate-400">&gt;</span>
+                <span className="text-slate-500 break-words">{post.title}</span>
               </nav>
             </div>
 
@@ -302,20 +302,20 @@ export default function DynamicSlugPage({ params }: PageProps) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
 
-        <div className="py-6 sm:py-10 bg-white">
+        <div className="py-6 sm:py-10 bg-white max-w-full overflow-hidden">
           {/* Top Title & Breadcrumb Banner (Exact match to media_1789415391296.png - Görsel 5) */}
-          <div className="bg-[#f0f1f8] py-12 sm:py-14 mb-8 sm:mb-12">
+          <div className="bg-[#f0f1f8] py-8 sm:py-14 mb-8 sm:mb-12">
             <div className="max-w-4xl mx-auto px-4 text-center">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-3 tracking-tight">
+              <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-3 tracking-tight break-words">
                 {page.title}
               </h1>
-              <nav className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-600">
-                <Link href="/" className="hover:underline inline-flex items-center gap-1.5 text-slate-800">
+              <nav className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-slate-600">
+                <Link href="/" className="hover:underline inline-flex items-center gap-1.5 text-slate-800 flex-shrink-0">
                   <Home className="w-3.5 h-3.5" />
                   <span>ANASAYFA</span>
                 </Link>
                 <span className="text-slate-400">&gt;</span>
-                <span className="text-indigo-600 font-bold">{page.title}</span>
+                <span className="text-indigo-600 font-bold break-words">{page.title}</span>
               </nav>
             </div>
           </div>

@@ -5,10 +5,15 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
   }
   body {
     @apply text-slate-800 bg-white antialiased;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
   }
 }
 
@@ -17,6 +22,12 @@
   color: #334155;
   line-height: 1.8;
   font-size: 1rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.prose-content * {
+  max-width: 100%;
 }
 
 .prose-content p {

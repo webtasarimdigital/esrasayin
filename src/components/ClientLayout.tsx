@@ -11,7 +11,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   const [isAppointmentOpen, setIsAppointmentOpen] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-900 font-sans selection:bg-[#ff5a6e] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-white text-slate-900 font-sans selection:bg-[#ff5a6e] selection:text-white w-full max-w-full overflow-x-hidden">
       <TitleNotifier />
       <Header onOpenAppointment={() => setIsAppointmentOpen(true)} />
       <main className="flex-1">{children}</main>
