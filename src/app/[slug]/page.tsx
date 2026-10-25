@@ -376,7 +376,7 @@ export default function DynamicSlugPage({ params }: PageProps) {
                     fill
                     priority
                     sizes="(max-width: 1024px) 100vw, 900px"
-                    className="object-cover"
+                    className={`object-cover ${featuredImg.includes('hero') ? 'object-[62%_center]' : 'object-center'}`}
                   />
                 </div>
 
