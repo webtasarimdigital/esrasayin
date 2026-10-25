@@ -320,125 +320,116 @@ export default function DynamicSlugPage({ params }: PageProps) {
             </div>
           </div>
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* If reviews page */}
-            {isReviewPage && (
-              <div className="mb-12">
-                <ReviewsSection />
-              </div>
-            )}
-
-            {/* If contact page */}
-            {isContactPage && (
-              <div className="mb-12">
-                <ContactSection />
-              </div>
-            )}
-
-            {/* If appointment page */}
-            {isAppointmentPage && (
-              <div className="mb-12">
-                <ContactSection />
-              </div>
-            )}
-
-            {/* Standard Service Page Layout (Exact match to media_1789415391296.png - Görsel 5) */}
-            {!isContactPage && !isAppointmentPage && !isReviewPage && (
-              <>
-                {/* Large Featured Image */}
-                <div className="max-w-4xl mx-auto relative aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-slate-100 mb-12 bg-slate-100">
-                  <Image
-                    src={featuredImg}
-                    alt={page.title}
-                    fill
-                    priority
-                    sizes="(max-width: 1024px) 100vw, 900px"
-                    className={`object-cover ${featuredImg.includes('hero') ? 'object-[62%_center]' : 'object-center'}`}
-                  />
+          {/* If contact or appointment page */}
+          {(isContactPage || isAppointmentPage) ? (
+            <ContactSection />
+          ) : (
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              {/* If reviews page */}
+              {isReviewPage && (
+                <div className="mb-12">
+                  <ReviewsSection />
                 </div>
+              )}
 
-                {/* 2-Column Grid: Content on Left, Services Sidebar on Right */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-                  {/* Left Column: Content */}
-                  <div className="lg:col-span-8">
-                    {page.content ? (
-                      <div
-                        className="prose-content max-w-none text-slate-700 bg-white"
-                        dangerouslySetInnerHTML={{ __html: page.content }}
-                      />
-                    ) : (
-                      <div className="p-8 bg-slate-50 rounded-2xl text-slate-600">
-                        {page.excerpt || 'Bu hizmet alanı hakkında detaylı bilgi ve randevu için bize ulaşabilirsiniz.'}
-                      </div>
-                    )}
-
-                    {/* 2 Bottom Recommendation Cards */}
-                    {!isAboutPage && (
-                      <div className="mt-12 bg-[#f8f9fc] rounded-2xl p-6 sm:p-8 border border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <Link
-                          href="/istanbul-bireysel-terapi/"
-                          className="group flex flex-col justify-between"
-                        >
-                          <div className="flex items-start gap-4">
-                            <div className="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0">
-                              <Brain className="w-6 h-6" />
-                            </div>
-                            <div>
-                              <h4 className="text-base font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
-                                Bireysel Danışmanlık
-                              </h4>
-                              <p className="text-xs text-slate-500 mt-1 leading-relaxed">
-                                Aile ve Evlilik, Çift, İlişki Danışmanı Esra SAYIN, danışmanlık süreci ile sorunlarınızı geride bırakmanıza yardımcı olur.
-                              </p>
-                            </div>
-                          </div>
-                          <div className="mt-4 pl-16">
-                            <ArrowRight className="w-4 h-4 text-slate-800 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all" />
-                          </div>
-                        </Link>
-
-                        <Link
-                          href="/istanbul-aile-terapisi/"
-                          className="group flex flex-col justify-between"
-                        >
-                          <div className="flex items-start gap-4">
-                            <div className="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0">
-                              <Users className="w-6 h-6" />
-                            </div>
-                            <div>
-                              <h4 className="text-base font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
-                                Aile Danışmanlığı
-                              </h4>
-                              <p className="text-xs text-slate-500 mt-1 leading-relaxed">
-                                Aile karmaşık ancak bağları güçlü bir yapıdır. Danışmanlığa başlayarak bu bağı güçlendirin ve sorunlarınızı çözün.
-                              </p>
-                            </div>
-                          </div>
-                          <div className="mt-4 pl-16">
-                            <ArrowRight className="w-4 h-4 text-slate-800 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all" />
-                          </div>
-                        </Link>
-                      </div>
-                    )}
+              {/* Standard Service Page Layout (Exact match to media_1789415391296.png - Görsel 5) */}
+              {!isReviewPage && (
+                <>
+                  {/* Large Featured Image */}
+                  <div className="max-w-4xl mx-auto relative aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-slate-100 mb-12 bg-slate-100">
+                    <Image
+                      src={featuredImg}
+                      alt={page.title}
+                      fill
+                      priority
+                      sizes="(max-width: 1024px) 100vw, 900px"
+                      className={`object-cover ${featuredImg.includes('hero') ? 'object-[62%_center]' : 'object-center'}`}
+                    />
                   </div>
 
-                  {/* Right Column: Sticky Services Sidebar */}
-                  <div className="lg:col-span-4">
-                    <div className="sticky top-28">
-                      <ServicesSidebar currentSlug={page.slug} />
+                  {/* 2-Column Grid: Content on Left, Services Sidebar on Right */}
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                    {/* Left Column: Content */}
+                    <div className="lg:col-span-8">
+                      {page.content ? (
+                        <div
+                          className="prose-content max-w-none text-slate-700 bg-white"
+                          dangerouslySetInnerHTML={{ __html: page.content }}
+                        />
+                      ) : (
+                        <div className="p-8 bg-slate-50 rounded-2xl text-slate-600">
+                          {page.excerpt || 'Bu hizmet alanı hakkında detaylı bilgi ve randevu için bize ulaşabilirsiniz.'}
+                        </div>
+                      )}
+
+                      {/* 2 Bottom Recommendation Cards */}
+                      {!isAboutPage && (
+                        <div className="mt-12 bg-[#f8f9fc] rounded-2xl p-6 sm:p-8 border border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                          <Link
+                            href="/istanbul-bireysel-terapi/"
+                            className="group flex flex-col justify-between"
+                          >
+                            <div className="flex items-start gap-4">
+                              <div className="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0">
+                                <Brain className="w-6 h-6" />
+                              </div>
+                              <div>
+                                <h4 className="text-base font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                  Bireysel Danışmanlık
+                                </h4>
+                                <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                                  Aile ve Evlilik, Çift, İlişki Danışmanı Esra SAYIN, danışmanlık süreci ile sorunlarınızı geride bırakmanıza yardımcı olur.
+                                </p>
+                              </div>
+                            </div>
+                            <div className="mt-4 pl-16">
+                              <ArrowRight className="w-4 h-4 text-slate-800 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all" />
+                            </div>
+                          </Link>
+
+                          <Link
+                            href="/istanbul-aile-terapisi/"
+                            className="group flex flex-col justify-between"
+                          >
+                            <div className="flex items-start gap-4">
+                              <div className="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0">
+                                <Users className="w-6 h-6" />
+                              </div>
+                              <div>
+                                <h4 className="text-base font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                  Aile Danışmanlığı
+                                </h4>
+                                <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                                  Aile karmaşık ancak bağları güçlü bir yapıdır. Danışmanlığa başlayarak bu bağı güçlendirin ve sorunlarınızı çözün.
+                                </p>
+                              </div>
+                            </div>
+                            <div className="mt-4 pl-16">
+                              <ArrowRight className="w-4 h-4 text-slate-800 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all" />
+                            </div>
+                          </Link>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Right Column: Sticky Services Sidebar */}
+                    <div className="lg:col-span-4">
+                      <div className="sticky top-28">
+                        <ServicesSidebar currentSlug={page.slug} />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </>
-            )}
-          </div>
+                </>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Danışmanlık Yöntemleri Banner (Yüz yüze veya Online) */}
-        <ServiceMethodsBanner />
+        {!isContactPage && !isAppointmentPage && <ServiceMethodsBanner />}
 
         {/* Contact Section at bottom */}
-        <ContactSection />
+        {!isContactPage && !isAppointmentPage && <ContactSection />}
       </>
     );
   }
