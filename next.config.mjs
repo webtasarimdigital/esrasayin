@@ -35,6 +35,10 @@ const nextConfig = {
       { source: '/sisli-evlilik-terapisi', destination: '/istanbul-evlilik-terapisi/', permanent: true },
       { source: '/online-psikolog', destination: '/', permanent: true },
       // Removed Blog Posts
+      { source: '/1034-beyoglu-yas-terapisi-kayip-destek', destination: '/', permanent: true },
+      { source: '/beyoglu-yas-terapisi-kayip-destek', destination: '/', permanent: true },
+      { source: '/988-beyoglu-psikolog-adres', destination: '/', permanent: true },
+      { source: '/beyoglu-psikolog-adres', destination: '/', permanent: true },
       { source: '/968-beyoglu-psikolog-tavsiye', destination: '/', permanent: true },
       { source: '/beyoglu-psikolog-tavsiye', destination: '/', permanent: true },
       { source: '/1032-beyoglu-okb-obsesif-kompulsif-terapi', destination: '/', permanent: true },
