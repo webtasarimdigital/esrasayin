@@ -15,11 +15,6 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      { source: '/beyoglu-psikolog', destination: '/', permanent: true },
-      { source: '/cihangir-psikolog', destination: '/', permanent: true },
-      { source: '/taksim-psikolog', destination: '/', permanent: true },
-      { source: '/sisli-psikolog', destination: '/', permanent: true },
-      { source: '/nisantasi-psikolog', destination: '/', permanent: true },
       { source: '/online-psikolog', destination: '/', permanent: true },
       { source: '/sisli-aile-danismanligi', destination: '/istanbul-aile-terapisi/', permanent: true },
       { source: '/sisli-cift-terapisi', destination: '/istanbul-cift-terapisi/', permanent: true },

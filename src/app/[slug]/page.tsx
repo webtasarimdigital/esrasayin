@@ -83,6 +83,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         description: page.excerpt,
         url: canonical,
         type: 'website',
+        images: [
+          {
+            url: (page as any).featured_image?.startsWith('http')
+              ? (page as any).featured_image
+              : `${SITE_INFO.url}${(page as any).featured_image || '/images/psikolog-esra-sayin-uniform.webp'}`,
+          },
+        ],
       },
     };
   }
@@ -288,7 +295,7 @@ export default function DynamicSlugPage({ params }: PageProps) {
     const isReviewPage = params.slug.includes('tavsiye');
     const isAppointmentPage = params.slug.includes('randevu');
     const isAboutPage = params.slug === 'istanbul-psikolog-esra-sayin';
-    const featuredImg = getServiceImage(page.slug, page.title);
+    const featuredImg = (page as any).featured_image || getServiceImage(page.slug, page.title);
 
     return (
       <>

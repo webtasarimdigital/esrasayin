@@ -19,15 +19,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
+  // 7 Odak Bölge Sayfaları (Cihangir, Beyoğlu, Taksim, Gümüşsuyu, Nişantaşı, Şişli, Kurtuluş)
+  const regionalSlugs = new Set([
+    'cihangir-psikolog',
+    'beyoglu-psikolog',
+    'taksim-psikolog',
+    'gumussuyu-psikolog',
+    'nisantasi-psikolog',
+    'sisli-psikolog',
+    'kurtulus-psikolog',
+  ]);
+
   // All Pages
   const pageRoutes: MetadataRoute.Sitemap = pages
-    .filter((p) => p.permalink && p.permalink !== '')
-    .map((p) => ({
-      url: `${baseUrl}/${p.permalink}/`,
-      lastModified: p.modified ? new Date(p.modified) : new Date(),
-      changeFrequency: 'weekly',
-      priority: p.permalink.includes('terapi') || p.permalink.includes('psikolog') ? 0.9 : 0.8,
-    }));
+    .filter((p) => p.permalink && p.permalink !== '' && p.permalink !== 'anasayfa')
+    .map((p) => {
+      const isRegional = regionalSlugs.has(p.slug || p.permalink);
+      return {
+        url: `${baseUrl}/${p.permalink}/`,
+        lastModified: p.modified ? new Date(p.modified) : new Date(),
+        changeFrequency: isRegional ? 'daily' : 'weekly',
+        priority: isRegional ? 0.95 : (p.permalink.includes('psikolog') || p.permalink.includes('danismanlik') ? 0.9 : 0.8),
+      };
+    });
 
   // All Blog Posts
   const postRoutes: MetadataRoute.Sitemap = posts.map((p) => ({
