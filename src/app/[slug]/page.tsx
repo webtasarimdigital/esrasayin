@@ -12,7 +12,7 @@ import {
   getRelatedPosts,
   SITE_INFO,
 } from '@/lib/data';
-import { getArticleSchema, getBreadcrumbSchema } from '@/lib/seo';
+import { getArticleSchema, getBreadcrumbSchema, getFaqSchema } from '@/lib/seo';
 import BlogCard from '@/components/BlogCard';
 import ContactSection from '@/components/ContactSection';
 import ReviewsSection from '@/components/ReviewsSection';
@@ -295,6 +295,8 @@ export default function DynamicSlugPage({ params }: PageProps) {
     const isReviewPage = params.slug.includes('tavsiye');
     const isAppointmentPage = params.slug.includes('randevu');
     const isAboutPage = params.slug === 'istanbul-psikolog-esra-sayin';
+    const pageFaqs = (page as any).faqs;
+    const faqSchema = pageFaqs && pageFaqs.length > 0 ? getFaqSchema(pageFaqs) : null;
     const featuredImg = (page as any).featured_image || getServiceImage(page.slug, page.title);
 
     return (
@@ -303,6 +305,12 @@ export default function DynamicSlugPage({ params }: PageProps) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
+        {faqSchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          />
+        )}
 
         <div className="py-6 sm:py-10 bg-white">
           {/* Top Title & Breadcrumb Banner (Exact match to media_1789415391296.png - Görsel 5) */}
@@ -437,7 +445,7 @@ export default function DynamicSlugPage({ params }: PageProps) {
             {/* Default FAQ section on information pages */}
             {!isAboutPage && (
               <div className="mt-16 pt-12 border-t border-slate-100">
-                <FaqAccordion />
+                <FaqAccordion items={pageFaqs && pageFaqs.length > 0 ? pageFaqs : undefined} />
               </div>
             )}
           </div>
