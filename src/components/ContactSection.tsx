@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, MessageCircle, CheckCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, MessageCircle, CheckCircle, Navigation, Share2 } from 'lucide-react';
 import { SITE_INFO } from '@/lib/data';
 
 export default function ContactSection() {
@@ -59,19 +59,33 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-xs font-bold text-indigo-600 uppercase tracking-wider mb-1">
-                      CİHANGİR OFİS
+                      BEYOĞLU CİHANGİR OFİS
                     </h4>
                     <p className="text-slate-700 text-sm sm:text-[15px] leading-relaxed">
                       {SITE_INFO.address.street}, {SITE_INFO.address.district}, {SITE_INFO.address.city}
                     </p>
-                    <a
-                      href={SITE_INFO.socials.googleMap}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block mt-1 text-xs font-bold text-indigo-600 hover:underline"
-                    >
-                      Google Haritada Yol Tarifi Al →
-                    </a>
+                    <div className="flex flex-wrap items-center gap-3 mt-2">
+                      <a
+                        href={SITE_INFO.socials.googleMap}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-600 hover:text-indigo-800 hover:underline"
+                      >
+                        <Navigation className="w-3.5 h-3.5" />
+                        <span>Google Haritalar&apos;da Yol Tarifi Al →</span>
+                      </a>
+                      <span className="text-slate-300">•</span>
+                      <a
+                        href={SITE_INFO.socials.googleMapShare}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-500 hover:text-slate-800 hover:underline"
+                        title="Harita Paylaşım Bağlantısı"
+                      >
+                        <Share2 className="w-3.5 h-3.5" />
+                        <span>Konumu Paylaş</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
 
@@ -259,19 +273,63 @@ export default function ContactSection() {
           </div>
         </div>
 
-        {/* ROW 2: FULL-WIDTH HORIZONTAL GOOGLE MAP (YATAY GEÇİŞLİ DÜZEN) */}
-        <div className="mt-8 sm:mt-10 w-full h-80 sm:h-96 md:h-[420px] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-md relative bg-slate-100">
-          <iframe
-            src={SITE_INFO.socials.googleMapEmbed}
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Psikolog Esra Sayın Cihangir Ofis Konumu Harita"
-            className="w-full h-full"
-          />
+        {/* ROW 2: FULL-WIDTH HORIZONTAL GOOGLE MAP WITH LOCAL SEO HEADER */}
+        <div className="mt-8 sm:mt-10 bg-white rounded-2xl sm:rounded-3xl border border-slate-200 shadow-md overflow-hidden">
+          {/* Map Header Card */}
+          <div className="p-4 sm:p-6 bg-slate-900 text-white flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="space-y-1">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                  ✓ Doğrulanmış Google İşletme Konumu
+                </span>
+                <span className="text-amber-400 text-xs font-semibold">
+                  ★★★★★ 5.0 Google Değerlendirmesi
+                </span>
+              </div>
+              <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
+                {SITE_INFO.name}
+              </h3>
+              <p className="text-xs text-slate-300">
+                {SITE_INFO.address.street}, {SITE_INFO.address.district}, {SITE_INFO.address.city}
+              </p>
+            </div>
+            <div className="flex items-center gap-3 flex-shrink-0">
+              <a
+                href={SITE_INFO.socials.googleMap}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold transition-all shadow-sm active:scale-95"
+              >
+                <Navigation className="w-4 h-4" />
+                <span>Haritada Aç &amp; Yol Tarifi Al</span>
+              </a>
+              <a
+                href={SITE_INFO.socials.googleMapShare}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium transition-all"
+                title="Harita Kısa Paylaşım Bağlantısı"
+              >
+                <Share2 className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">Paylaş</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Iframe */}
+          <div className="w-full h-80 sm:h-96 md:h-[420px] bg-slate-100">
+            <iframe
+              src={SITE_INFO.socials.googleMapEmbed}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Psikolog Esra Sayın Cihangir Beyoğlu Google Haritalar Konumu"
+              className="w-full h-full"
+            />
+          </div>
         </div>
       </div>
     </section>

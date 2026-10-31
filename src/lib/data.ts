@@ -8,17 +8,17 @@ export const pages: SitePage[] = pagesData as SitePage[];
 export const categories: Category[] = categoriesData as Category[];
 
 export const SITE_INFO = {
-  name: 'Psikolog & Aile Danışmanı Esra SAYIN',
+  name: 'Psikolog Esra Sayın | Çift, Aile ve Evlilik Danışmanı',
   shortName: 'Esra Sayın',
-  title: 'Psikolog & Aile Danışmanı Esra Sayın | Çift ve Aile Danışmanlığı',
-  description: 'Psikolog & Aile Danışmanı Esra Sayın. Çift danışmanlığı, evlilik danışmanlığı, aile ve bireysel danışmanlık süreçleri hakkında bilgilendirme ve randevu.',
+  title: 'Psikolog Esra Sayın | Beyoğlu Psikolog & Çift Danışmanlığı',
+  description: 'Beyoğlu Cihangir ofisinde çift danışmanlığı, evlilik danışmanlığı, aile ve yetişkin danışmanlığı sunan Psikolog Esra Sayın resmi danışmanlık sitesi ve harita konumu.',
   url: 'https://esrasayin.com.tr',
   phone: '0538 650 32 17',
   phoneFormatted: '+90 538 650 32 17',
   email: 'esrasayin111@gmail.com',
   address: {
     street: 'Kuloğlu Mah. Sıraselviler Cad. No:68 Garanti Bankası Üstü Simge Apartmanı Kat 2',
-    district: 'Cihangir / Beyoğlu',
+    district: 'Cihangir, Beyoğlu',
     city: 'İstanbul',
     country: 'Türkiye',
     postalCode: '34433',
@@ -30,8 +30,10 @@ export const SITE_INFO = {
     linkedin: 'https://www.linkedin.com/in/esra-s-1302b4209/',
     doktorTakvimi: 'https://www.doktortakvimi.com/profil/esra-sayin-2',
     doktorSitesi: 'https://www.doktorsitesi.com/psk-esra-sayin/psikoloji-aile-danismani-psikolog/istanbul',
-    googleMap: 'https://share.google/niicNRLot1aky40vr',
-    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.6854808981248!2d28.983053499999997!3d41.0321365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab7aad30c9351%3A0xf57e5e5fb04894eb!2sPsikolog%20Esra%20Say%C4%B1n%20Beyo%C4%9Flu!5e0!3m2!1str!2str!4v1762242545849!5m2!1str!2str',
+    googleMap: 'https://www.google.com/maps/place/Psikolog+Esra+Say%C4%B1n+%7C+%C3%87ift,+Aile+ve+Evlilik+Dan%C4%B1%C5%9Fman%C4%B1/@41.0321405,28.9804786,17z/data=!3m1!4b1!4m6!3m5!1s0x14cab7aad30c9351:0xf57e5e5fb04894eb!8m2!3d41.0321365!4d28.9830535!16s%2Fg%2F11y14qtcy3',
+    googleMapShare: 'https://share.google/vTit81gOrZ1GDtv8s',
+    googleMapCid: 'https://maps.google.com/?cid=17689680151430337771',
+    googleMapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.6854808981248!2d28.9804786!3d41.0321405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab7aad30c9351%3A0xf57e5e5fb04894eb!2sPsikolog%20Esra%20Say%C4%B1n%20%7C%20%C3%87ift%2C%20Aile%20ve%20Evlilik%20Dan%C4%B1%C5%9Fman%C4%B1!5e0!3m2!1str!2str!4v1730360000000!5m2!1str!2str',
   },
   workingHours: 'Pazartesi - Pazar: 10:00 - 23:30',
 };

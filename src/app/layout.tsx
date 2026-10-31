@@ -72,6 +72,23 @@ export const metadata: Metadata = {
   verification: {
     google: 'egXPzCMrAlxYA2SCdaoynX7nWPfNiJBjYG6d8h-vw88',
   },
+  keywords: [
+    'Beyoğlu Psikolog',
+    'Beyoğlu Çift Danışmanlığı',
+    'Çift Danışmanlığı İstanbul',
+    'Evlilik Danışmanlığı',
+    'Cihangir Psikolog',
+    'Taksim Psikolog',
+    'Aile Danışmanı Esra Sayın',
+    'Bireysel Danışmanlık Beyoğlu',
+    'İlişki Danışmanı İstanbul',
+  ],
+  other: {
+    'geo.region': 'TR-34',
+    'geo.placename': 'Beyoğlu, İstanbul',
+    'geo.position': '41.0321365;28.9830535',
+    'ICBM': '41.0321365, 28.9830535',
+  },
   icons: {
     icon: [
       { url: '/images/fav-icon-esra-sayin.png', type: 'image/png' },

@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Phone, ChevronRight, Brain, Users, HeartHandshake, CircleDot, ArrowRight } from 'lucide-react';
+import { Phone, ChevronRight, Brain, Users, HeartHandshake, CircleDot, ArrowRight, MapPin } from 'lucide-react';
 import { SITE_INFO } from '@/lib/data';
 
 interface HeroSectionProps {
@@ -45,7 +45,7 @@ export default function HeroSection({ onOpenAppointment }: HeroSectionProps) {
         <div className="block lg:hidden pt-4 pb-4">
           {/* Subtitle */}
           <span className="inline-block text-[11px] font-bold tracking-widest text-indigo-600 uppercase mb-2">
-            / ÇİFT VE AİLE DANIŞMANLIĞI /
+            / BEYOĞLU CİHANGİR • ÇİFT VE AİLE DANIŞMANLIĞI /
           </span>
 
           {/* Heading */}
@@ -61,7 +61,7 @@ export default function HeroSection({ onOpenAppointment }: HeroSectionProps) {
 
           {/* Subtext */}
           <p className="text-slate-600 text-sm leading-relaxed mb-6 font-normal">
-            İstanbul Cihangir ofisinde yüz yüze ve online platformlarda bireysel, çift ve aile danışmanlığı desteği sunulmaktadır.
+            İstanbul Beyoğlu Cihangir ofisinde yüz yüze ve online platformlarda çift danışmanlığı, evlilik danışmanlığı, aile ve bireysel danışmanlık hizmeti sunulmaktadır.
           </p>
 
           {/* Buttons Row */}
@@ -128,7 +128,7 @@ export default function HeroSection({ onOpenAppointment }: HeroSectionProps) {
             {/* Top Subtitle */}
             <div>
               <span className="inline-block text-xs font-bold tracking-widest text-indigo-600 uppercase mb-3">
-                / ÇİFT VE AİLE DANIŞMANLIĞI /
+                / BEYOĞLU CİHANGİR • ÇİFT VE AİLE DANIŞMANLIĞI /
               </span>
 
               {/* Main Heading matching screenshot */}
@@ -144,8 +144,8 @@ export default function HeroSection({ onOpenAppointment }: HeroSectionProps) {
             <div className="w-full h-[1.5px] bg-slate-200/80 my-5 sm:my-6" />
 
             {/* Subtext */}
-            <p className="text-slate-600 text-[15px] leading-relaxed mb-8 font-normal">
-              İstanbul Cihangir ofisinde yüz yüze ve online platformlarda bireysel, çift ve aile danışmanlığı desteği sunulmaktadır.
+            <p className="text-slate-600 text-[15px] leading-relaxed mb-6 font-normal">
+              İstanbul Beyoğlu Cihangir ofisinde yüz yüze ve online platformlarda çift danışmanlığı, evlilik danışmanlığı, aile ve bireysel danışmanlık hizmeti sunulmaktadır.
             </p>
 
             {/* Buttons Row */}
@@ -176,6 +176,23 @@ export default function HeroSection({ onOpenAppointment }: HeroSectionProps) {
                   <Phone className="w-3 h-3 text-white fill-white" />
                 </div>
                 <span>HEMEN ARAYIN</span>
+              </a>
+            </div>
+
+            {/* Google Maps Local Signal Link */}
+            <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span className="flex items-center gap-1.5">
+                <MapPin className="w-3.5 h-3.5 text-indigo-600" />
+                <span>Beyoğlu Cihangir Ofisi</span>
+              </span>
+              <a
+                href={SITE_INFO.socials.googleMap}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-indigo-600 hover:text-indigo-800 font-bold underline underline-offset-2 transition-colors"
+                title="Google Haritalar'da Görüntüle"
+              >
+                Google Haritalar&apos;da Gör →
               </a>
             </div>
           </div>

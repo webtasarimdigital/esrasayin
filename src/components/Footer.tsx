@@ -56,6 +56,17 @@ export default function Footer() {
                 <span>DoktorTakvimi</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
+              <a
+                href={SITE_INFO.socials.googleMap}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Google Haritalar Konumu"
+                className="px-3.5 py-2 rounded-full bg-slate-800 hover:bg-emerald-600 text-xs font-bold text-white transition-colors inline-flex items-center gap-1.5"
+                title="Google Haritalar'da Gör & Yol Tarifi Al"
+              >
+                <MapPin className="w-3.5 h-3.5 text-emerald-400" />
+                <span>Google Harita</span>
+              </a>
             </div>
           </div>
 
@@ -86,9 +97,26 @@ export default function Footer() {
             </h3>
             <div className="flex items-start gap-3 text-sm sm:text-[15px] text-slate-300">
               <MapPin className="w-5 h-5 text-indigo-400 flex-shrink-0 mt-0.5" />
-              <span>
-                {SITE_INFO.address.street}, {SITE_INFO.address.district}, {SITE_INFO.address.city}
-              </span>
+              <div>
+                <a
+                  href={SITE_INFO.socials.googleMap}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors block font-medium"
+                  title="Google Haritalar'da Aç"
+                >
+                  {SITE_INFO.address.street}, {SITE_INFO.address.district}, {SITE_INFO.address.city}
+                </a>
+                <a
+                  href={SITE_INFO.socials.googleMap}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-indigo-400 hover:text-indigo-300 font-semibold inline-flex items-center gap-1 mt-1 underline underline-offset-2"
+                >
+                  <span>Google Haritalar&apos;da Yol Tarifi Al</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
             </div>
             <div className="flex items-center gap-3 text-sm sm:text-[15px] text-slate-300">
               <Phone className="w-5 h-5 text-indigo-400 flex-shrink-0" />
@@ -118,7 +146,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-slate-800/60 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm text-slate-400 gap-4">
-          <p>© {currentYear} Psikolog &amp; Aile Danışmanı Esra Sayın. Tüm hakları saklıdır.</p>
+          <p>© {currentYear} Psikolog Esra Sayın | Çift, Aile ve Evlilik Danışmanı. Tüm hakları saklıdır.</p>
           <div className="flex items-center gap-5">
             <Link href="/" className="hover:text-white transition-colors">
               Anasayfa
