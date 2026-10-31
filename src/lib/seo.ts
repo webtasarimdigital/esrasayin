@@ -36,14 +36,27 @@ export function getLocalBusinessSchema() {
       latitude: 41.0321365,
       longitude: 28.9830535,
     },
+    serviceArea: {
+      '@type': 'GeoCircle',
+      geoMidpoint: {
+        '@type': 'GeoCoordinates',
+        latitude: 41.0321365,
+        longitude: 28.9830535,
+      },
+      geoRadius: 15000,
+    },
     areaServed: [
       { '@type': 'AdministrativeArea', name: 'Beyoğlu, İstanbul' },
       { '@type': 'AdministrativeArea', name: 'Cihangir, İstanbul' },
+      { '@type': 'AdministrativeArea', name: 'Kuloğlu, Beyoğlu, İstanbul' },
       { '@type': 'AdministrativeArea', name: 'Taksim, İstanbul' },
       { '@type': 'AdministrativeArea', name: 'Gümüşsuyu, İstanbul' },
+      { '@type': 'AdministrativeArea', name: 'Galata, İstanbul' },
+      { '@type': 'AdministrativeArea', name: 'Karaköy, İstanbul' },
       { '@type': 'AdministrativeArea', name: 'Şişli, İstanbul' },
       { '@type': 'AdministrativeArea', name: 'Nişantaşı, İstanbul' },
       { '@type': 'AdministrativeArea', name: 'Beşiktaş, İstanbul' },
+      { '@type': 'AdministrativeArea', name: 'Kadıköy, İstanbul' },
       { '@type': 'AdministrativeArea', name: 'İstanbul' },
     ],
     knowsAbout: [
@@ -58,6 +71,40 @@ export function getLocalBusinessSchema() {
       'Bilişsel Davranışçı Terapi',
       'Şema Danışmanlığı',
       'Stres Yönetimi',
+    ],
+    makesOffer: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Çift Danışmanlığı',
+          description: 'Beyoğlu Cihangir ofisinde yüz yüze ve online çift danışmanlığı süreci.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Evlilik Danışmanlığı',
+          description: 'Evlilik dinamikleri, iletişim problemleri ve rol çatışmaları için profesyonel danışmanlık.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Aile Danışmanlığı',
+          description: 'Aile içi sınırlar ve yapıcı iletişim odaklı aile danışmanlığı desteği.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Bireysel Danışmanlık',
+          description: 'Yetişkin bireysel farkındalık, stres yönetimi ve bilişsel davranışçı danışmanlık.',
+        },
+      },
     ],
     openingHoursSpecification: [
       {

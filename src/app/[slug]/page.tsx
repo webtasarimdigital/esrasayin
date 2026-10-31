@@ -12,7 +12,7 @@ import {
   getRelatedPosts,
   SITE_INFO,
 } from '@/lib/data';
-import { getArticleSchema, getBreadcrumbSchema } from '@/lib/seo';
+import { getArticleSchema, getBreadcrumbSchema, getFaqSchema } from '@/lib/seo';
 import BlogCard from '@/components/BlogCard';
 import ContactSection from '@/components/ContactSection';
 import ReviewsSection from '@/components/ReviewsSection';
@@ -295,12 +295,45 @@ export default function DynamicSlugPage({ params }: PageProps) {
       ? '/images/psikolog-esra-sayin-updated-hero.webp'
       : (page as any).featured_image || getServiceImage(page.slug, page.title);
 
+    const regionalFaqs = isRegionalPage
+      ? [
+          {
+            question: `${page.title.split('|')[0].trim()} sürecinde çift ve evlilik danışmanlığı nasıl ilerler?`,
+            answer:
+              'Beyoğlu Sıraselviler Caddesi Cihangir ofisimizde gerçekleştirilen görüşmelerde; çiftlerin tekrarlayan iletişim tıkanıklıkları, duygusal kopukluk ve ilişki krizleri bilimsel ekoller (Bilişsel Davranışçı Danışmanlık ve Şema Yaklaşımı) doğrultusunda ele alınır.',
+          },
+          {
+            question: 'Beyoğlu Cihangir ofisine toplu taşıma veya araçla nasıl ulaşılır?',
+            answer:
+              'Ofisimiz Beyoğlu Kuloğlu Mah. Sıraselviler Cad. No:68 Garanti Bankası Üstü Simge Apartmanı Kat 2 adresindedir. Taksim Meydanı metro istasyonuna ve İstiklal Caddesi çıkışına 4-5 dakikalık yürüme mesafesinde son derece merkezi bir lokasyondadır.',
+          },
+          {
+            question: 'Görüşmeler yüz yüze mi yoksa online mı gerçekleştirilmektedir?',
+            answer:
+              'Danışanlarımızın tercihine göre Beyoğlu Cihangir ofisimizde yüz yüze veya şehir dışı/yurt dışındaki danışanlarımız için gizlilik standartlarına uygun online video görüşme formatında yürütülmektedir.',
+          },
+          {
+            question: 'Danışmanlık süreci için randevu nasıl oluşturulabilir?',
+            answer:
+              '0538 650 32 17 numaralı telefon veya WhatsApp hattı üzerinden iletişim kurarak uygun seans gün ve saatleri hakkında bilgi alabilir, randevunuzu kolaylıkla planlayabilirsiniz.',
+          },
+        ]
+      : null;
+
+    const regionalFaqSchema = regionalFaqs ? getFaqSchema(regionalFaqs) : null;
+
     return (
       <>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
+        {regionalFaqSchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(regionalFaqSchema) }}
+          />
+        )}
 
         <div className="py-6 sm:py-10 bg-white max-w-full overflow-hidden">
           {/* Top Title & Breadcrumb Banner (Exact match to media_1789415391296.png - Görsel 5) */}

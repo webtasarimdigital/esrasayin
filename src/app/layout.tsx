@@ -88,6 +88,15 @@ export const metadata: Metadata = {
     'geo.placename': 'Beyoğlu, İstanbul',
     'geo.position': '41.0321365;28.9830535',
     'ICBM': '41.0321365, 28.9830535',
+    'place:location:latitude': '41.0321365',
+    'place:location:longitude': '28.9830535',
+    'business:contact_data:street_address': SITE_INFO.address.street,
+    'business:contact_data:locality': 'Beyoğlu',
+    'business:contact_data:region': 'İstanbul',
+    'business:contact_data:postal_code': SITE_INFO.address.postalCode,
+    'business:contact_data:country_name': 'Türkiye',
+    'business:contact_data:phone_number': SITE_INFO.phoneFormatted,
+    'business:contact_data:website': SITE_INFO.url,
   },
   icons: {
     icon: [
